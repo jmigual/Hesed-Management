@@ -1,0 +1,3 @@
+Hola això és una prova
+a veure si funciona correctament el programa 
+que obre arxius de text
