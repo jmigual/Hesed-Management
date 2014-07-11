@@ -21,3 +21,12 @@ FORMS    += mainwindow.ui
 
 RESOURCES += \
     textfinder.qrc
+
+CONFIG += static
+
+static {
+    CONFIG += static
+    QTPLUGIN += qsqloci qgif
+    DEFINES += STATIC 
+    message("Static build.")
+}
