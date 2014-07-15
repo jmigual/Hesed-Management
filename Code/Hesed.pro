@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2014-06-27T00:49:06
+# Project created by QtCreator 2014-07-15T19:00:20
 #
 #-------------------------------------------------
 
@@ -18,15 +18,3 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.hpp
 
 FORMS    += mainwindow.ui
-
-RESOURCES += \
-    textfinder.qrc
-
-CONFIG += static
-
-static {
-    CONFIG += static
-    QTPLUGIN += qsqloci qgif
-    DEFINES += STATIC 
-    message("Static build.")
-}

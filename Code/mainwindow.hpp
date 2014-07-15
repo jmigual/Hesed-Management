@@ -4,24 +4,19 @@
 #include <QMainWindow>
 
 namespace Ui {
-class Pepe;
+class MainWindow;
 }
 
-class Pepe : public QMainWindow
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
     
 public:
-    explicit Pepe(QWidget *parent = 0);
-    ~Pepe();
-    
-private slots:
-    
-    void on_findButton_clicked();
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
     
 private:
-    Ui::Pepe *ui;
-    void loadTextFile();
+    Ui::MainWindow *ui;
 };
 
 #endif // MAINWINDOW_HPP
