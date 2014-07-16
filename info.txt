@@ -17,3 +17,18 @@ Referente a la fecha de ayuda es que la ayuda dura tres meses Después se les da
 Si algo no te queda claro,
 Gracias
 
+============================================================================
+
+Informació de la persona
+
+ - Nom
+ - Cognoms
+ - DNI
+ - Data naixement
+ - DNI parella (si en té, si no DNI parella = -1)
+ - Direcció
+ - Telèfon
+ - Data última ajuda
+ - Data fi validesa ajuda
+ - Nombre de vegades que s'ha donat la ajuda
+  
