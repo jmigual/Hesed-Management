@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2014-07-15T19:00:20
+# Project created by QtCreator 2014-07-16T20:59:22
 #
 #-------------------------------------------------
 
@@ -13,8 +13,8 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        widget.cpp
 
-HEADERS  += mainwindow.hpp
+HEADERS  += widget.h
 
-FORMS    += mainwindow.ui
+FORMS    += widget.ui

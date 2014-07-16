@@ -1,0 +1,19 @@
+Message 1:
+
+Hola Joan,
+Quizá tienes razón que con un acces sería suficiente para lo que necesitamos, pero yo te explico lo que tenemos ahora.
+Estamos usando un programa de empresa que, por estar caducado, ya no nos permite modificar
+nada, sólo entrar los datos. Nosotros necesitamos entrar los datos de la persona solicitante, más los datos del cónyuge, número de miembros de la unidad familiar. edades de los miembros, fecha en que se inicia la ayuda y fecha en que acaba. Pero también necesitaríamos poder añadir la fecha de la nueva ayuda (por 2ª o 3ª vez). Y, sobre todo, que tengamos filtros para buscar a las personas (al cónyuge por el DNI), para evitar lo que intentan algunos; primero viene la mujer a solicitar la ayuda y cuando se le acaba, viene el marido como si fuera la primera vez que la solicita.
+No se si me explico bien. Es fácil saber lo que uno tiene en mente pero no tan fácil compartirlo con otros. Si tienes alguna duda escríbeme (y así volveré a tener tu coreo) vale??
+Muchas gracias
+
+=============================================================================
+
+Message 2:
+
+Hola,
+no me acuerdo si te dije que también hay que poner dirección, teléfono, en fin todos los datos d de la persona.
+Referente a la fecha de ayuda es que la ayuda dura tres meses Después se les da de baja y después de algún tiempo pueden volver a venir a solicitarla, pero claro , ya no es la primera vez que se les ayuda. Por lo que necesitamos saber cuándo fue la última vez que se les ayudó para saber si ha pasado suficiente tiempo para poder reactivarle la ayuda. O saber si ya se le actualizó la ayuda por segunda o tercera vez. No se si me explico.
+Si algo no te queda claro,
+Gracias
+
