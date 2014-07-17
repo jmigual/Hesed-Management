@@ -27,7 +27,7 @@ class Ui_MainWindow
 {
 public:
     QAction *actionInsertar;
-    QAction *action_Eliminar;
+    QAction *actionEliminar;
     QWidget *centralwidget;
     QMenuBar *menubar;
     QMenu *menuArchivo;
@@ -42,11 +42,15 @@ public:
         actionInsertar = new QAction(MainWindow);
         actionInsertar->setObjectName(QStringLiteral("actionInsertar"));
         QIcon icon;
-        icon.addFile(QStringLiteral("Images/insert.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon.addFile(QStringLiteral("../Images/insert.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon.addFile(QStringLiteral(":/Images/Icons/plus.ico"), QSize(), QIcon::Normal, QIcon::Off);
         actionInsertar->setIcon(icon);
-        action_Eliminar = new QAction(MainWindow);
-        action_Eliminar->setObjectName(QStringLiteral("action_Eliminar"));
+        actionInsertar->setIconVisibleInMenu(false);
+        actionEliminar = new QAction(MainWindow);
+        actionEliminar->setObjectName(QStringLiteral("actionEliminar"));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/Images/Icons/delete.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        actionEliminar->setIcon(icon1);
+        actionEliminar->setIconVisibleInMenu(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         MainWindow->setCentralWidget(centralwidget);
@@ -55,6 +59,7 @@ public:
         menubar->setGeometry(QRect(0, 0, 640, 21));
         menuArchivo = new QMenu(menubar);
         menuArchivo->setObjectName(QStringLiteral("menuArchivo"));
+        menuArchivo->setEnabled(true);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -63,13 +68,14 @@ public:
         toolBar->setObjectName(QStringLiteral("toolBar"));
         toolBar->setEnabled(true);
         toolBar->setMovable(true);
+        toolBar->setIconSize(QSize(16, 16));
         MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
-        MainWindow->insertToolBarBreak(toolBar);
 
         menubar->addAction(menuArchivo->menuAction());
         menuArchivo->addAction(actionInsertar);
-        menuArchivo->addAction(action_Eliminar);
+        menuArchivo->addAction(actionEliminar);
         toolBar->addAction(actionInsertar);
+        toolBar->addAction(actionEliminar);
 
         retranslateUi(MainWindow);
 
@@ -79,10 +85,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        actionInsertar->setText(QApplication::translate("MainWindow", "&Insertar", 0));
+        actionInsertar->setText(QApplication::translate("MainWindow", "Insertar", 0));
         actionInsertar->setShortcut(QApplication::translate("MainWindow", "Ctrl+N", 0));
-        action_Eliminar->setText(QApplication::translate("MainWindow", "&Eliminar", 0));
-        action_Eliminar->setShortcut(QApplication::translate("MainWindow", "Ctrl+D", 0));
+        actionEliminar->setText(QApplication::translate("MainWindow", "Eliminar", 0));
+        actionEliminar->setShortcut(QApplication::translate("MainWindow", "Ctrl+D", 0));
         menuArchivo->setTitle(QApplication::translate("MainWindow", "Archivo", 0));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0));
     } // retranslateUi

@@ -108,7 +108,49 @@ compiler_rcc_make_all: release/qrc_Resources.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_Resources.cpp
 release/qrc_Resources.cpp: ../../Code/Resources.qrc \
-		../../Code/Images/insert.png
+		../../Code/Images/Icons/heart.ico \
+		../../Code/Images/Icons/bookmark.ico \
+		../../Code/Images/Icons/down.ico \
+		../../Code/Images/Icons/gear.ico \
+		../../Code/Images/Icons/home.ico \
+		../../Code/Images/Icons/label.ico \
+		../../Code/Images/Icons/print.ico \
+		../../Code/Images/Icons/info.ico \
+		../../Code/Images/Icons/help.ico \
+		../../Code/Images/Icons/warning.ico \
+		../../Code/Images/Icons/diagram.ico \
+		../../Code/Images/Icons/document.ico \
+		../../Code/Images/Icons/user.ico \
+		../../Code/Images/Icons/key.ico \
+		../../Code/Images/Icons/right.ico \
+		../../Code/Images/Icons/address.ico \
+		../../Code/Images/Icons/wallet.ico \
+		../../Code/Images/Icons/flag.ico \
+		../../Code/Images/Icons/up.ico \
+		../../Code/Images/Icons/delete.ico \
+		../../Code/Images/Icons/calendar.ico \
+		../../Code/Images/Icons/left.ico \
+		../../Code/Images/Icons/search.ico \
+		../../Code/Images/Icons/block.ico \
+		../../Code/Images/Icons/pencil.ico \
+		../../Code/Images/Icons/shield.ico \
+		../../Code/Images/Icons/stop.ico \
+		../../Code/Images/Icons/buy.ico \
+		../../Code/Images/Icons/bubble.ico \
+		../../Code/Images/Icons/statistics.ico \
+		../../Code/Images/Icons/present.ico \
+		../../Code/Images/Icons/save.ico \
+		../../Code/Images/Icons/clock.ico \
+		../../Code/Images/Icons/briefcase.ico \
+		../../Code/Images/Icons/monitor.ico \
+		../../Code/Images/Icons/trash.ico \
+		../../Code/Images/Icons/clipboard.ico \
+		../../Code/Images/Icons/folder.ico \
+		../../Code/Images/Icons/plus.ico \
+		../../Code/Images/Icons/letter.ico \
+		../../Code/Images/Icons/globe.ico \
+		../../Code/Images/Icons/license.txt \
+		../../Code/Images/Icons/tick.ico
 	C:\Qt\5.3\mingw482_32\bin\rcc.exe -name Resources ..\..\Code\Resources.qrc -o release\qrc_Resources.cpp
 
 compiler_moc_header_make_all: release/moc_mainwindow.cpp

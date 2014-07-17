@@ -1,5 +1,47 @@
 <RCC>
-    <qresource prefix="/Images">
-        <file>Images/insert.png</file>
+    <qresource prefix="/">
+        <file>Images/Icons/address.ico</file>
+        <file>Images/Icons/block.ico</file>
+        <file>Images/Icons/bookmark.ico</file>
+        <file>Images/Icons/briefcase.ico</file>
+        <file>Images/Icons/bubble.ico</file>
+        <file>Images/Icons/buy.ico</file>
+        <file>Images/Icons/calendar.ico</file>
+        <file>Images/Icons/clipboard.ico</file>
+        <file>Images/Icons/clock.ico</file>
+        <file>Images/Icons/delete.ico</file>
+        <file>Images/Icons/diagram.ico</file>
+        <file>Images/Icons/document.ico</file>
+        <file>Images/Icons/down.ico</file>
+        <file>Images/Icons/flag.ico</file>
+        <file>Images/Icons/folder.ico</file>
+        <file>Images/Icons/gear.ico</file>
+        <file>Images/Icons/globe.ico</file>
+        <file>Images/Icons/heart.ico</file>
+        <file>Images/Icons/help.ico</file>
+        <file>Images/Icons/home.ico</file>
+        <file>Images/Icons/info.ico</file>
+        <file>Images/Icons/key.ico</file>
+        <file>Images/Icons/label.ico</file>
+        <file>Images/Icons/left.ico</file>
+        <file>Images/Icons/letter.ico</file>
+        <file>Images/Icons/license.txt</file>
+        <file>Images/Icons/monitor.ico</file>
+        <file>Images/Icons/pencil.ico</file>
+        <file>Images/Icons/plus.ico</file>
+        <file>Images/Icons/present.ico</file>
+        <file>Images/Icons/print.ico</file>
+        <file>Images/Icons/right.ico</file>
+        <file>Images/Icons/save.ico</file>
+        <file>Images/Icons/search.ico</file>
+        <file>Images/Icons/shield.ico</file>
+        <file>Images/Icons/statistics.ico</file>
+        <file>Images/Icons/stop.ico</file>
+        <file>Images/Icons/tick.ico</file>
+        <file>Images/Icons/trash.ico</file>
+        <file>Images/Icons/up.ico</file>
+        <file>Images/Icons/user.ico</file>
+        <file>Images/Icons/wallet.ico</file>
+        <file>Images/Icons/warning.ico</file>
     </qresource>
 </RCC>
