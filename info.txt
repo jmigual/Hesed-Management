@@ -25,7 +25,7 @@ Informació de la persona
  - Cognoms
  - DNI
  - Data naixement
- - DNI parella (si en té, si no DNI parella = -1)
+ - DNI parella (si té parella, si no DNI parella = -1)
  - Direcció
  - Telèfon
  - Data última ajuda

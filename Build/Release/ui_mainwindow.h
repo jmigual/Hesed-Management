@@ -13,13 +13,12 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,41 +26,50 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QWidget *centralWidget;
-    QHBoxLayout *horizontalLayout;
-    QTableView *tableView;
-    QMenuBar *menuBar;
-    QMenu *menuInsert;
-    QStatusBar *statusBar;
+    QAction *actionInsertar;
+    QAction *action_Eliminar;
+    QWidget *centralwidget;
+    QMenuBar *menubar;
+    QMenu *menuArchivo;
+    QStatusBar *statusbar;
+    QToolBar *toolBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(400, 300);
-        centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        horizontalLayout = new QHBoxLayout(centralWidget);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        tableView = new QTableView(centralWidget);
-        tableView->setObjectName(QStringLiteral("tableView"));
+        MainWindow->resize(640, 480);
+        actionInsertar = new QAction(MainWindow);
+        actionInsertar->setObjectName(QStringLiteral("actionInsertar"));
+        QIcon icon;
+        icon.addFile(QStringLiteral("Images/insert.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral("../Images/insert.png"), QSize(), QIcon::Normal, QIcon::On);
+        actionInsertar->setIcon(icon);
+        action_Eliminar = new QAction(MainWindow);
+        action_Eliminar->setObjectName(QStringLiteral("action_Eliminar"));
+        centralwidget = new QWidget(MainWindow);
+        centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        MainWindow->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(MainWindow);
+        menubar->setObjectName(QStringLiteral("menubar"));
+        menubar->setGeometry(QRect(0, 0, 640, 21));
+        menuArchivo = new QMenu(menubar);
+        menuArchivo->setObjectName(QStringLiteral("menuArchivo"));
+        MainWindow->setMenuBar(menubar);
+        statusbar = new QStatusBar(MainWindow);
+        statusbar->setObjectName(QStringLiteral("statusbar"));
+        MainWindow->setStatusBar(statusbar);
+        toolBar = new QToolBar(MainWindow);
+        toolBar->setObjectName(QStringLiteral("toolBar"));
+        toolBar->setEnabled(true);
+        toolBar->setMovable(true);
+        MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
+        MainWindow->insertToolBarBreak(toolBar);
 
-        horizontalLayout->addWidget(tableView);
-
-        MainWindow->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(MainWindow);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 400, 21));
-        menuInsert = new QMenu(menuBar);
-        menuInsert->setObjectName(QStringLiteral("menuInsert"));
-        MainWindow->setMenuBar(menuBar);
-        statusBar = new QStatusBar(MainWindow);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
-        MainWindow->setStatusBar(statusBar);
-
-        menuBar->addAction(menuInsert->menuAction());
+        menubar->addAction(menuArchivo->menuAction());
+        menuArchivo->addAction(actionInsertar);
+        menuArchivo->addAction(action_Eliminar);
+        toolBar->addAction(actionInsertar);
 
         retranslateUi(MainWindow);
 
@@ -71,7 +79,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        menuInsert->setTitle(QApplication::translate("MainWindow", "Insert", 0));
+        actionInsertar->setText(QApplication::translate("MainWindow", "&Insertar", 0));
+        actionInsertar->setShortcut(QApplication::translate("MainWindow", "Ctrl+N", 0));
+        action_Eliminar->setText(QApplication::translate("MainWindow", "&Eliminar", 0));
+        action_Eliminar->setShortcut(QApplication::translate("MainWindow", "Ctrl+D", 0));
+        menuArchivo->setTitle(QApplication::translate("MainWindow", "Archivo", 0));
+        toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0));
     } // retranslateUi
 
 };

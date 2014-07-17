@@ -12,9 +12,14 @@ TARGET = Hesed
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        widget.cpp
+SOURCES += main.cpp \
+    mainwindow.cpp
 
-HEADERS  += widget.h
+HEADERS  += \
+    mainwindow.h
 
-FORMS    += widget.ui
+FORMS    += \
+    mainwindow.ui
+
+RESOURCES += \
+    Resources.qrc
