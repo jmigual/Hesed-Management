@@ -18,7 +18,9 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -29,6 +31,8 @@ public:
     QAction *actionInsertar;
     QAction *actionEliminar;
     QWidget *centralwidget;
+    QVBoxLayout *verticalLayout;
+    QTableView *tableView;
     QMenuBar *menubar;
     QMenu *menuArchivo;
     QStatusBar *statusbar;
@@ -53,6 +57,14 @@ public:
         actionEliminar->setIconVisibleInMenu(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        verticalLayout = new QVBoxLayout(centralwidget);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(-1, -1, -1, 9);
+        tableView = new QTableView(centralwidget);
+        tableView->setObjectName(QStringLiteral("tableView"));
+
+        verticalLayout->addWidget(tableView);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
