@@ -259,6 +259,12 @@ release/moc_mainwindow.cpp: C:/Qt/5.3/mingw482_32/include/QtWidgets/QMainWindow 
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/QStandardItemModel \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QDir \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qdir.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qfileinfo.h \
 		../../Code/mainwindow.h
 	C:\Qt\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.3/mingw482_32/mkspecs/win32-g++ -IC:/Users/Joan/Documents/Repository/Hesed/Code -IC:/Qt/5.3/mingw482_32/include -IC:/Qt/5.3/mingw482_32/include/QtWidgets -IC:/Qt/5.3/mingw482_32/include/QtGui -IC:/Qt/5.3/mingw482_32/include/QtCore -I. ..\..\Code\mainwindow.h -o release\moc_mainwindow.cpp
 
@@ -386,6 +392,12 @@ release/main.o: ../../Code/main.cpp ../../Code/mainwindow.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/QStandardItemModel \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QDir \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qdir.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qfileinfo.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.3/mingw482_32/include/QtCore/qcoreapplication.h \
@@ -502,6 +514,12 @@ release/mainwindow.o: ../../Code/mainwindow.cpp ../../Code/mainwindow.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/QStandardItemModel \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QDir \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qdir.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qfileinfo.h \
 		ui_mainwindow.h \
 		C:/Qt/5.3/mingw482_32/include/QtCore/QVariant \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QAction \
@@ -521,7 +539,6 @@ release/mainwindow.o: ../../Code/mainwindow.cpp ../../Code/mainwindow.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractitemview.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractscrollarea.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.3/mingw482_32/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/5.3/mingw482_32/include/QtCore/qitemselectionmodel.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractitemdelegate.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstyleoption.h \
@@ -539,8 +556,15 @@ release/mainwindow.o: ../../Code/mainwindow.cpp ../../Code/mainwindow.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qmenubar.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QStatusBar \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstatusbar.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QTableView \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtableview.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QToolBar \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtoolbar.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QVBoxLayout \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgridlayout.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QWidget \
 		C:/Qt/5.3/mingw482_32/include/QtCore/QtDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\..\Code\mainwindow.cpp

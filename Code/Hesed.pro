@@ -16,10 +16,14 @@ SOURCES += main.cpp \
     mainwindow.cpp
 
 HEADERS  += \
-    mainwindow.h
+    mainwindow.h \
+    person.h
 
 FORMS    += \
-    mainwindow.ui
+    mainwindow.ui 
 
 RESOURCES += \
     Resources.qrc
+
+OTHER_FILES += \
+    Doxyfile
