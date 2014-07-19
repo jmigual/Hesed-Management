@@ -20,6 +20,11 @@ MainWindow::~MainWindow()
     delete model;
 }
 
+void MainWindow::loadData(QDir data)
+{
+    
+}
+
 void MainWindow::on_actionInsertar_triggered()
 {
     qDebug() << "Botó apretat!";

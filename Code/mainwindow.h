@@ -3,18 +3,22 @@
 
 #include <QMainWindow>
 #include <QStandardItemModel>
+#include <QDir>
 
 namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow
+class 
+        MainWindow : public QMainWindow
 {
     Q_OBJECT
     
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    
+    void loadData(QDir data);
     
 private slots:
     void on_actionInsertar_triggered();

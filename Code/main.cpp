@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     QDir data;
     if (data.exists(QStandardPaths::writableLocation(QStandardPaths::DataLocation))) {
         qDebug() << "Trobat";
+        w.loadData(data);
     }
     else qDebug() << "No s'ha trobat";
     
