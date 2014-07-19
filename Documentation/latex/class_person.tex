@@ -1,14 +1,97 @@
 \hypertarget{class_person}{\section{Person Class Reference}
 \label{class_person}\index{Person@{Person}}
 }
+
+
+The \hyperlink{class_person}{Person} Class contains all people basic data.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_person_1_1info}{info}
+\begin{DoxyCompactList}\small\item\em Struct to store basic people information. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_person_a0397c6f89fafc12e738923f612bc41a3}{\hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{Person} ()}\label{class_person_a0397c6f89fafc12e738923f612bc41a3}
-
-\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{Person} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{read} (Q\+Dir data)
+\begin{DoxyCompactList}\small\item\em Function to read all stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-person.\+h\end{DoxyCompactItemize}
+list$<$ \hyperlink{struct_person_1_1info}{info} $>$ \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_person}{Person} Class contains all people basic data. 
+
+Definition at line 12 of file person.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_person_a0397c6f89fafc12e738923f612bc41a3}{\index{Person@{Person}!Person@{Person}}
+\index{Person@{Person}!Person@{Person}}
+\subsubsection[{Person}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::\+Person (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_person_a0397c6f89fafc12e738923f612bc41a3}
+
+
+Default constructor. 
+
+
+
+Definition at line 3 of file person.\+cpp.
+
+
+\begin{DoxyCode}
+4 \{
+5     
+6 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{\index{Person@{Person}!read@{read}}
+\index{read@{read}!Person@{Person}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::read (
+\begin{DoxyParamCaption}
+\item[{Q\+Dir}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}
+
+
+Function to read all stored data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Path to {\itshape Data} folder \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All data stored in {\itshape datafile.\+db} has been read and stored to implicit parameter. 
+\end{DoxyPostcond}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{\index{Person@{Person}!all@{all}}
+\index{all@{all}!Person@{Person}}
+\subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf info}$>$ Person\+::all\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}
+
+
+Definition at line 37 of file person.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{person_8h}{person.\+h}\item 
+\hyperlink{person_8cpp}{person.\+cpp}\end{DoxyCompactItemize}
