@@ -31,4 +31,5 @@ Informació de la persona
  - Data última ajuda
  - Data fi validesa ajuda
  - Nombre de vegades que s'ha donat la ajuda
+ - ID automatic (no s'ha de veure)
   
