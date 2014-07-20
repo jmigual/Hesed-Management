@@ -37,12 +37,21 @@
      <bool>true</bool>
     </property>
     <property name="title">
-     <string>Archivo</string>
+     <string>Arxiu</string>
     </property>
-    <addaction name="actionInsertar"/>
+    <addaction name="actionObrir"/>
+    <addaction name="actionExportar"/>
+    <addaction name="actionTancar"/>
+   </widget>
+   <widget class="QMenu" name="menuEditar">
+    <property name="title">
+     <string>Editar</string>
+    </property>
+    <addaction name="actionInserir"/>
     <addaction name="actionEliminar"/>
    </widget>
    <addaction name="menuArchivo"/>
+   <addaction name="menuEditar"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -67,22 +76,16 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionInsertar"/>
+   <addaction name="actionInserir"/>
    <addaction name="actionEliminar"/>
   </widget>
-  <action name="actionInsertar">
+  <action name="actionInserir">
    <property name="icon">
     <iconset resource="Resources.qrc">
      <normaloff>:/Images/Icons/plus.ico</normaloff>:/Images/Icons/plus.ico</iconset>
    </property>
    <property name="text">
-    <string>Insertar</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+N</string>
-   </property>
-   <property name="iconVisibleInMenu">
-    <bool>false</bool>
+    <string>Inserir</string>
    </property>
   </action>
   <action name="actionEliminar">
@@ -93,11 +96,28 @@
    <property name="text">
     <string>Eliminar</string>
    </property>
-   <property name="shortcut">
-    <string>Ctrl+D</string>
+  </action>
+  <action name="actionObrir">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Images/Icons/folder.ico</normaloff>:/Images/Icons/folder.ico</iconset>
    </property>
-   <property name="iconVisibleInMenu">
-    <bool>false</bool>
+   <property name="text">
+    <string>Obrir</string>
+   </property>
+  </action>
+  <action name="actionTancar">
+   <property name="text">
+    <string>Tancar</string>
+   </property>
+  </action>
+  <action name="actionExportar">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Images/Icons/letter.ico</normaloff>:/Images/Icons/letter.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Exportar</string>
    </property>
   </action>
  </widget>

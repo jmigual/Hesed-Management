@@ -33,6 +33,11 @@ int \hyperlink{struct_person_1_1info_afc121f83e810c2c0318e115f4ba6d730}{fam\+Mem
 \begin{DoxyCompactList}\small\item\em Amount of members in the home family. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{struct_person_1_1info_a535ca27747d371eb58005194190f6bd6}{I\+D}
 \begin{DoxyCompactList}\small\item\em Identification number for internal use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Data\+Stream \& \hyperlink{struct_person_1_1info_aa1cff6f546458f788536a635780f7014}{operator$>$$>$} (Q\+Data\+Stream \&in, \hyperlink{struct_person_1_1info}{info} \&i)
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -56,6 +61,30 @@ Stored info is\+:
 
 Definition at line 36 of file person.\+h.
 
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{struct_person_1_1info_aa1cff6f546458f788536a635780f7014}{\index{Person\+::info@{Person\+::info}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Person\+::info@{Person\+::info}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Data\+Stream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{Q\+Data\+Stream \&}]{in, }
+\item[{{\bf info} \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{struct_person_1_1info_aa1cff6f546458f788536a635780f7014}
+
+
+Definition at line 74 of file person.\+h.
+
+
+\begin{DoxyCode}
+74                                                                   \{
+75             in >> i.adress >> i.beginHelp >> i.birthDate >> i.cNIF
+76                >> i.endHelp >> i.famMembers >> i.ID >> i.name >> i.NIF
+77                >> i.numberHelp >> i.phone >> i.surname;
+78             \textcolor{keywordflow}{return} in;
+79         \}
+\end{DoxyCode}
 
 
 \subsection{Member Data Documentation}

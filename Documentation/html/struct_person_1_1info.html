@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="struct_person_1_1info-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Person::info Struct Reference</div>  </div>
@@ -134,6 +135,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a535ca27747d371eb58005194190f6bd6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_person_1_1info.html#a535ca27747d371eb58005194190f6bd6">ID</a></td></tr>
 <tr class="memdesc:a535ca27747d371eb58005194190f6bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identification number for internal use.  <a href="#a535ca27747d371eb58005194190f6bd6">More...</a><br /></td></tr>
 <tr class="separator:a535ca27747d371eb58005194190f6bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:aa1cff6f546458f788536a635780f7014"><td class="memItemLeft" align="right" valign="top">QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_person_1_1info.html#aa1cff6f546458f788536a635780f7014">operator&gt;&gt;</a> (QDataStream &amp;in, <a class="el" href="struct_person_1_1info.html">info</a> &amp;i)</td></tr>
+<tr class="separator:aa1cff6f546458f788536a635780f7014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struct to store basic people information. </p>
@@ -165,7 +171,50 @@ Family members </li>
 </ul>
 
 <p>Definition at line <a class="el" href="person_8h_source.html#l00036">36</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="aa1cff6f546458f788536a635780f7014"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QDataStream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_person_1_1info.html">info</a> &amp;&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="person_8h_source.html#l00074">74</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            in &gt;&gt; i.adress &gt;&gt; i.beginHelp &gt;&gt; i.birthDate &gt;&gt; i.cNIF</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;               &gt;&gt; i.endHelp &gt;&gt; i.famMembers &gt;&gt; i.ID &gt;&gt; i.name &gt;&gt; i.NIF</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;               &gt;&gt; i.numberHelp &gt;&gt; i.phone &gt;&gt; i.surname;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> in;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a81051c5b2abdf064395938f2f47017b8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +413,7 @@ Family members </li>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 20 2014 20:53:55 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 20 2014 21:12:04 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

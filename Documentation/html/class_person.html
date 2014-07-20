@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -146,7 +146,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a> = 0;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
-<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00075">person.h:75</a></div></div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00082">person.h:82</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -171,8 +171,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a> = p.<a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a> = p.<a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
-<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00074">person.h:74</a></div></div>
-<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00075">person.h:75</a></div></div>
+<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00081">person.h:81</a></div></div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00082">person.h:82</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -207,8 +207,16 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span>(not dataFile.open(QIODevice::ReadWrite)) {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;Cannot create the file&quot;</span> &lt;&lt; dataFile.fileName();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    dataFile.close();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    QDataStream in(&amp;dataFile);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    in.setByteOrder(QDataStream::LittleEndian);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">while</span>(not in.atEnd()) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        info aux;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        in &gt;&gt; aux;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a>.push_back(aux);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    dataFile.close();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00081">person.h:81</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,10 +242,10 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="person_8cpp_source.html#l00023">23</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<p>Definition at line <a class="el" href="person_8cpp_source.html#l00030">30</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -260,7 +268,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="person_8h_source.html#l00074">74</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+<p>Definition at line <a class="el" href="person_8h_source.html#l00081">81</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
 
 </div>
 </div>
@@ -282,7 +290,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="person_8h_source.html#l00075">75</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+<p>Definition at line <a class="el" href="person_8h_source.html#l00082">82</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
 
 </div>
 </div>
@@ -293,7 +301,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 20 2014 20:53:55 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 20 2014 21:12:04 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

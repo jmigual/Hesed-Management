@@ -118,8 +118,15 @@ Definition at line 14 of file person.\+cpp.
 17     \textcolor{keywordflow}{if}(not dataFile.open(QIODevice::ReadWrite)) \{
 18         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << dataFile.fileName();
 19     \}
-20     dataFile.close();
-21 \}
+20     QDataStream in(&dataFile);
+21     in.setByteOrder(QDataStream::LittleEndian);
+22     \textcolor{keywordflow}{while}(not in.atEnd()) \{
+23         info aux;
+24         in >> aux;
+25         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.push\_back(aux);
+26     \}
+27     dataFile.close();
+28 \}
 \end{DoxyCode}
 \hypertarget{class_person_ac89ee9923a0b4a874be8f5901e35b753}{\index{Person@{Person}!show@{show}}
 \index{show@{show}!Person@{Person}}
@@ -139,13 +146,13 @@ Function to show all stored data.
 \end{DoxyParams}
 
 
-Definition at line 23 of file person.\+cpp.
+Definition at line 30 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-24 \{
-25     
-26 \}
+31 \{
+32     
+33 \}
 \end{DoxyCode}
 
 
@@ -155,14 +162,14 @@ Definition at line 23 of file person.\+cpp.
 \subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf info}$>$ Person\+::all\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}
 
 
-Definition at line 74 of file person.\+h.
+Definition at line 81 of file person.\+h.
 
 \hypertarget{class_person_a816ee6194426eb703b61ae267e8e8ee6}{\index{Person@{Person}!max\+I\+D@{max\+I\+D}}
 \index{max\+I\+D@{max\+I\+D}!Person@{Person}}
 \subsubsection[{max\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Person\+::max\+I\+D\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a816ee6194426eb703b61ae267e8e8ee6}
 
 
-Definition at line 75 of file person.\+h.
+Definition at line 82 of file person.\+h.
 
 
 

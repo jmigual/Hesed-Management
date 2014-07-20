@@ -37,7 +37,6 @@ public:
     void addPath(const QDir &data);
     
 private slots:
-    void on_actionInsertar_triggered();
     
 private:
     QDir data;

@@ -70,6 +70,13 @@ private:
          * @brief Identification number for internal use
          */
         unsigned int ID;
+        
+        friend QDataStream& operator>> (QDataStream &in, info &i) {
+            in >> i.adress >> i.beginHelp >> i.birthDate >> i.cNIF
+               >> i.endHelp >> i.famMembers >> i.ID >> i.name >> i.NIF
+               >> i.numberHelp >> i.phone >> i.surname;
+            return in;
+        }
     };
     list<info> all;
     unsigned int maxID;

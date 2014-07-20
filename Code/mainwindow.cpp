@@ -38,8 +38,3 @@ void MainWindow::addPath(const QDir &data)
 {
     this->data = data;
 }
-
-void MainWindow::on_actionInsertar_triggered()
-{
-    qDebug() << "Botó apretat!";
-}
