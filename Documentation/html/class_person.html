@@ -105,19 +105,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0397c6f89fafc12e738923f612bc41a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a0397c6f89fafc12e738923f612bc41a3">Person</a> ()</td></tr>
 <tr class="memdesc:a0397c6f89fafc12e738923f612bc41a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a0397c6f89fafc12e738923f612bc41a3">More...</a><br /></td></tr>
 <tr class="separator:a0397c6f89fafc12e738923f612bc41a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a847845e2e214a89e790c584678f1ea97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a847845e2e214a89e790c584678f1ea97">Person</a> (const <a class="el" href="class_person.html">Person</a> &amp;p)</td></tr>
+<tr class="memdesc:a847845e2e214a89e790c584678f1ea97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a847845e2e214a89e790c584678f1ea97">More...</a><br /></td></tr>
+<tr class="separator:a847845e2e214a89e790c584678f1ea97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98c73f33a51b80cc9296a949f2fc5cf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a98c73f33a51b80cc9296a949f2fc5cf3">read</a> (QDir data)</td></tr>
 <tr class="memdesc:a98c73f33a51b80cc9296a949f2fc5cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to read all stored data.  <a href="#a98c73f33a51b80cc9296a949f2fc5cf3">More...</a><br /></td></tr>
 <tr class="separator:a98c73f33a51b80cc9296a949f2fc5cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89ee9923a0b4a874be8f5901e35b753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#ac89ee9923a0b4a874be8f5901e35b753">show</a> (QTableView *table)</td></tr>
+<tr class="memdesc:ac89ee9923a0b4a874be8f5901e35b753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to show all stored data.  <a href="#ac89ee9923a0b4a874be8f5901e35b753">More...</a><br /></td></tr>
+<tr class="separator:ac89ee9923a0b4a874be8f5901e35b753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a23d6ff8cb8e45c9e3502baffa6a0468a"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="struct_person_1_1info.html">info</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a></td></tr>
 <tr class="separator:a23d6ff8cb8e45c9e3502baffa6a0468a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816ee6194426eb703b61ae267e8e8ee6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a></td></tr>
+<tr class="separator:a816ee6194426eb703b61ae267e8e8ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_person.html" title="The Person Class contains all people basic data. ">Person</a> Class contains all people basic data. </p>
 
-<p>Definition at line <a class="el" href="person_8h_source.html#l00012">12</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+<p>Definition at line <a class="el" href="person_8h_source.html#l00015">15</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0397c6f89fafc12e738923f612bc41a3"></a>
 <div class="memitem">
@@ -136,8 +144,35 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="person_8cpp_source.html#l00003">3</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a> = 0;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00075">person.h:75</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a847845e2e214a89e790c584678f1ea97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Person::Person </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_person.html">Person</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+<p>Definition at line <a class="el" href="person_8cpp_source.html#l00008">8</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a> = p.<a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a> = p.<a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00074">person.h:74</a></div></div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00075">person.h:75</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -166,6 +201,44 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>All data stored in <em>datafile.db</em> has been read and stored to implicit parameter. </dd></dl>
 
+<p>Definition at line <a class="el" href="person_8cpp_source.html#l00014">14</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    QFile dataFile(data.filePath(<span class="stringliteral">&quot;datafile.db&quot;</span>));</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span>(not dataFile.open(QIODevice::ReadWrite)) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        qWarning() &lt;&lt; <span class="stringliteral">&quot;Cannot create the file&quot;</span> &lt;&lt; dataFile.fileName();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    dataFile.close();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac89ee9923a0b4a874be8f5901e35b753"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Person::show </td>
+          <td>(</td>
+          <td class="paramtype">QTableView *&#160;</td>
+          <td class="paramname"><em>table</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to show all stored data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">table</td><td>Pointer to a existing TableView </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="person_8cpp_source.html#l00023">23</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -187,7 +260,29 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="person_8h_source.html#l00037">37</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+<p>Definition at line <a class="el" href="person_8h_source.html#l00074">74</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a816ee6194426eb703b61ae267e8e8ee6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Person::maxID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="person_8h_source.html#l00075">75</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
 
 </div>
 </div>
@@ -198,7 +293,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 19 2014 22:25:18 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 20 2014 20:53:55 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

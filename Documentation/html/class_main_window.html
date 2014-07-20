@@ -101,9 +101,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8b244be8b7b7db1b08de2a2acb9409db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
 <tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a932ff15a63daa01ca83de14172855ba3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a932ff15a63daa01ca83de14172855ba3">loadData</a> (QDir data)</td></tr>
-<tr class="memdesc:a932ff15a63daa01ca83de14172855ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that loads data when exists de <em>Data</em> folder.  <a href="#a932ff15a63daa01ca83de14172855ba3">More...</a><br /></td></tr>
-<tr class="separator:a932ff15a63daa01ca83de14172855ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6906cd747941813c6da899b18d881473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a6906cd747941813c6da899b18d881473">loadData</a> ()</td></tr>
+<tr class="memdesc:a6906cd747941813c6da899b18d881473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that loads data when exists de <em>Data</em> folder.  <a href="#a6906cd747941813c6da899b18d881473">More...</a><br /></td></tr>
+<tr class="separator:a6906cd747941813c6da899b18d881473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44d044deed1ddca8952f59554705e28d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a44d044deed1ddca8952f59554705e28d">addPath</a> (const QDir &amp;<a class="el" href="class_main_window.html#a1dc35bda22acc11636be809539ab73d9">data</a>)</td></tr>
+<tr class="memdesc:a44d044deed1ddca8952f59554705e28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to add the <em>Data</em> folder path.  <a href="#a44d044deed1ddca8952f59554705e28d">More...</a><br /></td></tr>
+<tr class="separator:a44d044deed1ddca8952f59554705e28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
 Private Slots</h2></td></tr>
@@ -112,10 +115,14 @@ Private Slots</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a1dc35bda22acc11636be809539ab73d9"><td class="memItemLeft" align="right" valign="top">QDir&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a1dc35bda22acc11636be809539ab73d9">data</a></td></tr>
+<tr class="separator:a1dc35bda22acc11636be809539ab73d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35466a70ed47252a0191168126a352a5"><td class="memItemLeft" align="right" valign="top">Ui::MainWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a></td></tr>
 <tr class="separator:a35466a70ed47252a0191168126a352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1a1f8ce9c37a7ac70d21402759638b3"><td class="memItemLeft" align="right" valign="top">QStandardItemModel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a></td></tr>
 <tr class="separator:aa1a1f8ce9c37a7ac70d21402759638b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d1f101eed410e692b5db9b7226174bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_person.html">Person</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a2d1f101eed410e692b5db9b7226174bf">info</a></td></tr>
+<tr class="separator:a2d1f101eed410e692b5db9b7226174bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to show basic information to user. </p>
@@ -152,20 +159,20 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00005">5</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                     :QMainWindow(parent),</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>(<span class="keyword">new</span> Ui::MainWindow)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a> = <span class="keyword">new</span> QStandardItemModel();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    QStringList titols;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    titols &lt;&lt; <span class="stringliteral">&quot;DNI&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Nom&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Cognoms&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Data Fi ajuda&quot;</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a>-&gt;setHorizontalHeaderLabels(titols);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;tableView-&gt;setModel(<a class="code" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="ttc" id="class_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00038">mainwindow.h:38</a></div></div>
-<div class="ttc" id="class_main_window_html_aa1a1f8ce9c37a7ac70d21402759638b3"><div class="ttname"><a href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">MainWindow::model</a></div><div class="ttdeci">QStandardItemModel * model</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00039">mainwindow.h:39</a></div></div>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00009">9</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                     :QMainWindow(parent),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>(<span class="keyword">new</span> Ui::MainWindow)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a> = <span class="keyword">new</span> QStandardItemModel();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    QStringList titols;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    titols &lt;&lt; <span class="stringliteral">&quot;DNI&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Nom&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Cognoms&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Data Fi ajuda&quot;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a>-&gt;setHorizontalHeaderLabels(titols);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;tableView-&gt;setModel(<a class="code" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="ttc" id="class_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00044">mainwindow.h:44</a></div></div>
+<div class="ttc" id="class_main_window_html_aa1a1f8ce9c37a7ac70d21402759638b3"><div class="ttname"><a href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">MainWindow::model</a></div><div class="ttdeci">QStandardItemModel * model</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00045">mainwindow.h:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,32 +189,60 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00017">17</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="ttc" id="class_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00038">mainwindow.h:38</a></div></div>
-<div class="ttc" id="class_main_window_html_aa1a1f8ce9c37a7ac70d21402759638b3"><div class="ttname"><a href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">MainWindow::model</a></div><div class="ttdeci">QStandardItemModel * model</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00039">mainwindow.h:39</a></div></div>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00021">21</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">model</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="ttc" id="class_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00044">mainwindow.h:44</a></div></div>
+<div class="ttc" id="class_main_window_html_aa1a1f8ce9c37a7ac70d21402759638b3"><div class="ttname"><a href="class_main_window.html#aa1a1f8ce9c37a7ac70d21402759638b3">MainWindow::model</a></div><div class="ttdeci">QStandardItemModel * model</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00045">mainwindow.h:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a932ff15a63daa01ca83de14172855ba3"></a>
+<a class="anchor" id="a6906cd747941813c6da899b18d881473"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void MainWindow::loadData </td>
           <td>(</td>
-          <td class="paramtype">QDir&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Function that loads data when exists de <em>Data</em> folder. </p>
+
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00031">31</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_main_window.html#a2d1f101eed410e692b5db9b7226174bf">info</a>.<a class="code" href="class_person.html#a98c73f33a51b80cc9296a949f2fc5cf3">read</a>(<a class="code" href="class_main_window.html#a1dc35bda22acc11636be809539ab73d9">data</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_main_window.html#a2d1f101eed410e692b5db9b7226174bf">info</a>.<a class="code" href="class_person.html#ac89ee9923a0b4a874be8f5901e35b753">show</a>(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;tableView);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="ttc" id="class_main_window_html_a1dc35bda22acc11636be809539ab73d9"><div class="ttname"><a href="class_main_window.html#a1dc35bda22acc11636be809539ab73d9">MainWindow::data</a></div><div class="ttdeci">QDir data</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00043">mainwindow.h:43</a></div></div>
+<div class="ttc" id="class_main_window_html_a2d1f101eed410e692b5db9b7226174bf"><div class="ttname"><a href="class_main_window.html#a2d1f101eed410e692b5db9b7226174bf">MainWindow::info</a></div><div class="ttdeci">Person info</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00046">mainwindow.h:46</a></div></div>
+<div class="ttc" id="class_person_html_a98c73f33a51b80cc9296a949f2fc5cf3"><div class="ttname"><a href="class_person.html#a98c73f33a51b80cc9296a949f2fc5cf3">Person::read</a></div><div class="ttdeci">void read(QDir data)</div><div class="ttdoc">Function to read all stored data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8cpp_source.html#l00014">person.cpp:14</a></div></div>
+<div class="ttc" id="class_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00044">mainwindow.h:44</a></div></div>
+<div class="ttc" id="class_person_html_ac89ee9923a0b4a874be8f5901e35b753"><div class="ttname"><a href="class_person.html#ac89ee9923a0b4a874be8f5901e35b753">Person::show</a></div><div class="ttdeci">void show(QTableView *table)</div><div class="ttdoc">Function to show all stored data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8cpp_source.html#l00023">person.cpp:23</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a44d044deed1ddca8952f59554705e28d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::addPath </td>
+          <td>(</td>
+          <td class="paramtype">const QDir &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to add the <em>Data</em> folder path. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Contains de PATH to de <em>Data</em> folder. </td></tr>
@@ -215,10 +250,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00023">23</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00037">37</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    this-&gt;<a class="code" href="class_main_window.html#a1dc35bda22acc11636be809539ab73d9">data</a> = <a class="code" href="class_main_window.html#a1dc35bda22acc11636be809539ab73d9">data</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="ttc" id="class_main_window_html_a1dc35bda22acc11636be809539ab73d9"><div class="ttname"><a href="class_main_window.html#a1dc35bda22acc11636be809539ab73d9">MainWindow::data</a></div><div class="ttdeci">QDir data</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00043">mainwindow.h:43</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -243,14 +279,36 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00028">28</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    qDebug() &lt;&lt; <span class="stringliteral">&quot;Botó apretat!&quot;</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<p>Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00042">42</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    qDebug() &lt;&lt; <span class="stringliteral">&quot;Botó apretat!&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a1dc35bda22acc11636be809539ab73d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QDir MainWindow::data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00043">43</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a35466a70ed47252a0191168126a352a5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -269,7 +327,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00038">38</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00044">44</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -291,7 +349,29 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00039">39</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00045">45</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d1f101eed410e692b5db9b7226174bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_person.html">Person</a> MainWindow::info</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="mainwindow_8h_source.html#l00046">46</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -302,7 +382,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 19 2014 22:25:18 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 20 2014 20:53:55 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

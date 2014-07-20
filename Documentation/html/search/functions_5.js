@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7emainwindow',['~MainWindow',['../class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]]
+  ['read',['read',['../class_person.html#a98c73f33a51b80cc9296a949f2fc5cf3',1,'Person']]]
 ];

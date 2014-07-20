@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endhelp',['endHelp',['../struct_person_1_1info.html#a1b774280eaa544c6cd8664f1d4797b6e',1,'Person::info']]]
+  ['data',['data',['../class_main_window.html#a1dc35bda22acc11636be809539ab73d9',1,'MainWindow']]]
 ];

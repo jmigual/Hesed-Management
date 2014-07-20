@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['person',['Person',['../class_person.html#a0397c6f89fafc12e738923f612bc41a3',1,'Person']]]
+  ['on_5factioninsertar_5ftriggered',['on_actionInsertar_triggered',['../class_main_window.html#a5e1e7858e4d3197098301e6743ab47c0',1,'MainWindow']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loaddata',['loadData',['../class_main_window.html#a932ff15a63daa01ca83de14172855ba3',1,'MainWindow']]]
+  ['fammembers',['famMembers',['../struct_person_1_1info.html#afc121f83e810c2c0318e115f4ba6d730',1,'Person::info']]]
 ];

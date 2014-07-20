@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loaddata',['loadData',['../class_main_window.html#a932ff15a63daa01ca83de14172855ba3',1,'MainWindow']]]
+  ['addpath',['addPath',['../class_main_window.html#a44d044deed1ddca8952f59554705e28d',1,'MainWindow']]]
 ];

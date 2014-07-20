@@ -4,6 +4,9 @@
 #include <QString>
 #include <QDate>
 #include <QDir>
+#include <QFile>
+#include <QTableView>
+#include <QtDebug>
 using namespace std;
 
 /**
@@ -27,20 +30,60 @@ private:
      *  <li>End help date</li>
      *  <li>Times helped</li>
      *  <li>Identification Number</li>
+     *  <li>Family members</li>
      * </ul>
      */
     struct info {
+        /**
+         * @var name
+         * @brief Name
+         * @var surname
+         * @brief Surname
+         * @var NIF
+         * @brief Personal NIF (Número de Identificación Fiscal)
+         * @var cNIF
+         * @brief Couple NIF (Número de Identificación Fiscal)
+         * @var adress
+         * @brief Personal home adress
+         * @var phone
+         * @brief Personal phone
+         */
         QString name, surname, NIF, cNIF, adress, phone;
+        /**
+         * @var birthDate
+         * @brief Date of birth
+         * @var beginHelp
+         * @brief First day recieved help
+         * @var endHelp
+         * @brief Finishing help date
+         */
         QDate birthDate, beginHelp, endHelp;
-        int numberHelp, ID;
+        /**
+         * @var numberHelp
+         * @brief Number of times that somebody has been helped
+         * @var famMembers
+         * @brief Amount of members in the home family
+         */
+        int numberHelp, famMembers;
+        /**
+         * @var ID
+         * @brief Identification number for internal use
+         */
+        unsigned int ID;
     };
     list<info> all;
+    unsigned int maxID;
     
 public:
     /**
      * @brief Default constructor
      */
     Person();
+    
+    /**
+     * @brief Copy constructor
+     */
+    Person(const Person &p);
     
     /**
      * @brief Function to read all stored data
@@ -50,6 +93,12 @@ public:
      * to implicit parameter.
      */
     void read(QDir data);
+    
+    /**
+     * @brief Function to show all stored data
+     * @param table Pointer to a existing TableView
+     */
+    void show(QTableView *table);
     
 };
 

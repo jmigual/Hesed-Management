@@ -27,16 +27,23 @@ public:
     
     /**
      * @brief Function that loads data when exists de <em>Data</em> folder.
+     */
+    void loadData();
+    
+    /**
+     * @brief Function to add the <em>Data</em> folder path.
      * @param data Contains de PATH to de <em>Data</em> folder.
      */
-    void loadData(QDir data);
+    void addPath(const QDir &data);
     
 private slots:
     void on_actionInsertar_triggered();
     
 private:
+    QDir data;
     Ui::MainWindow *ui;
     QStandardItemModel *model;
+    Person info;
 };
 
 #endif // MAINWINDOW_H

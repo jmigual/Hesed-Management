@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['person',['Person',['../class_person.html',1,'Person'],['../class_person.html#a0397c6f89fafc12e738923f612bc41a3',1,'Person::Person()']]],
-  ['person_2ecpp',['person.cpp',['../person_8cpp.html',1,'']]],
-  ['person_2eh',['person.h',['../person_8h.html',1,'']]],
-  ['phone',['phone',['../struct_person_1_1info.html#a410d9f283db98b67f3110be9080767a5',1,'Person::info']]]
+  ['name',['name',['../struct_person_1_1info.html#a81051c5b2abdf064395938f2f47017b8',1,'Person::info']]],
+  ['nif',['NIF',['../struct_person_1_1info.html#ab91922388b5ba74969a7d8f7a4fad95b',1,'Person::info']]],
+  ['numberhelp',['numberHelp',['../struct_person_1_1info.html#a6fd0e334bf6cc9baf667ef94806ed993',1,'Person::info']]]
 ];

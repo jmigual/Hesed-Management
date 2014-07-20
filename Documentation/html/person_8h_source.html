@@ -90,35 +90,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QDate&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QDir&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_person.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_person.html">Person</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html">   32</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_person_1_1info.html">info</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html#acf04a7168c9c5d559f2503f5c0dfe617">   33</a></span>&#160;        QString name, <a class="code" href="struct_person_1_1info.html#acf04a7168c9c5d559f2503f5c0dfe617">surname</a>, NIF, cNIF, adress, phone;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html#a1b774280eaa544c6cd8664f1d4797b6e">   34</a></span>&#160;        QDate birthDate, beginHelp, <a class="code" href="struct_person_1_1info.html#a1b774280eaa544c6cd8664f1d4797b6e">endHelp</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html#a6e17da0b05d6604b18d759363eecfc9f">   35</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_person_1_1info.html#a6e17da0b05d6604b18d759363eecfc9f">numberHelp</a>, ID;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">   37</a></span>&#160;    list&lt;info&gt; <a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_person.html">Person</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> read(QDir data);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // PERSON_H</span></div>
-<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00037">person.h:37</a></div></div>
-<div class="ttc" id="struct_person_1_1info_html"><div class="ttname"><a href="struct_person_1_1info.html">Person::info</a></div><div class="ttdoc">Struct to store basic people information. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00032">person.h:32</a></div></div>
-<div class="ttc" id="struct_person_1_1info_html_a1b774280eaa544c6cd8664f1d4797b6e"><div class="ttname"><a href="struct_person_1_1info.html#a1b774280eaa544c6cd8664f1d4797b6e">Person::info::endHelp</a></div><div class="ttdeci">QDate endHelp</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00034">person.h:34</a></div></div>
-<div class="ttc" id="struct_person_1_1info_html_acf04a7168c9c5d559f2503f5c0dfe617"><div class="ttname"><a href="struct_person_1_1info.html#acf04a7168c9c5d559f2503f5c0dfe617">Person::info::surname</a></div><div class="ttdeci">QString surname</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00033">person.h:33</a></div></div>
-<div class="ttc" id="struct_person_1_1info_html_a6e17da0b05d6604b18d759363eecfc9f"><div class="ttname"><a href="struct_person_1_1info.html#a6e17da0b05d6604b18d759363eecfc9f">Person::info::numberHelp</a></div><div class="ttdeci">int numberHelp</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00035">person.h:35</a></div></div>
-<div class="ttc" id="class_person_html"><div class="ttname"><a href="class_person.html">Person</a></div><div class="ttdoc">The Person Class contains all people basic data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00012">person.h:12</a></div></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QFile&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QTableView&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QtDebug&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_person.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_person.html">Person</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html">   36</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_person_1_1info.html">info</a> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html#a5dffef4c24ab24eaa62a3428e04b4239">   51</a></span>&#160;        QString name, <a class="code" href="struct_person_1_1info.html#a5dffef4c24ab24eaa62a3428e04b4239">surname</a>, NIF, cNIF, adress, phone;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html#acc738154c5e01adc22c880fc49d6e09c">   60</a></span>&#160;        QDate birthDate, beginHelp, <a class="code" href="struct_person_1_1info.html#acc738154c5e01adc22c880fc49d6e09c">endHelp</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html#a6fd0e334bf6cc9baf667ef94806ed993">   67</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="struct_person_1_1info.html#a6fd0e334bf6cc9baf667ef94806ed993">numberHelp</a>, famMembers;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="struct_person_1_1info.html#a535ca27747d371eb58005194190f6bd6">   72</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_person_1_1info.html#a535ca27747d371eb58005194190f6bd6">ID</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">   74</a></span>&#160;    list&lt;info&gt; <a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">   75</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="class_person.html">Person</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_person.html">Person</a>(<span class="keyword">const</span> <a class="code" href="class_person.html">Person</a> &amp;p);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> read(QDir data);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> show(QTableView *table);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif // PERSON_H</span></div>
+<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00074">person.h:74</a></div></div>
+<div class="ttc" id="struct_person_1_1info_html"><div class="ttname"><a href="struct_person_1_1info.html">Person::info</a></div><div class="ttdoc">Struct to store basic people information. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00036">person.h:36</a></div></div>
+<div class="ttc" id="struct_person_1_1info_html_acc738154c5e01adc22c880fc49d6e09c"><div class="ttname"><a href="struct_person_1_1info.html#acc738154c5e01adc22c880fc49d6e09c">Person::info::endHelp</a></div><div class="ttdeci">QDate endHelp</div><div class="ttdoc">Finishing help date. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00060">person.h:60</a></div></div>
+<div class="ttc" id="struct_person_1_1info_html_a5dffef4c24ab24eaa62a3428e04b4239"><div class="ttname"><a href="struct_person_1_1info.html#a5dffef4c24ab24eaa62a3428e04b4239">Person::info::surname</a></div><div class="ttdeci">QString surname</div><div class="ttdoc">Surname. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00051">person.h:51</a></div></div>
+<div class="ttc" id="struct_person_1_1info_html_a6fd0e334bf6cc9baf667ef94806ed993"><div class="ttname"><a href="struct_person_1_1info.html#a6fd0e334bf6cc9baf667ef94806ed993">Person::info::numberHelp</a></div><div class="ttdeci">int numberHelp</div><div class="ttdoc">Number of times that somebody has been helped. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00067">person.h:67</a></div></div>
+<div class="ttc" id="struct_person_1_1info_html_a535ca27747d371eb58005194190f6bd6"><div class="ttname"><a href="struct_person_1_1info.html#a535ca27747d371eb58005194190f6bd6">Person::info::ID</a></div><div class="ttdeci">unsigned int ID</div><div class="ttdoc">Identification number for internal use. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00072">person.h:72</a></div></div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00075">person.h:75</a></div></div>
+<div class="ttc" id="class_person_html"><div class="ttname"><a href="class_person.html">Person</a></div><div class="ttdoc">The Person Class contains all people basic data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00015">person.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 19 2014 22:25:18 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 20 2014 20:53:55 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

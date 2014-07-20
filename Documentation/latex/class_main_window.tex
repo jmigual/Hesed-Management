@@ -13,8 +13,10 @@ Class to show basic information to user.
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 \hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window} ()
 \item 
-void \hyperlink{class_main_window_a932ff15a63daa01ca83de14172855ba3}{load\+Data} (Q\+Dir data)
-\begin{DoxyCompactList}\small\item\em Function that loads data when exists de {\itshape Data} folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_main_window_a6906cd747941813c6da899b18d881473}{load\+Data} ()
+\begin{DoxyCompactList}\small\item\em Function that loads data when exists de {\itshape Data} folder. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a44d044deed1ddca8952f59554705e28d}{add\+Path} (const Q\+Dir \&\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data})
+\begin{DoxyCompactList}\small\item\em Function to add the {\itshape Data} folder path. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,9 +25,13 @@ void \hyperlink{class_main_window_a5e1e7858e4d3197098301e6743ab47c0}{on\+\_\+act
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
+Q\+Dir \hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data}
+\item 
 Ui\+::\+Main\+Window $\ast$ \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}
 \item 
 Q\+Standard\+Item\+Model $\ast$ \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model}
+\item 
+\hyperlink{class_person}{Person} \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}
 \end{DoxyCompactItemize}
 
 
@@ -55,21 +61,21 @@ Default constructor.
 \end{DoxyParams}
 
 
-Definition at line 5 of file mainwindow.\+cpp.
+Definition at line 9 of file mainwindow.\+cpp.
 
 
 \begin{DoxyCode}
-5                                      :QMainWindow(parent),
-6     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}(\textcolor{keyword}{new} Ui::MainWindow)
-7 \{
-8     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->setupUi(\textcolor{keyword}{this});
-9     \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model} = \textcolor{keyword}{new} QStandardItemModel();
-10     QStringList titols;
-11     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"};
-12     \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model}->setHorizontalHeaderLabels(titols);
-13     
-14     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView->setModel(\hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model});
-15 \}
+9                                      :QMainWindow(parent),
+10     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}(\textcolor{keyword}{new} Ui::MainWindow)
+11 \{
+12     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->setupUi(\textcolor{keyword}{this});
+13     \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model} = \textcolor{keyword}{new} QStandardItemModel();
+14     QStringList titols;
+15     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"};
+16     \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model}->setHorizontalHeaderLabels(titols);
+17     
+18     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView->setModel(\hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model});
+19 \}
 \end{DoxyCode}
 \hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\index{Main\+Window@{Main\+Window}!````~Main\+Window@{$\sim$\+Main\+Window}}
 \index{````~Main\+Window@{$\sim$\+Main\+Window}!Main\+Window@{Main\+Window}}
@@ -80,28 +86,50 @@ Definition at line 5 of file mainwindow.\+cpp.
 )}}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}
 
 
-Definition at line 17 of file mainwindow.\+cpp.
+Definition at line 21 of file mainwindow.\+cpp.
 
 
 \begin{DoxyCode}
-18 \{
-19     \textcolor{keyword}{delete} \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui};
-20     \textcolor{keyword}{delete} \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model};
-21 \}
+22 \{
+23     \textcolor{keyword}{delete} \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui};
+24     \textcolor{keyword}{delete} \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model};
+25 \}
 \end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_main_window_a932ff15a63daa01ca83de14172855ba3}{\index{Main\+Window@{Main\+Window}!load\+Data@{load\+Data}}
+\hypertarget{class_main_window_a6906cd747941813c6da899b18d881473}{\index{Main\+Window@{Main\+Window}!load\+Data@{load\+Data}}
 \index{load\+Data@{load\+Data}!Main\+Window@{Main\+Window}}
 \subsubsection[{load\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::load\+Data (
 \begin{DoxyParamCaption}
-\item[{Q\+Dir}]{data}
+{}
 \end{DoxyParamCaption}
-)}}\label{class_main_window_a932ff15a63daa01ca83de14172855ba3}
+)}}\label{class_main_window_a6906cd747941813c6da899b18d881473}
 
 
 Function that loads data when exists de {\itshape Data} folder. 
+
+
+
+Definition at line 31 of file mainwindow.\+cpp.
+
+
+\begin{DoxyCode}
+32 \{
+33     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{read}(\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data});
+34     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_ac89ee9923a0b4a874be8f5901e35b753}{show}(\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView);
+35 \}
+\end{DoxyCode}
+\hypertarget{class_main_window_a44d044deed1ddca8952f59554705e28d}{\index{Main\+Window@{Main\+Window}!add\+Path@{add\+Path}}
+\index{add\+Path@{add\+Path}!Main\+Window@{Main\+Window}}
+\subsubsection[{add\+Path}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::add\+Path (
+\begin{DoxyParamCaption}
+\item[{const Q\+Dir \&}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_a44d044deed1ddca8952f59554705e28d}
+
+
+Function to add the {\itshape Data} folder path. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -110,13 +138,13 @@ Function that loads data when exists de {\itshape Data} folder.
 \end{DoxyParams}
 
 
-Definition at line 23 of file mainwindow.\+cpp.
+Definition at line 37 of file mainwindow.\+cpp.
 
 
 \begin{DoxyCode}
-24 \{
-25     
-26 \}
+38 \{
+39     this->\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data} = \hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data};
+40 \}
 \end{DoxyCode}
 \hypertarget{class_main_window_a5e1e7858e4d3197098301e6743ab47c0}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Insertar\+\_\+triggered@{on\+\_\+action\+Insertar\+\_\+triggered}}
 \index{on\+\_\+action\+Insertar\+\_\+triggered@{on\+\_\+action\+Insertar\+\_\+triggered}!Main\+Window@{Main\+Window}}
@@ -127,30 +155,44 @@ Definition at line 23 of file mainwindow.\+cpp.
 )\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a5e1e7858e4d3197098301e6743ab47c0}
 
 
-Definition at line 28 of file mainwindow.\+cpp.
+Definition at line 42 of file mainwindow.\+cpp.
 
 
 \begin{DoxyCode}
-29 \{
-30     qDebug() << \textcolor{stringliteral}{"Botó apretat!"};
-31 \}
+43 \{
+44     qDebug() << \textcolor{stringliteral}{"Botó apretat!"};
+45 \}
 \end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_main_window_a1dc35bda22acc11636be809539ab73d9}{\index{Main\+Window@{Main\+Window}!data@{data}}
+\index{data@{data}!Main\+Window@{Main\+Window}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir Main\+Window\+::data\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a1dc35bda22acc11636be809539ab73d9}
+
+
+Definition at line 43 of file mainwindow.\+h.
+
 \hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}{\index{Main\+Window@{Main\+Window}!ui@{ui}}
 \index{ui@{ui}!Main\+Window@{Main\+Window}}
 \subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a35466a70ed47252a0191168126a352a5}
 
 
-Definition at line 38 of file mainwindow.\+h.
+Definition at line 44 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{\index{Main\+Window@{Main\+Window}!model@{model}}
 \index{model@{model}!Main\+Window@{Main\+Window}}
 \subsubsection[{model}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Standard\+Item\+Model$\ast$ Main\+Window\+::model\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}
 
 
-Definition at line 39 of file mainwindow.\+h.
+Definition at line 45 of file mainwindow.\+h.
+
+\hypertarget{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{\index{Main\+Window@{Main\+Window}!info@{info}}
+\index{info@{info}!Main\+Window@{Main\+Window}}
+\subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Person} Main\+Window\+::info\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a2d1f101eed410e692b5db9b7226174bf}
+
+
+Definition at line 46 of file mainwindow.\+h.
 
 
 

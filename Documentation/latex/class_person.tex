@@ -16,19 +16,25 @@ struct \hyperlink{struct_person_1_1info}{info}
 \item 
 \hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{Person} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_person_a847845e2e214a89e790c584678f1ea97}{Person} (const \hyperlink{class_person}{Person} \&p)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
 void \hyperlink{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{read} (Q\+Dir data)
-\begin{DoxyCompactList}\small\item\em Function to read all stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function to read all stored data. \end{DoxyCompactList}\item 
+void \hyperlink{class_person_ac89ee9923a0b4a874be8f5901e35b753}{show} (Q\+Table\+View $\ast$table)
+\begin{DoxyCompactList}\small\item\em Function to show all stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 list$<$ \hyperlink{struct_person_1_1info}{info} $>$ \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}
+\item 
+unsigned int \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{max\+I\+D}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 The \hyperlink{class_person}{Person} Class contains all people basic data. 
 
-Definition at line 12 of file person.\+h.
+Definition at line 15 of file person.\+h.
 
 
 
@@ -51,8 +57,30 @@ Definition at line 3 of file person.\+cpp.
 
 \begin{DoxyCode}
 4 \{
-5     
+5     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = 0;
 6 \}
+\end{DoxyCode}
+\hypertarget{class_person_a847845e2e214a89e790c584678f1ea97}{\index{Person@{Person}!Person@{Person}}
+\index{Person@{Person}!Person@{Person}}
+\subsubsection[{Person}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::\+Person (
+\begin{DoxyParamCaption}
+\item[{const {\bf Person} \&}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_person_a847845e2e214a89e790c584678f1ea97}
+
+
+Copy constructor. 
+
+
+
+Definition at line 8 of file person.\+cpp.
+
+
+\begin{DoxyCode}
+9 \{
+10     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = p.\hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+11     \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all} = p.\hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all};
+12 \}
 \end{DoxyCode}
 
 
@@ -81,13 +109,60 @@ All data stored in {\itshape datafile.\+db} has been read and stored to implicit
 \end{DoxyPostcond}
 
 
+Definition at line 14 of file person.\+cpp.
+
+
+\begin{DoxyCode}
+15 \{
+16     QFile dataFile(data.filePath(\textcolor{stringliteral}{"datafile.db"}));
+17     \textcolor{keywordflow}{if}(not dataFile.open(QIODevice::ReadWrite)) \{
+18         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << dataFile.fileName();
+19     \}
+20     dataFile.close();
+21 \}
+\end{DoxyCode}
+\hypertarget{class_person_ac89ee9923a0b4a874be8f5901e35b753}{\index{Person@{Person}!show@{show}}
+\index{show@{show}!Person@{Person}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::show (
+\begin{DoxyParamCaption}
+\item[{Q\+Table\+View $\ast$}]{table}
+\end{DoxyParamCaption}
+)}}\label{class_person_ac89ee9923a0b4a874be8f5901e35b753}
+
+
+Function to show all stored data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Pointer to a existing Table\+View \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file person.\+cpp.
+
+
+\begin{DoxyCode}
+24 \{
+25     
+26 \}
+\end{DoxyCode}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{\index{Person@{Person}!all@{all}}
 \index{all@{all}!Person@{Person}}
 \subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf info}$>$ Person\+::all\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}
 
 
-Definition at line 37 of file person.\+h.
+Definition at line 74 of file person.\+h.
+
+\hypertarget{class_person_a816ee6194426eb703b61ae267e8e8ee6}{\index{Person@{Person}!max\+I\+D@{max\+I\+D}}
+\index{max\+I\+D@{max\+I\+D}!Person@{Person}}
+\subsubsection[{max\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Person\+::max\+I\+D\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a816ee6194426eb703b61ae267e8e8ee6}
+
+
+Definition at line 75 of file person.\+h.
 
 
 

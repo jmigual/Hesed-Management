@@ -2,6 +2,10 @@
 #include "ui_mainwindow.h"
 #include <QtDebug>
 
+/****************
+ * CONSTRUCTORS *
+ ****************/
+
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
@@ -20,9 +24,19 @@ MainWindow::~MainWindow()
     delete model;
 }
 
-void MainWindow::loadData(QDir data)
+/***************
+ *  MODIFIERS  *
+ ***************/
+
+void MainWindow::loadData()
 {
-    
+    info.read(data);
+    info.show(ui->tableView);
+}
+
+void MainWindow::addPath(const QDir &data)
+{
+    this->data = data;
 }
 
 void MainWindow::on_actionInsertar_triggered()

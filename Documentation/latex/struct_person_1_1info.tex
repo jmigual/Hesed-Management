@@ -9,28 +9,30 @@ Struct to store basic people information.
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Q\+String \hyperlink{struct_person_1_1info_a8ab46165bb77b7882e956aba3101fa85}{name}
-\item 
-Q\+String \hyperlink{struct_person_1_1info_acf04a7168c9c5d559f2503f5c0dfe617}{surname}
-\item 
-Q\+String \hyperlink{struct_person_1_1info_ad60a1409eef3fa675d378d34f0a23318}{N\+I\+F}
-\item 
-Q\+String \hyperlink{struct_person_1_1info_a05bf59483c45d0cefac792cd143746b3}{c\+N\+I\+F}
-\item 
-Q\+String \hyperlink{struct_person_1_1info_a9842940ff9863d4643bedb4c1c3a66bb}{adress}
-\item 
-Q\+String \hyperlink{struct_person_1_1info_a410d9f283db98b67f3110be9080767a5}{phone}
-\item 
-Q\+Date \hyperlink{struct_person_1_1info_ae35b9afac92191fa90ba28dce704c4de}{birth\+Date}
-\item 
-Q\+Date \hyperlink{struct_person_1_1info_a77c4910695598cdba10e16081b858860}{begin\+Help}
-\item 
-Q\+Date \hyperlink{struct_person_1_1info_a1b774280eaa544c6cd8664f1d4797b6e}{end\+Help}
-\item 
-int \hyperlink{struct_person_1_1info_a6e17da0b05d6604b18d759363eecfc9f}{number\+Help}
-\item 
-int \hyperlink{struct_person_1_1info_a50a0afa03e7717b606892e8bfa9100da}{I\+D}
-\end{DoxyCompactItemize}
+Q\+String \hyperlink{struct_person_1_1info_a81051c5b2abdf064395938f2f47017b8}{name}
+\begin{DoxyCompactList}\small\item\em Name. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{struct_person_1_1info_a5dffef4c24ab24eaa62a3428e04b4239}{surname}
+\begin{DoxyCompactList}\small\item\em Surname. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{struct_person_1_1info_ab91922388b5ba74969a7d8f7a4fad95b}{N\+I\+F}
+\begin{DoxyCompactList}\small\item\em Personal N\+I\+F (Número de Identificación Fiscal) \end{DoxyCompactList}\item 
+Q\+String \hyperlink{struct_person_1_1info_a3ee6bcba23c2257f4571084e7a734e6d}{c\+N\+I\+F}
+\begin{DoxyCompactList}\small\item\em Couple N\+I\+F (Número de Identificación Fiscal) \end{DoxyCompactList}\item 
+Q\+String \hyperlink{struct_person_1_1info_a350817c964e878c2c59019eb51e9f608}{adress}
+\begin{DoxyCompactList}\small\item\em Personal home adress. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{struct_person_1_1info_a07a8d88e73398595a0e0282eaffe9fef}{phone}
+\begin{DoxyCompactList}\small\item\em Personal phone. \end{DoxyCompactList}\item 
+Q\+Date \hyperlink{struct_person_1_1info_a803a2ee586aaa2503e10447b1435e916}{birth\+Date}
+\begin{DoxyCompactList}\small\item\em Date of birth. \end{DoxyCompactList}\item 
+Q\+Date \hyperlink{struct_person_1_1info_a835c907e641433331e06c62bcde9dfe9}{begin\+Help}
+\begin{DoxyCompactList}\small\item\em First day recieved help. \end{DoxyCompactList}\item 
+Q\+Date \hyperlink{struct_person_1_1info_acc738154c5e01adc22c880fc49d6e09c}{end\+Help}
+\begin{DoxyCompactList}\small\item\em Finishing help date. \end{DoxyCompactList}\item 
+int \hyperlink{struct_person_1_1info_a6fd0e334bf6cc9baf667ef94806ed993}{number\+Help}
+\begin{DoxyCompactList}\small\item\em Number of times that somebody has been helped. \end{DoxyCompactList}\item 
+int \hyperlink{struct_person_1_1info_afc121f83e810c2c0318e115f4ba6d730}{fam\+Members}
+\begin{DoxyCompactList}\small\item\em Amount of members in the home family. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_person_1_1info_a535ca27747d371eb58005194190f6bd6}{I\+D}
+\begin{DoxyCompactList}\small\item\em Identification number for internal use. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -49,89 +51,145 @@ Stored info is\+:
 \item End help date 
 \item Times helped 
 \item Identification Number 
+\item Family members 
 \end{DoxyItemize}
 
-Definition at line 32 of file person.\+h.
+Definition at line 36 of file person.\+h.
 
 
 
 \subsection{Member Data Documentation}
-\hypertarget{struct_person_1_1info_a8ab46165bb77b7882e956aba3101fa85}{\index{Person\+::info@{Person\+::info}!name@{name}}
+\hypertarget{struct_person_1_1info_a81051c5b2abdf064395938f2f47017b8}{\index{Person\+::info@{Person\+::info}!name@{name}}
 \index{name@{name}!Person\+::info@{Person\+::info}}
-\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Person\+::info\+::name}}\label{struct_person_1_1info_a8ab46165bb77b7882e956aba3101fa85}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::name}}\label{struct_person_1_1info_a81051c5b2abdf064395938f2f47017b8}
 
 
-Definition at line 33 of file person.\+h.
+Name. 
 
-\hypertarget{struct_person_1_1info_acf04a7168c9c5d559f2503f5c0dfe617}{\index{Person\+::info@{Person\+::info}!surname@{surname}}
+
+
+Definition at line 51 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_a5dffef4c24ab24eaa62a3428e04b4239}{\index{Person\+::info@{Person\+::info}!surname@{surname}}
 \index{surname@{surname}!Person\+::info@{Person\+::info}}
-\subsubsection[{surname}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Person\+::info\+::surname}}\label{struct_person_1_1info_acf04a7168c9c5d559f2503f5c0dfe617}
+\subsubsection[{surname}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::surname}}\label{struct_person_1_1info_a5dffef4c24ab24eaa62a3428e04b4239}
 
 
-Definition at line 33 of file person.\+h.
+Surname. 
 
-\hypertarget{struct_person_1_1info_ad60a1409eef3fa675d378d34f0a23318}{\index{Person\+::info@{Person\+::info}!N\+I\+F@{N\+I\+F}}
+
+
+Definition at line 51 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_ab91922388b5ba74969a7d8f7a4fad95b}{\index{Person\+::info@{Person\+::info}!N\+I\+F@{N\+I\+F}}
 \index{N\+I\+F@{N\+I\+F}!Person\+::info@{Person\+::info}}
-\subsubsection[{N\+I\+F}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Person\+::info\+::\+N\+I\+F}}\label{struct_person_1_1info_ad60a1409eef3fa675d378d34f0a23318}
+\subsubsection[{N\+I\+F}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::\+N\+I\+F}}\label{struct_person_1_1info_ab91922388b5ba74969a7d8f7a4fad95b}
 
 
-Definition at line 33 of file person.\+h.
+Personal N\+I\+F (Número de Identificación Fiscal) 
 
-\hypertarget{struct_person_1_1info_a05bf59483c45d0cefac792cd143746b3}{\index{Person\+::info@{Person\+::info}!c\+N\+I\+F@{c\+N\+I\+F}}
+
+
+Definition at line 51 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_a3ee6bcba23c2257f4571084e7a734e6d}{\index{Person\+::info@{Person\+::info}!c\+N\+I\+F@{c\+N\+I\+F}}
 \index{c\+N\+I\+F@{c\+N\+I\+F}!Person\+::info@{Person\+::info}}
-\subsubsection[{c\+N\+I\+F}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Person\+::info\+::c\+N\+I\+F}}\label{struct_person_1_1info_a05bf59483c45d0cefac792cd143746b3}
+\subsubsection[{c\+N\+I\+F}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::c\+N\+I\+F}}\label{struct_person_1_1info_a3ee6bcba23c2257f4571084e7a734e6d}
 
 
-Definition at line 33 of file person.\+h.
+Couple N\+I\+F (Número de Identificación Fiscal) 
 
-\hypertarget{struct_person_1_1info_a9842940ff9863d4643bedb4c1c3a66bb}{\index{Person\+::info@{Person\+::info}!adress@{adress}}
+
+
+Definition at line 51 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_a350817c964e878c2c59019eb51e9f608}{\index{Person\+::info@{Person\+::info}!adress@{adress}}
 \index{adress@{adress}!Person\+::info@{Person\+::info}}
-\subsubsection[{adress}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Person\+::info\+::adress}}\label{struct_person_1_1info_a9842940ff9863d4643bedb4c1c3a66bb}
+\subsubsection[{adress}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::adress}}\label{struct_person_1_1info_a350817c964e878c2c59019eb51e9f608}
 
 
-Definition at line 33 of file person.\+h.
+Personal home adress. 
 
-\hypertarget{struct_person_1_1info_a410d9f283db98b67f3110be9080767a5}{\index{Person\+::info@{Person\+::info}!phone@{phone}}
+
+
+Definition at line 51 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_a07a8d88e73398595a0e0282eaffe9fef}{\index{Person\+::info@{Person\+::info}!phone@{phone}}
 \index{phone@{phone}!Person\+::info@{Person\+::info}}
-\subsubsection[{phone}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Person\+::info\+::phone}}\label{struct_person_1_1info_a410d9f283db98b67f3110be9080767a5}
+\subsubsection[{phone}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::phone}}\label{struct_person_1_1info_a07a8d88e73398595a0e0282eaffe9fef}
 
 
-Definition at line 33 of file person.\+h.
+Personal phone. 
 
-\hypertarget{struct_person_1_1info_ae35b9afac92191fa90ba28dce704c4de}{\index{Person\+::info@{Person\+::info}!birth\+Date@{birth\+Date}}
+
+
+Definition at line 51 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_a803a2ee586aaa2503e10447b1435e916}{\index{Person\+::info@{Person\+::info}!birth\+Date@{birth\+Date}}
 \index{birth\+Date@{birth\+Date}!Person\+::info@{Person\+::info}}
-\subsubsection[{birth\+Date}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Person\+::info\+::birth\+Date}}\label{struct_person_1_1info_ae35b9afac92191fa90ba28dce704c4de}
+\subsubsection[{birth\+Date}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::birth\+Date}}\label{struct_person_1_1info_a803a2ee586aaa2503e10447b1435e916}
 
 
-Definition at line 34 of file person.\+h.
+Date of birth. 
 
-\hypertarget{struct_person_1_1info_a77c4910695598cdba10e16081b858860}{\index{Person\+::info@{Person\+::info}!begin\+Help@{begin\+Help}}
+
+
+Definition at line 60 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_a835c907e641433331e06c62bcde9dfe9}{\index{Person\+::info@{Person\+::info}!begin\+Help@{begin\+Help}}
 \index{begin\+Help@{begin\+Help}!Person\+::info@{Person\+::info}}
-\subsubsection[{begin\+Help}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Person\+::info\+::begin\+Help}}\label{struct_person_1_1info_a77c4910695598cdba10e16081b858860}
+\subsubsection[{begin\+Help}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::begin\+Help}}\label{struct_person_1_1info_a835c907e641433331e06c62bcde9dfe9}
 
 
-Definition at line 34 of file person.\+h.
+First day recieved help. 
 
-\hypertarget{struct_person_1_1info_a1b774280eaa544c6cd8664f1d4797b6e}{\index{Person\+::info@{Person\+::info}!end\+Help@{end\+Help}}
+
+
+Definition at line 60 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_acc738154c5e01adc22c880fc49d6e09c}{\index{Person\+::info@{Person\+::info}!end\+Help@{end\+Help}}
 \index{end\+Help@{end\+Help}!Person\+::info@{Person\+::info}}
-\subsubsection[{end\+Help}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date Person\+::info\+::end\+Help}}\label{struct_person_1_1info_a1b774280eaa544c6cd8664f1d4797b6e}
+\subsubsection[{end\+Help}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::end\+Help}}\label{struct_person_1_1info_acc738154c5e01adc22c880fc49d6e09c}
 
 
-Definition at line 34 of file person.\+h.
+Finishing help date. 
 
-\hypertarget{struct_person_1_1info_a6e17da0b05d6604b18d759363eecfc9f}{\index{Person\+::info@{Person\+::info}!number\+Help@{number\+Help}}
+
+
+Definition at line 60 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_a6fd0e334bf6cc9baf667ef94806ed993}{\index{Person\+::info@{Person\+::info}!number\+Help@{number\+Help}}
 \index{number\+Help@{number\+Help}!Person\+::info@{Person\+::info}}
-\subsubsection[{number\+Help}]{\setlength{\rightskip}{0pt plus 5cm}int Person\+::info\+::number\+Help}}\label{struct_person_1_1info_a6e17da0b05d6604b18d759363eecfc9f}
+\subsubsection[{number\+Help}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::number\+Help}}\label{struct_person_1_1info_a6fd0e334bf6cc9baf667ef94806ed993}
 
 
-Definition at line 35 of file person.\+h.
+Number of times that somebody has been helped. 
 
-\hypertarget{struct_person_1_1info_a50a0afa03e7717b606892e8bfa9100da}{\index{Person\+::info@{Person\+::info}!I\+D@{I\+D}}
+
+
+Definition at line 67 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_afc121f83e810c2c0318e115f4ba6d730}{\index{Person\+::info@{Person\+::info}!fam\+Members@{fam\+Members}}
+\index{fam\+Members@{fam\+Members}!Person\+::info@{Person\+::info}}
+\subsubsection[{fam\+Members}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::fam\+Members}}\label{struct_person_1_1info_afc121f83e810c2c0318e115f4ba6d730}
+
+
+Amount of members in the home family. 
+
+
+
+Definition at line 67 of file person.\+h.
+
+\hypertarget{struct_person_1_1info_a535ca27747d371eb58005194190f6bd6}{\index{Person\+::info@{Person\+::info}!I\+D@{I\+D}}
 \index{I\+D@{I\+D}!Person\+::info@{Person\+::info}}
-\subsubsection[{I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int Person\+::info\+::\+I\+D}}\label{struct_person_1_1info_a50a0afa03e7717b606892e8bfa9100da}
+\subsubsection[{I\+D}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::info\+::\+I\+D}}\label{struct_person_1_1info_a535ca27747d371eb58005194190f6bd6}
 
 
-Definition at line 35 of file person.\+h.
+Identification number for internal use. 
+
+
+
+Definition at line 72 of file person.\+h.
 
 
 

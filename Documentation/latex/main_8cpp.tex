@@ -26,21 +26,29 @@ int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, cha
 )}}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
 
 
-Definition at line 7 of file main.\+cpp.
+Definition at line 8 of file main.\+cpp.
 
 
 \begin{DoxyCode}
-8 \{
-9     QApplication a(argc, argv);
-10     \hyperlink{class_main_window}{MainWindow} w;
-11     w.showMaximized();
-12     QDir data;
-13     \textcolor{keywordflow}{if} (data.exists(QStandardPaths::writableLocation(QStandardPaths::DataLocation))) \{
-14         qDebug() << \textcolor{stringliteral}{"Trobat"};
-15         w.\hyperlink{class_main_window_a932ff15a63daa01ca83de14172855ba3}{loadData}(data);
-16     \}
-17     \textcolor{keywordflow}{else} qDebug() << \textcolor{stringliteral}{"No s'ha trobat"};
-18     
-19     \textcolor{keywordflow}{return} a.exec();
-20 \}
+9 \{
+10     QApplication a(argc, argv);
+11     \hyperlink{class_main_window}{MainWindow} w;
+12     
+13     QString path(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+14     qDebug() << path;
+15     QDir data(path);
+16     w.\hyperlink{class_main_window_a44d044deed1ddca8952f59554705e28d}{addPath}(data);
+17     \textcolor{keywordflow}{if} (data.exists()) \{
+18         qDebug() << \textcolor{stringliteral}{"Trobat"};
+19         w.\hyperlink{class_main_window_a6906cd747941813c6da899b18d881473}{loadData}();
+20     \}
+21     \textcolor{keywordflow}{else} \{
+22         qDebug() << \textcolor{stringliteral}{"No s'ha trobat, creant directori"};
+23         data.mkpath(path);
+24     \}
+25     
+26     w.showMaximized();
+27     
+28     \textcolor{keywordflow}{return} a.exec();
+29 \}
 \end{DoxyCode}
