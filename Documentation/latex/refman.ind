@@ -1,0 +1,43 @@
+\begin{theindex}
+
+  \item {all}
+    \subitem {Person}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Person}, \hyperpage{10}
+    \subitem {all}, \hyperpage{14}
+    \subitem {Person}, \hyperpage{11}
+    \subitem {read}, \hyperpage{11}
+    \subitem {show}, \hyperpage{13}
+    \subitem {sort}, \hyperpage{12}
+    \subitem {table}, \hyperpage{14}
+    \subitem {write}, \hyperpage{12}
+
+  \indexspace
+
+  \item {read}
+    \subitem {Person}, \hyperpage{11}
+
+  \indexspace
+
+  \item {show}
+    \subitem {Person}, \hyperpage{13}
+  \item {sort}
+    \subitem {Person}, \hyperpage{12}
+
+  \indexspace
+
+  \item {table}
+    \subitem {Person}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Ui}, \hyperpage{1}
+
+  \indexspace
+
+  \item {write}
+    \subitem {Person}, \hyperpage{12}
+
+\end{theindex}

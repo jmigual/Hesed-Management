@@ -21,7 +21,7 @@ HEADERS  += \
     person.h
 
 FORMS    += \
-    mainwindow.ui 
+    mainwindow.ui  
 
 RESOURCES += \
     Resources.qrc

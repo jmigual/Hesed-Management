@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ui',['ui',['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow']]]
+  ['table',['table',['../class_person.html#aefba04c96d0d90ab2b220e6ad704c55a',1,'Person']]]
 ];

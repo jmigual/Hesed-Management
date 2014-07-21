@@ -26,7 +26,9 @@ void \hyperlink{class_person_aa667ce32c0552e818ac6df14c9a5f50d}{write} (Q\+Dir d
 \begin{DoxyCompactList}\small\item\em Function to store all data to a file. \end{DoxyCompactList}\item 
 void \hyperlink{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{sort} (int type)
 \begin{DoxyCompactList}\small\item\em Function to sort the data with the specified metod. \end{DoxyCompactList}\item 
-void \hyperlink{class_person_ac89ee9923a0b4a874be8f5901e35b753}{show} (Q\+Table\+View $\ast$table)
+void \hyperlink{class_person_a100215914f651662a6207722ef28769e}{add\+Table} (Q\+Table\+View $\ast$t)
+\begin{DoxyCompactList}\small\item\em Adds the pointer to a Q\+Table\+View. \end{DoxyCompactList}\item 
+void \hyperlink{class_person_a2f1231629a6e7e8c83ada57628e80a89}{show} ()
 \begin{DoxyCompactList}\small\item\em Function to show all stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -34,13 +36,15 @@ void \hyperlink{class_person_ac89ee9923a0b4a874be8f5901e35b753}{show} (Q\+Table\
 list$<$ \hyperlink{struct_person_1_1info}{info} $>$ \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}
 \begin{DoxyCompactList}\small\item\em List to store all data. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{max\+I\+D}
-\begin{DoxyCompactList}\small\item\em Contains de maximum I\+D that has ever been assigned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Contains de maximum I\+D that has ever been assigned. \end{DoxyCompactList}\item 
+Q\+Table\+View $\ast$ \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 The \hyperlink{class_person}{Person} Class contains all people basic data. 
 
-Definition at line 15 of file person.\+h.
+Definition at line 16 of file person.\+h.
 
 
 
@@ -230,33 +234,65 @@ Definition at line 57 of file person.\+cpp.
 61         a.select(type);
 62         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.sort(a);
 63     \}
-64 \}
+64     \textcolor{keywordflow}{else} qWarning() << \textcolor{stringliteral}{"Error while trying to sort"};
+65 \}
 \end{DoxyCode}
-\hypertarget{class_person_ac89ee9923a0b4a874be8f5901e35b753}{\index{Person@{Person}!show@{show}}
+\hypertarget{class_person_a100215914f651662a6207722ef28769e}{\index{Person@{Person}!add\+Table@{add\+Table}}
+\index{add\+Table@{add\+Table}!Person@{Person}}
+\subsubsection[{add\+Table}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::add\+Table (
+\begin{DoxyParamCaption}
+\item[{Q\+Table\+View $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_person_a100215914f651662a6207722ef28769e}
+
+
+Adds the pointer to a Q\+Table\+View. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Pointer to a Q\+Tablet\+View \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+t is not N\+U\+L\+L 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The pointer has been added 
+\end{DoxyPostcond}
+
+
+Definition at line 67 of file person.\+cpp.
+
+
+\begin{DoxyCode}
+67 \{ \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table} = t; \}
+\end{DoxyCode}
+\hypertarget{class_person_a2f1231629a6e7e8c83ada57628e80a89}{\index{Person@{Person}!show@{show}}
 \index{show@{show}!Person@{Person}}
 \subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::show (
 \begin{DoxyParamCaption}
-\item[{Q\+Table\+View $\ast$}]{table}
+{}
 \end{DoxyParamCaption}
-)}}\label{class_person_ac89ee9923a0b4a874be8f5901e35b753}
+)}}\label{class_person_a2f1231629a6e7e8c83ada57628e80a89}
 
 
 Function to show all stored data. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em table} & Pointer to a existing Table\+View \\
-\hline
-\end{DoxyParams}
 
-
-Definition at line 70 of file person.\+cpp.
+Definition at line 73 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-71 \{
-72 
-73 \}
+74 \{
+75     QStandardItemModel *model = \textcolor{keyword}{new} QStandardItemModel();
+76     QStringList titols;
+77     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"} << \textcolor{stringliteral}{"Nº Ajudat"}
+78            << \textcolor{stringliteral}{"Membres"};
+79     model->setHorizontalHeaderLabels(titols);
+80     
+81     \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table}->setModel(model);
+82 \}
 \end{DoxyCode}
 
 
@@ -270,7 +306,7 @@ List to store all data.
 
 
 
-Definition at line 138 of file person.\+h.
+Definition at line 139 of file person.\+h.
 
 \hypertarget{class_person_a816ee6194426eb703b61ae267e8e8ee6}{\index{Person@{Person}!max\+I\+D@{max\+I\+D}}
 \index{max\+I\+D@{max\+I\+D}!Person@{Person}}
@@ -281,7 +317,14 @@ Contains de maximum I\+D that has ever been assigned.
 
 
 
-Definition at line 142 of file person.\+h.
+Definition at line 143 of file person.\+h.
+
+\hypertarget{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{\index{Person@{Person}!table@{table}}
+\index{table@{table}!Person@{Person}}
+\subsubsection[{table}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Table\+View$\ast$ Person\+::table\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_aefba04c96d0d90ab2b220e6ad704c55a}
+
+
+Definition at line 144 of file person.\+h.
 
 
 

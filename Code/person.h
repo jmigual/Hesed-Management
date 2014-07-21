@@ -7,6 +7,7 @@
 #include <QFile>
 #include <QTableView>
 #include <QtDebug>
+#include <QStandardItemModel>
 using namespace std;
 
 /**
@@ -140,6 +141,7 @@ private:
      * @brief Contains de maximum ID that has ever been assigned
      */
     unsigned int maxID;
+    QTableView *table;
     
 public:
     
@@ -179,7 +181,6 @@ public:
      */
     void write(QDir data);
     
-    
     /**
      * @brief Function to sort the data with the specified metod
      * 
@@ -205,10 +206,23 @@ public:
     void sort(int type);
     
     /**
-     * @brief Function to show all stored data
-     * @param table Pointer to a existing TableView
+     * @brief Adds the pointer to a QTableView
+     * @param t Pointer to a QTabletView
+     * @pre t is not NULL
+     * @post The pointer has been added
      */
-    void show(QTableView *table);    
+    void addTable(QTableView *t);
+    
+    void addInfo();
+    
+    /***************
+     *  CONSULTOR  *
+     ***************/
+    
+    /**
+     * @brief Function to show all stored data
+     */
+    void show();    
 };
 
 #endif // PERSON_H

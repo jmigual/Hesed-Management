@@ -24,8 +24,6 @@ Q\+Dir \hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data}
 \item 
 Ui\+::\+Main\+Window $\ast$ \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}
 \item 
-Q\+Standard\+Item\+Model $\ast$ \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model}
-\item 
 \hyperlink{class_person}{Person} \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}
 \end{DoxyCompactItemize}
 
@@ -33,7 +31,7 @@ Q\+Standard\+Item\+Model $\ast$ \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70
 \subsection{Detailed Description}
 Class to show basic information to user. 
 
-Definition at line 16 of file mainwindow.\+h.
+Definition at line 15 of file mainwindow.\+h.
 
 
 
@@ -64,13 +62,7 @@ Definition at line 9 of file mainwindow.\+cpp.
 10     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}(\textcolor{keyword}{new} Ui::MainWindow)
 11 \{
 12     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->setupUi(\textcolor{keyword}{this});
-13     \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model} = \textcolor{keyword}{new} QStandardItemModel();
-14     QStringList titols;
-15     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"};
-16     \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model}->setHorizontalHeaderLabels(titols);
-17     
-18     \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView->setModel(\hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model});
-19 \}
+13 \}
 \end{DoxyCode}
 \hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\index{Main\+Window@{Main\+Window}!````~Main\+Window@{$\sim$\+Main\+Window}}
 \index{````~Main\+Window@{$\sim$\+Main\+Window}!Main\+Window@{Main\+Window}}
@@ -81,14 +73,13 @@ Definition at line 9 of file mainwindow.\+cpp.
 )}}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}
 
 
-Definition at line 21 of file mainwindow.\+cpp.
+Definition at line 15 of file mainwindow.\+cpp.
 
 
 \begin{DoxyCode}
-22 \{
-23     \textcolor{keyword}{delete} \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui};
-24     \textcolor{keyword}{delete} \hyperlink{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{model};
-25 \}
+16 \{
+17     \textcolor{keyword}{delete} \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui};
+18 \}
 \end{DoxyCode}
 
 
@@ -106,14 +97,15 @@ Function that loads data when exists de {\itshape Data} folder.
 
 
 
-Definition at line 31 of file mainwindow.\+cpp.
+Definition at line 24 of file mainwindow.\+cpp.
 
 
 \begin{DoxyCode}
-32 \{
-33     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{read}(\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data});
-34     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_ac89ee9923a0b4a874be8f5901e35b753}{show}(\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView);
-35 \}
+25 \{
+26     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{read}(\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data});
+27     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a100215914f651662a6207722ef28769e}{addTable}(\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView);
+28     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a2f1231629a6e7e8c83ada57628e80a89}{show}();
+29 \}
 \end{DoxyCode}
 \hypertarget{class_main_window_a44d044deed1ddca8952f59554705e28d}{\index{Main\+Window@{Main\+Window}!add\+Path@{add\+Path}}
 \index{add\+Path@{add\+Path}!Main\+Window@{Main\+Window}}
@@ -133,13 +125,13 @@ Function to add the {\itshape Data} folder path.
 \end{DoxyParams}
 
 
-Definition at line 37 of file mainwindow.\+cpp.
+Definition at line 31 of file mainwindow.\+cpp.
 
 
 \begin{DoxyCode}
-38 \{
-39     this->\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data} = \hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data};
-40 \}
+32 \{
+33     this->\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data} = \hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data};
+34 \}
 \end{DoxyCode}
 
 
@@ -149,28 +141,21 @@ Definition at line 37 of file mainwindow.\+cpp.
 \subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir Main\+Window\+::data\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a1dc35bda22acc11636be809539ab73d9}
 
 
-Definition at line 50 of file mainwindow.\+h.
+Definition at line 49 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}{\index{Main\+Window@{Main\+Window}!ui@{ui}}
 \index{ui@{ui}!Main\+Window@{Main\+Window}}
 \subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a35466a70ed47252a0191168126a352a5}
 
 
-Definition at line 51 of file mainwindow.\+h.
-
-\hypertarget{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}{\index{Main\+Window@{Main\+Window}!model@{model}}
-\index{model@{model}!Main\+Window@{Main\+Window}}
-\subsubsection[{model}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Standard\+Item\+Model$\ast$ Main\+Window\+::model\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_aa1a1f8ce9c37a7ac70d21402759638b3}
-
-
-Definition at line 52 of file mainwindow.\+h.
+Definition at line 50 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{\index{Main\+Window@{Main\+Window}!info@{info}}
 \index{info@{info}!Main\+Window@{Main\+Window}}
 \subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Person} Main\+Window\+::info\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a2d1f101eed410e692b5db9b7226174bf}
 
 
-Definition at line 53 of file mainwindow.\+h.
+Definition at line 51 of file mainwindow.\+h.
 
 
 

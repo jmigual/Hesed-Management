@@ -10,18 +10,11 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    model = new QStandardItemModel();
-    QStringList titols;
-    titols << "DNI" << "Nom" << "Cognoms" << "Data Fi ajuda";
-    model->setHorizontalHeaderLabels(titols);
-    
-    ui->tableView->setModel(model);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete model;
 }
 
 /***************
@@ -31,10 +24,16 @@ MainWindow::~MainWindow()
 void MainWindow::loadData()
 {
     info.read(data);
-    info.show(ui->tableView);
+    info.addTable(ui->tableView);
+    info.show();
 }
 
 void MainWindow::addPath(const QDir &data)
 {
     this->data = data;
+}
+
+void MainWindow::on_actionInserir_triggered()
+{
+    
 }

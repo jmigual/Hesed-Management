@@ -120,9 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a602ce88a8ef959c3f4044d9dc00dd2cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a602ce88a8ef959c3f4044d9dc00dd2cf">sort</a> (int type)</td></tr>
 <tr class="memdesc:a602ce88a8ef959c3f4044d9dc00dd2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to sort the data with the specified metod.  <a href="#a602ce88a8ef959c3f4044d9dc00dd2cf">More...</a><br /></td></tr>
 <tr class="separator:a602ce88a8ef959c3f4044d9dc00dd2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac89ee9923a0b4a874be8f5901e35b753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#ac89ee9923a0b4a874be8f5901e35b753">show</a> (QTableView *table)</td></tr>
-<tr class="memdesc:ac89ee9923a0b4a874be8f5901e35b753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to show all stored data.  <a href="#ac89ee9923a0b4a874be8f5901e35b753">More...</a><br /></td></tr>
-<tr class="separator:ac89ee9923a0b4a874be8f5901e35b753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100215914f651662a6207722ef28769e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a100215914f651662a6207722ef28769e">addTable</a> (QTableView *t)</td></tr>
+<tr class="memdesc:a100215914f651662a6207722ef28769e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the pointer to a QTableView.  <a href="#a100215914f651662a6207722ef28769e">More...</a><br /></td></tr>
+<tr class="separator:a100215914f651662a6207722ef28769e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1231629a6e7e8c83ada57628e80a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a2f1231629a6e7e8c83ada57628e80a89">show</a> ()</td></tr>
+<tr class="memdesc:a2f1231629a6e7e8c83ada57628e80a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to show all stored data.  <a href="#a2f1231629a6e7e8c83ada57628e80a89">More...</a><br /></td></tr>
+<tr class="separator:a2f1231629a6e7e8c83ada57628e80a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -132,11 +135,13 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a816ee6194426eb703b61ae267e8e8ee6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a></td></tr>
 <tr class="memdesc:a816ee6194426eb703b61ae267e8e8ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains de maximum ID that has ever been assigned.  <a href="#a816ee6194426eb703b61ae267e8e8ee6">More...</a><br /></td></tr>
 <tr class="separator:a816ee6194426eb703b61ae267e8e8ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefba04c96d0d90ab2b220e6ad704c55a"><td class="memItemLeft" align="right" valign="top">QTableView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_person.html#aefba04c96d0d90ab2b220e6ad704c55a">table</a></td></tr>
+<tr class="separator:aefba04c96d0d90ab2b220e6ad704c55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_person.html" title="The Person Class contains all people basic data. ">Person</a> Class contains all people basic data. </p>
 
-<p>Definition at line <a class="el" href="person_8h_source.html#l00015">15</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+<p>Definition at line <a class="el" href="person_8h_source.html#l00016">16</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0397c6f89fafc12e738923f612bc41a3"></a>
 <div class="memitem">
@@ -157,7 +162,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a> = 0;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdoc">Contains de maximum ID that has ever been assigned. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00142">person.h:142</a></div></div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdoc">Contains de maximum ID that has ever been assigned. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00143">person.h:143</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,8 +187,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a> = p.<a class="code" href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">maxID</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a> = p.<a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdoc">List to store all data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00138">person.h:138</a></div></div>
-<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdoc">Contains de maximum ID that has ever been assigned. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00142">person.h:142</a></div></div>
+<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdoc">List to store all data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00139">person.h:139</a></div></div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdoc">Contains de maximum ID that has ever been assigned. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00143">person.h:143</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -228,8 +233,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    file.close();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdoc">List to store all data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00138">person.h:138</a></div></div>
-<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdoc">Contains de maximum ID that has ever been assigned. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00142">person.h:142</a></div></div>
+<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdoc">List to store all data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00139">person.h:139</a></div></div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdoc">Contains de maximum ID that has ever been assigned. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00143">person.h:143</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -274,8 +279,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdoc">List to store all data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00138">person.h:138</a></div></div>
-<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdoc">Contains de maximum ID that has ever been assigned. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00142">person.h:142</a></div></div>
+<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdoc">List to store all data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00139">person.h:139</a></div></div>
+<div class="ttc" id="class_person_html_a816ee6194426eb703b61ae267e8e8ee6"><div class="ttname"><a href="class_person.html#a816ee6194426eb703b61ae267e8e8ee6">Person::maxID</a></div><div class="ttdeci">unsigned int maxID</div><div class="ttdoc">Contains de maximum ID that has ever been assigned. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00143">person.h:143</a></div></div>
 <div class="ttc" id="class_person_html_a602ce88a8ef959c3f4044d9dc00dd2cf"><div class="ttname"><a href="class_person.html#a602ce88a8ef959c3f4044d9dc00dd2cf">Person::sort</a></div><div class="ttdeci">void sort(int type)</div><div class="ttdoc">Function to sort the data with the specified metod. </div><div class="ttdef"><b>Definition:</b> <a href="person_8cpp_source.html#l00057">person.cpp:57</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -338,37 +343,68 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        a.select(type);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">all</a>.sort(a);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdoc">List to store all data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00138">person.h:138</a></div></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">else</span> qWarning() &lt;&lt; <span class="stringliteral">&quot;Error while trying to sort&quot;</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="class_person_html_a23d6ff8cb8e45c9e3502baffa6a0468a"><div class="ttname"><a href="class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a">Person::all</a></div><div class="ttdeci">list&lt; info &gt; all</div><div class="ttdoc">List to store all data. </div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00139">person.h:139</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="ac89ee9923a0b4a874be8f5901e35b753"></a>
+<a class="anchor" id="a100215914f651662a6207722ef28769e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Person::addTable </td>
+          <td>(</td>
+          <td class="paramtype">QTableView *&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the pointer to a QTableView. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Pointer to a QTabletView </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>t is not NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The pointer has been added </dd></dl>
+
+<p>Definition at line <a class="el" href="person_8cpp_source.html#l00067">67</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{ <a class="code" href="class_person.html#aefba04c96d0d90ab2b220e6ad704c55a">table</a> = t; }</div>
+<div class="ttc" id="class_person_html_aefba04c96d0d90ab2b220e6ad704c55a"><div class="ttname"><a href="class_person.html#aefba04c96d0d90ab2b220e6ad704c55a">Person::table</a></div><div class="ttdeci">QTableView * table</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00144">person.h:144</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2f1231629a6e7e8c83ada57628e80a89"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Person::show </td>
           <td>(</td>
-          <td class="paramtype">QTableView *&#160;</td>
-          <td class="paramname"><em>table</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Function to show all stored data. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">table</td><td>Pointer to a existing TableView </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p>Definition at line <a class="el" href="person_8cpp_source.html#l00070">70</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<p>Definition at line <a class="el" href="person_8cpp_source.html#l00073">73</a> of file <a class="el" href="person_8cpp_source.html">person.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    QStandardItemModel *model = <span class="keyword">new</span> QStandardItemModel();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QStringList titols;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    titols &lt;&lt; <span class="stringliteral">&quot;DNI&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Nom&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Cognoms&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Data Fi ajuda&quot;</span> &lt;&lt; <span class="stringliteral">&quot;Nº Ajudat&quot;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;           &lt;&lt; <span class="stringliteral">&quot;Membres&quot;</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    model-&gt;setHorizontalHeaderLabels(titols);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="class_person.html#aefba04c96d0d90ab2b220e6ad704c55a">table</a>-&gt;setModel(model);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="ttc" id="class_person_html_aefba04c96d0d90ab2b220e6ad704c55a"><div class="ttname"><a href="class_person.html#aefba04c96d0d90ab2b220e6ad704c55a">Person::table</a></div><div class="ttdeci">QTableView * table</div><div class="ttdef"><b>Definition:</b> <a href="person_8h_source.html#l00144">person.h:144</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -393,7 +429,7 @@ Private Attributes</h2></td></tr>
 
 <p>List to store all data. </p>
 
-<p>Definition at line <a class="el" href="person_8h_source.html#l00138">138</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+<p>Definition at line <a class="el" href="person_8h_source.html#l00139">139</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +453,29 @@ Private Attributes</h2></td></tr>
 
 <p>Contains de maximum ID that has ever been assigned. </p>
 
-<p>Definition at line <a class="el" href="person_8h_source.html#l00142">142</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+<p>Definition at line <a class="el" href="person_8h_source.html#l00143">143</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aefba04c96d0d90ab2b220e6ad704c55a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTableView* Person::table</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="person_8h_source.html#l00144">144</a> of file <a class="el" href="person_8h_source.html">person.h</a>.</p>
 
 </div>
 </div>
@@ -428,7 +486,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 21 2014 19:07:24 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 21 2014 19:56:56 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

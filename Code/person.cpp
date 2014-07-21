@@ -64,11 +64,24 @@ void Person::sort(int type)
     else qWarning() << "Error while trying to sort";
 }
 
+void Person::addTable(QTableView *t) { table = t; }
+
+void Person::addInfo()
+{
+    show();
+}
+
 /***************
  *  CONSULTOR  *
  ***************/
 
-void Person::show(QTableView *table)
+void Person::show()
 {
-
+    QStandardItemModel *model = new QStandardItemModel();
+    QStringList titols;
+    titols << "DNI" << "Nom" << "Cognoms" << "Data Fi ajuda" << "Nº Ajudat"
+           << "Membres";
+    model->setHorizontalHeaderLabels(titols);
+    
+    table->setModel(model);
 }

@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QStandardItemModel>
 #include <QDir>
 #include "person.h"
 
@@ -46,10 +45,11 @@ public:
     
 private slots:
     
+    void on_actionInserir_triggered();
+    
 private:
     QDir data;
     Ui::MainWindow *ui;
-    QStandardItemModel *model;
     Person info;
 };
 
