@@ -68,7 +68,9 @@ void Person::addTable(QTableView *t) { table = t; }
 
 void Person::addInfo()
 {
-    show();
+    Dialog *d = new Dialog;
+    d->setAttribute(Qt::WA_DeleteOnClose);
+    d->open();
 }
 
 /***************

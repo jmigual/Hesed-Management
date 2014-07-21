@@ -17,6 +17,11 @@ void \hyperlink{class_main_window_a6906cd747941813c6da899b18d881473}{load\+Data}
 \begin{DoxyCompactList}\small\item\em Function that loads data when exists de {\itshape Data} folder. \end{DoxyCompactList}\item 
 void \hyperlink{class_main_window_a44d044deed1ddca8952f59554705e28d}{add\+Path} (const Q\+Dir \&\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data})
 \begin{DoxyCompactList}\small\item\em Function to add the {\itshape Data} folder path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_window_a308a629f351133027a3602d27099cb7c}{on\+\_\+action\+Inserir\+\_\+triggered} ()
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -102,9 +107,9 @@ Definition at line 24 of file mainwindow.\+cpp.
 
 \begin{DoxyCode}
 25 \{
-26     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{read}(\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data});
-27     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a100215914f651662a6207722ef28769e}{addTable}(\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView);
-28     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a2f1231629a6e7e8c83ada57628e80a89}{show}();
+26     \hyperlink{structinfo}{info}.read(\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data});
+27     \hyperlink{structinfo}{info}.addTable(\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView);
+28     \hyperlink{structinfo}{info}.show();
 29 \}
 \end{DoxyCode}
 \hypertarget{class_main_window_a44d044deed1ddca8952f59554705e28d}{\index{Main\+Window@{Main\+Window}!add\+Path@{add\+Path}}
@@ -133,6 +138,23 @@ Definition at line 31 of file mainwindow.\+cpp.
 33     this->\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data} = \hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data};
 34 \}
 \end{DoxyCode}
+\hypertarget{class_main_window_a308a629f351133027a3602d27099cb7c}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Inserir\+\_\+triggered@{on\+\_\+action\+Inserir\+\_\+triggered}}
+\index{on\+\_\+action\+Inserir\+\_\+triggered@{on\+\_\+action\+Inserir\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Inserir\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Inserir\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a308a629f351133027a3602d27099cb7c}
+
+
+Definition at line 36 of file mainwindow.\+cpp.
+
+
+\begin{DoxyCode}
+37 \{
+38     \hyperlink{structinfo}{info}.addInfo();
+39 \}
+\end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
@@ -141,21 +163,21 @@ Definition at line 31 of file mainwindow.\+cpp.
 \subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir Main\+Window\+::data\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a1dc35bda22acc11636be809539ab73d9}
 
 
-Definition at line 49 of file mainwindow.\+h.
+Definition at line 51 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}{\index{Main\+Window@{Main\+Window}!ui@{ui}}
 \index{ui@{ui}!Main\+Window@{Main\+Window}}
 \subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a35466a70ed47252a0191168126a352a5}
 
 
-Definition at line 50 of file mainwindow.\+h.
+Definition at line 52 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{\index{Main\+Window@{Main\+Window}!info@{info}}
 \index{info@{info}!Main\+Window@{Main\+Window}}
 \subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Person} Main\+Window\+::info\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a2d1f101eed410e692b5db9b7226174bf}
 
 
-Definition at line 51 of file mainwindow.\+h.
+Definition at line 53 of file mainwindow.\+h.
 
 
 

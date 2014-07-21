@@ -9,7 +9,7 @@ The comp struct is used to sort the info.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{struct_person_1_1comp_a99053054fa60fef569df526d680b9993}{operator()} (\hyperlink{struct_person_1_1info}{info} a, \hyperlink{struct_person_1_1info}{info} b)
+bool \hyperlink{struct_person_1_1comp_a99053054fa60fef569df526d680b9993}{operator()} (\hyperlink{structinfo}{info} a, \hyperlink{structinfo}{info} b)
 \begin{DoxyCompactList}\small\item\em Needed to sort info. \end{DoxyCompactList}\item 
 \hyperlink{struct_person_1_1comp_a5272710b2721399c612bcdad1b1cead7}{comp} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
@@ -25,7 +25,7 @@ int \hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel}
 \subsection{Detailed Description}
 The comp struct is used to sort the info. 
 
-Definition at line 99 of file person.\+h.
+Definition at line 23 of file person.\+h.
 
 
 
@@ -43,13 +43,13 @@ Default constructor.
 
 
 
-Definition at line 126 of file person.\+h.
+Definition at line 50 of file person.\+h.
 
 
 \begin{DoxyCode}
-127         \{
-128             \hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} = 0;
-129         \}
+51         \{
+52             \hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} = 0;
+53         \}
 \end{DoxyCode}
 
 
@@ -68,24 +68,24 @@ Needed to sort info.
 
 
 
-Definition at line 108 of file person.\+h.
+Definition at line 32 of file person.\+h.
 
 
 \begin{DoxyCode}
-109         \{
-110             \textcolor{keywordflow}{if}(\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 0) \textcolor{keywordflow}{return} a.ID < b.ID;
-111             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 1) \textcolor{keywordflow}{return} a.name < b.name;
-112             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 2) \textcolor{keywordflow}{return} a.surname < b.surname;
-113             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 3) \textcolor{keywordflow}{return} a.NIF < b.NIF;
-114             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 4) \textcolor{keywordflow}{return} a.birthDate < b.birthDate;
-115             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 5) \textcolor{keywordflow}{return} a.cNIF < b.cNIF;
-116             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 6) \textcolor{keywordflow}{return} a.adress < b.adress;
-117             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 7) \textcolor{keywordflow}{return} a.phone < b.phone;
-118             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 8) \textcolor{keywordflow}{return} a.beginHelp < b.beginHelp;
-119             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 9) \textcolor{keywordflow}{return} a.endHelp < b.endHelp;
-120             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 10) \textcolor{keywordflow}{return} a.numberHelp < b.numberHelp;
-121             \textcolor{keywordflow}{return} a.famMembers < b.famMembers;
-122         \}
+33         \{
+34             \textcolor{keywordflow}{if}(\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 0) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a3c042f827b9847005666b1ecc5221549}{ID} < b.\hyperlink{structinfo_a3c042f827b9847005666b1ecc5221549}{ID};
+35             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 1) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a27cfacf228447e06d83abd01882eb78d}{name} < b.\hyperlink{structinfo_a27cfacf228447e06d83abd01882eb78d}{name};
+36             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 2) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a9dd9f00d6b74f1d7b4519e509efd0031}{surname} < b.\hyperlink{structinfo_a9dd9f00d6b74f1d7b4519e509efd0031}{surname};
+37             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 3) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a68e2c3e3e7e8e6df17e1f5b466506319}{NIF} < b.\hyperlink{structinfo_a68e2c3e3e7e8e6df17e1f5b466506319}{NIF};
+38             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 4) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a2269c62bc80419abee5ab99596715014}{birthDate} < b.\hyperlink{structinfo_a2269c62bc80419abee5ab99596715014}{birthDate};
+39             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 5) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a46ee4d6a7e5976d795ed9efa02341fce}{cNIF} < b.\hyperlink{structinfo_a46ee4d6a7e5976d795ed9efa02341fce}{cNIF};
+40             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 6) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a589dff7ad548e9ac9a45f632539c9a0a}{adress} < b.\hyperlink{structinfo_a589dff7ad548e9ac9a45f632539c9a0a}{adress};
+41             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 7) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a716fe5520eb096be308dcd18f7cbd1c1}{phone} < b.\hyperlink{structinfo_a716fe5520eb096be308dcd18f7cbd1c1}{phone};
+42             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 8) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a860bf129937fda542024222bd425a224}{beginHelp} < b.\hyperlink{structinfo_a860bf129937fda542024222bd425a224}{beginHelp};
+43             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 9) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_ac9af3f49f3357521492ffaf635897af4}{endHelp} < b.\hyperlink{structinfo_ac9af3f49f3357521492ffaf635897af4}{endHelp};
+44             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 10) \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a96e373e7fbb00b84889fba5f87e23c6a}{numberHelp} < b.\hyperlink{structinfo_a96e373e7fbb00b84889fba5f87e23c6a}{numberHelp};
+45             \textcolor{keywordflow}{return} a.\hyperlink{structinfo_a1b51e61437e4e0b422a49ad00b8a4e65}{famMembers} < b.\hyperlink{structinfo_a1b51e61437e4e0b422a49ad00b8a4e65}{famMembers};
+46         \}
 \end{DoxyCode}
 \hypertarget{struct_person_1_1comp_af552a34297c810b79725508e2d5d810a}{\index{Person\+::comp@{Person\+::comp}!select@{select}}
 \index{select@{select}!Person\+::comp@{Person\+::comp}}
@@ -100,11 +100,11 @@ To selec the desired option.
 
 
 
-Definition at line 133 of file person.\+h.
+Definition at line 57 of file person.\+h.
 
 
 \begin{DoxyCode}
-133 \{ \hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} = s; \}
+57 \{ \hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} = s; \}
 \end{DoxyCode}
 
 
@@ -118,7 +118,7 @@ Stores the selected ordering type.
 
 
 
-Definition at line 103 of file person.\+h.
+Definition at line 27 of file person.\+h.
 
 
 

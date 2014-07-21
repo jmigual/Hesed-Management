@@ -1,0 +1,78 @@
+\hypertarget{class_dialog}{\section{Dialog Class Reference}
+\label{class_dialog}\index{Dialog@{Dialog}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dialog_acfa2063f9f962d394c6a645b6e7e08d8}{Dialog} (Q\+Widget $\ast$parent=0)
+\item 
+\hyperlink{class_dialog_a2a1fe6ef28513eed13bfcd3a4da83ccb}{$\sim$\+Dialog} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Dialog $\ast$ \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 10 of file dialog.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_dialog_acfa2063f9f962d394c6a645b6e7e08d8}{\index{Dialog@{Dialog}!Dialog@{Dialog}}
+\index{Dialog@{Dialog}!Dialog@{Dialog}}
+\subsubsection[{Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Dialog\+::\+Dialog (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_dialog_acfa2063f9f962d394c6a645b6e7e08d8}
+
+
+Definition at line 4 of file dialog.\+cpp.
+
+
+\begin{DoxyCode}
+4                               :
+5     QDialog(parent),
+6     \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}(\textcolor{keyword}{new} Ui::Dialog)
+7 \{
+8     \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->setupUi(\textcolor{keyword}{this});
+9 \}
+\end{DoxyCode}
+\hypertarget{class_dialog_a2a1fe6ef28513eed13bfcd3a4da83ccb}{\index{Dialog@{Dialog}!````~Dialog@{$\sim$\+Dialog}}
+\index{````~Dialog@{$\sim$\+Dialog}!Dialog@{Dialog}}
+\subsubsection[{$\sim$\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Dialog\+::$\sim$\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_dialog_a2a1fe6ef28513eed13bfcd3a4da83ccb}
+
+
+Definition at line 11 of file dialog.\+cpp.
+
+
+\begin{DoxyCode}
+12 \{
+13     \textcolor{keyword}{delete} \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui};
+14 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{\index{Dialog@{Dialog}!ui@{ui}}
+\index{ui@{ui}!Dialog@{Dialog}}
+\subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Dialog$\ast$ Dialog\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}
+
+
+Definition at line 19 of file dialog.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dialog_8h}{dialog.\+h}\item 
+\hyperlink{dialog_8cpp}{dialog.\+cpp}\end{DoxyCompactItemize}

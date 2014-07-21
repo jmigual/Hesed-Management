@@ -35,5 +35,5 @@ void MainWindow::addPath(const QDir &data)
 
 void MainWindow::on_actionInserir_triggered()
 {
-    
+    info.addInfo();
 }

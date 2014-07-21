@@ -1,0 +1,262 @@
+\hypertarget{structinfo}{\section{info Struct Reference}
+\label{structinfo}\index{info@{info}}
+}
+
+
+Struct to store basic people information.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{structinfo_a27cfacf228447e06d83abd01882eb78d}{name}
+\begin{DoxyCompactList}\small\item\em Name. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{structinfo_a9dd9f00d6b74f1d7b4519e509efd0031}{surname}
+\begin{DoxyCompactList}\small\item\em Surname. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{structinfo_a68e2c3e3e7e8e6df17e1f5b466506319}{N\+I\+F}
+\begin{DoxyCompactList}\small\item\em Personal N\+I\+F (Número de Identificación Fiscal) \end{DoxyCompactList}\item 
+Q\+String \hyperlink{structinfo_a46ee4d6a7e5976d795ed9efa02341fce}{c\+N\+I\+F}
+\begin{DoxyCompactList}\small\item\em Couple N\+I\+F (Número de Identificación Fiscal) \end{DoxyCompactList}\item 
+Q\+String \hyperlink{structinfo_a589dff7ad548e9ac9a45f632539c9a0a}{adress}
+\begin{DoxyCompactList}\small\item\em Personal home adress. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{structinfo_a716fe5520eb096be308dcd18f7cbd1c1}{phone}
+\begin{DoxyCompactList}\small\item\em Personal phone. \end{DoxyCompactList}\item 
+Q\+Date \hyperlink{structinfo_a2269c62bc80419abee5ab99596715014}{birth\+Date}
+\begin{DoxyCompactList}\small\item\em Date of birth. \end{DoxyCompactList}\item 
+Q\+Date \hyperlink{structinfo_a860bf129937fda542024222bd425a224}{begin\+Help}
+\begin{DoxyCompactList}\small\item\em First day recieved help. \end{DoxyCompactList}\item 
+Q\+Date \hyperlink{structinfo_ac9af3f49f3357521492ffaf635897af4}{end\+Help}
+\begin{DoxyCompactList}\small\item\em Finishing help date. \end{DoxyCompactList}\item 
+int \hyperlink{structinfo_a96e373e7fbb00b84889fba5f87e23c6a}{number\+Help}
+\begin{DoxyCompactList}\small\item\em Number of times that somebody has been helped. \end{DoxyCompactList}\item 
+int \hyperlink{structinfo_a1b51e61437e4e0b422a49ad00b8a4e65}{fam\+Members}
+\begin{DoxyCompactList}\small\item\em Amount of members in the home family. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structinfo_a3c042f827b9847005666b1ecc5221549}{I\+D}
+\begin{DoxyCompactList}\small\item\em Identification number for internal use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Data\+Stream \& \hyperlink{structinfo_aa1cff6f546458f788536a635780f7014}{operator$>$$>$} (Q\+Data\+Stream \&in, \hyperlink{structinfo}{info} \&i)
+\begin{DoxyCompactList}\small\item\em Definition of the operator '$>$$>$' to the struct. \end{DoxyCompactList}\item 
+Q\+Data\+Stream \& \hyperlink{structinfo_abc99bd8cbdd8d6f6ee6a15abc543fd26}{operator$<$$<$} (Q\+Data\+Stream \&out, \hyperlink{structinfo}{info} \&i)
+\begin{DoxyCompactList}\small\item\em Definition of the operator '$<$$<$' to the struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct to store basic people information. 
+
+Stored info is\+: 
+\begin{DoxyItemize}
+\item Name 
+\item Surname 
+\item N\+I\+F 
+\item Birth Date 
+\item Couple N\+I\+F 
+\item Adress 
+\item Phone number 
+\item Beginning help date 
+\item End help date 
+\item Times helped 
+\item Family members 
+\item Identification Number 
+\end{DoxyItemize}
+
+Definition at line 23 of file info.\+h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{structinfo_aa1cff6f546458f788536a635780f7014}{\index{info@{info}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!info@{info}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Data\+Stream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{Q\+Data\+Stream \&}]{in, }
+\item[{{\bf info} \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{structinfo_aa1cff6f546458f788536a635780f7014}
+
+
+Definition of the operator '$>$$>$' to the struct. 
+
+
+
+Definition at line 64 of file info.\+h.
+
+
+\begin{DoxyCode}
+64                                                               \{
+65         in >> i.\hyperlink{structinfo_a589dff7ad548e9ac9a45f632539c9a0a}{adress} >> i.\hyperlink{structinfo_a860bf129937fda542024222bd425a224}{beginHelp} >> i.\hyperlink{structinfo_a2269c62bc80419abee5ab99596715014}{birthDate} >> i.
+      \hyperlink{structinfo_a46ee4d6a7e5976d795ed9efa02341fce}{cNIF}
+66            >> i.\hyperlink{structinfo_ac9af3f49f3357521492ffaf635897af4}{endHelp} >> i.\hyperlink{structinfo_a1b51e61437e4e0b422a49ad00b8a4e65}{famMembers} >> i.\hyperlink{structinfo_a3c042f827b9847005666b1ecc5221549}{ID} >> i.\hyperlink{structinfo_a27cfacf228447e06d83abd01882eb78d}{name} >> i.
+      \hyperlink{structinfo_a68e2c3e3e7e8e6df17e1f5b466506319}{NIF}
+67            >> i.\hyperlink{structinfo_a96e373e7fbb00b84889fba5f87e23c6a}{numberHelp} >> i.\hyperlink{structinfo_a716fe5520eb096be308dcd18f7cbd1c1}{phone} >> i.\hyperlink{structinfo_a9dd9f00d6b74f1d7b4519e509efd0031}{surname};
+68         \textcolor{keywordflow}{return} in;
+69     \}
+\end{DoxyCode}
+\hypertarget{structinfo_abc99bd8cbdd8d6f6ee6a15abc543fd26}{\index{info@{info}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!info@{info}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Data\+Stream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{Q\+Data\+Stream \&}]{out, }
+\item[{{\bf info} \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{structinfo_abc99bd8cbdd8d6f6ee6a15abc543fd26}
+
+
+Definition of the operator '$<$$<$' to the struct. 
+
+
+
+Definition at line 74 of file info.\+h.
+
+
+\begin{DoxyCode}
+74                                                                \{
+75         out << i.\hyperlink{structinfo_a589dff7ad548e9ac9a45f632539c9a0a}{adress} << i.\hyperlink{structinfo_a860bf129937fda542024222bd425a224}{beginHelp} << i.\hyperlink{structinfo_a2269c62bc80419abee5ab99596715014}{birthDate} << i.
+      \hyperlink{structinfo_a46ee4d6a7e5976d795ed9efa02341fce}{cNIF}
+76             << i.\hyperlink{structinfo_ac9af3f49f3357521492ffaf635897af4}{endHelp} << i.\hyperlink{structinfo_a1b51e61437e4e0b422a49ad00b8a4e65}{famMembers} << i.\hyperlink{structinfo_a3c042f827b9847005666b1ecc5221549}{ID} << i.\hyperlink{structinfo_a27cfacf228447e06d83abd01882eb78d}{name} << i.
+      \hyperlink{structinfo_a68e2c3e3e7e8e6df17e1f5b466506319}{NIF}
+77             << i.\hyperlink{structinfo_a96e373e7fbb00b84889fba5f87e23c6a}{numberHelp} << i.\hyperlink{structinfo_a716fe5520eb096be308dcd18f7cbd1c1}{phone} << i.\hyperlink{structinfo_a9dd9f00d6b74f1d7b4519e509efd0031}{surname};
+78         \textcolor{keywordflow}{return} out;
+79     \} 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structinfo_a27cfacf228447e06d83abd01882eb78d}{\index{info@{info}!name@{name}}
+\index{name@{name}!info@{info}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}info\+::name}}\label{structinfo_a27cfacf228447e06d83abd01882eb78d}
+
+
+Name. 
+
+
+
+Definition at line 38 of file info.\+h.
+
+\hypertarget{structinfo_a9dd9f00d6b74f1d7b4519e509efd0031}{\index{info@{info}!surname@{surname}}
+\index{surname@{surname}!info@{info}}
+\subsubsection[{surname}]{\setlength{\rightskip}{0pt plus 5cm}info\+::surname}}\label{structinfo_a9dd9f00d6b74f1d7b4519e509efd0031}
+
+
+Surname. 
+
+
+
+Definition at line 38 of file info.\+h.
+
+\hypertarget{structinfo_a68e2c3e3e7e8e6df17e1f5b466506319}{\index{info@{info}!N\+I\+F@{N\+I\+F}}
+\index{N\+I\+F@{N\+I\+F}!info@{info}}
+\subsubsection[{N\+I\+F}]{\setlength{\rightskip}{0pt plus 5cm}info\+::\+N\+I\+F}}\label{structinfo_a68e2c3e3e7e8e6df17e1f5b466506319}
+
+
+Personal N\+I\+F (Número de Identificación Fiscal) 
+
+
+
+Definition at line 38 of file info.\+h.
+
+\hypertarget{structinfo_a46ee4d6a7e5976d795ed9efa02341fce}{\index{info@{info}!c\+N\+I\+F@{c\+N\+I\+F}}
+\index{c\+N\+I\+F@{c\+N\+I\+F}!info@{info}}
+\subsubsection[{c\+N\+I\+F}]{\setlength{\rightskip}{0pt plus 5cm}info\+::c\+N\+I\+F}}\label{structinfo_a46ee4d6a7e5976d795ed9efa02341fce}
+
+
+Couple N\+I\+F (Número de Identificación Fiscal) 
+
+
+
+Definition at line 38 of file info.\+h.
+
+\hypertarget{structinfo_a589dff7ad548e9ac9a45f632539c9a0a}{\index{info@{info}!adress@{adress}}
+\index{adress@{adress}!info@{info}}
+\subsubsection[{adress}]{\setlength{\rightskip}{0pt plus 5cm}info\+::adress}}\label{structinfo_a589dff7ad548e9ac9a45f632539c9a0a}
+
+
+Personal home adress. 
+
+
+
+Definition at line 38 of file info.\+h.
+
+\hypertarget{structinfo_a716fe5520eb096be308dcd18f7cbd1c1}{\index{info@{info}!phone@{phone}}
+\index{phone@{phone}!info@{info}}
+\subsubsection[{phone}]{\setlength{\rightskip}{0pt plus 5cm}info\+::phone}}\label{structinfo_a716fe5520eb096be308dcd18f7cbd1c1}
+
+
+Personal phone. 
+
+
+
+Definition at line 38 of file info.\+h.
+
+\hypertarget{structinfo_a2269c62bc80419abee5ab99596715014}{\index{info@{info}!birth\+Date@{birth\+Date}}
+\index{birth\+Date@{birth\+Date}!info@{info}}
+\subsubsection[{birth\+Date}]{\setlength{\rightskip}{0pt plus 5cm}info\+::birth\+Date}}\label{structinfo_a2269c62bc80419abee5ab99596715014}
+
+
+Date of birth. 
+
+
+
+Definition at line 47 of file info.\+h.
+
+\hypertarget{structinfo_a860bf129937fda542024222bd425a224}{\index{info@{info}!begin\+Help@{begin\+Help}}
+\index{begin\+Help@{begin\+Help}!info@{info}}
+\subsubsection[{begin\+Help}]{\setlength{\rightskip}{0pt plus 5cm}info\+::begin\+Help}}\label{structinfo_a860bf129937fda542024222bd425a224}
+
+
+First day recieved help. 
+
+
+
+Definition at line 47 of file info.\+h.
+
+\hypertarget{structinfo_ac9af3f49f3357521492ffaf635897af4}{\index{info@{info}!end\+Help@{end\+Help}}
+\index{end\+Help@{end\+Help}!info@{info}}
+\subsubsection[{end\+Help}]{\setlength{\rightskip}{0pt plus 5cm}info\+::end\+Help}}\label{structinfo_ac9af3f49f3357521492ffaf635897af4}
+
+
+Finishing help date. 
+
+
+
+Definition at line 47 of file info.\+h.
+
+\hypertarget{structinfo_a96e373e7fbb00b84889fba5f87e23c6a}{\index{info@{info}!number\+Help@{number\+Help}}
+\index{number\+Help@{number\+Help}!info@{info}}
+\subsubsection[{number\+Help}]{\setlength{\rightskip}{0pt plus 5cm}info\+::number\+Help}}\label{structinfo_a96e373e7fbb00b84889fba5f87e23c6a}
+
+
+Number of times that somebody has been helped. 
+
+
+
+Definition at line 54 of file info.\+h.
+
+\hypertarget{structinfo_a1b51e61437e4e0b422a49ad00b8a4e65}{\index{info@{info}!fam\+Members@{fam\+Members}}
+\index{fam\+Members@{fam\+Members}!info@{info}}
+\subsubsection[{fam\+Members}]{\setlength{\rightskip}{0pt plus 5cm}info\+::fam\+Members}}\label{structinfo_a1b51e61437e4e0b422a49ad00b8a4e65}
+
+
+Amount of members in the home family. 
+
+
+
+Definition at line 54 of file info.\+h.
+
+\hypertarget{structinfo_a3c042f827b9847005666b1ecc5221549}{\index{info@{info}!I\+D@{I\+D}}
+\index{I\+D@{I\+D}!info@{info}}
+\subsubsection[{I\+D}]{\setlength{\rightskip}{0pt plus 5cm}info\+::\+I\+D}}\label{structinfo_a3c042f827b9847005666b1ecc5221549}
+
+
+Identification number for internal use. 
+
+
+
+Definition at line 59 of file info.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{info_8h}{info.\+h}\end{DoxyCompactItemize}

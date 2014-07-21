@@ -28,13 +28,17 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QAction *actionInsertar;
+    QAction *actionInserir;
     QAction *actionEliminar;
+    QAction *actionObrir;
+    QAction *actionTancar;
+    QAction *actionExportar;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QTableView *tableView;
     QMenuBar *menubar;
     QMenu *menuArchivo;
+    QMenu *menuEditar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -43,18 +47,28 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(640, 480);
-        actionInsertar = new QAction(MainWindow);
-        actionInsertar->setObjectName(QStringLiteral("actionInsertar"));
+        actionInserir = new QAction(MainWindow);
+        actionInserir->setObjectName(QStringLiteral("actionInserir"));
         QIcon icon;
         icon.addFile(QStringLiteral(":/Images/Icons/plus.ico"), QSize(), QIcon::Normal, QIcon::Off);
-        actionInsertar->setIcon(icon);
-        actionInsertar->setIconVisibleInMenu(false);
+        actionInserir->setIcon(icon);
         actionEliminar = new QAction(MainWindow);
         actionEliminar->setObjectName(QStringLiteral("actionEliminar"));
         QIcon icon1;
         icon1.addFile(QStringLiteral(":/Images/Icons/delete.ico"), QSize(), QIcon::Normal, QIcon::Off);
         actionEliminar->setIcon(icon1);
-        actionEliminar->setIconVisibleInMenu(false);
+        actionObrir = new QAction(MainWindow);
+        actionObrir->setObjectName(QStringLiteral("actionObrir"));
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/Images/Icons/folder.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        actionObrir->setIcon(icon2);
+        actionTancar = new QAction(MainWindow);
+        actionTancar->setObjectName(QStringLiteral("actionTancar"));
+        actionExportar = new QAction(MainWindow);
+        actionExportar->setObjectName(QStringLiteral("actionExportar"));
+        QIcon icon3;
+        icon3.addFile(QStringLiteral(":/Images/Icons/letter.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        actionExportar->setIcon(icon3);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -72,6 +86,8 @@ public:
         menuArchivo = new QMenu(menubar);
         menuArchivo->setObjectName(QStringLiteral("menuArchivo"));
         menuArchivo->setEnabled(true);
+        menuEditar = new QMenu(menubar);
+        menuEditar->setObjectName(QStringLiteral("menuEditar"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -84,9 +100,13 @@ public:
         MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
 
         menubar->addAction(menuArchivo->menuAction());
-        menuArchivo->addAction(actionInsertar);
-        menuArchivo->addAction(actionEliminar);
-        toolBar->addAction(actionInsertar);
+        menubar->addAction(menuEditar->menuAction());
+        menuArchivo->addAction(actionObrir);
+        menuArchivo->addAction(actionExportar);
+        menuArchivo->addAction(actionTancar);
+        menuEditar->addAction(actionInserir);
+        menuEditar->addAction(actionEliminar);
+        toolBar->addAction(actionInserir);
         toolBar->addAction(actionEliminar);
 
         retranslateUi(MainWindow);
@@ -97,11 +117,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        actionInsertar->setText(QApplication::translate("MainWindow", "Insertar", 0));
-        actionInsertar->setShortcut(QApplication::translate("MainWindow", "Ctrl+N", 0));
+        actionInserir->setText(QApplication::translate("MainWindow", "Inserir", 0));
         actionEliminar->setText(QApplication::translate("MainWindow", "Eliminar", 0));
-        actionEliminar->setShortcut(QApplication::translate("MainWindow", "Ctrl+D", 0));
-        menuArchivo->setTitle(QApplication::translate("MainWindow", "Archivo", 0));
+        actionObrir->setText(QApplication::translate("MainWindow", "Obrir", 0));
+        actionTancar->setText(QApplication::translate("MainWindow", "Tancar", 0));
+        actionExportar->setText(QApplication::translate("MainWindow", "Exportar", 0));
+        menuArchivo->setTitle(QApplication::translate("MainWindow", "Arxiu", 0));
+        menuEditar->setTitle(QApplication::translate("MainWindow", "Editar", 0));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0));
     } // retranslateUi
 

@@ -14,14 +14,18 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     mainwindow.cpp \
-    person.cpp
+    person.cpp \
+    dialog.cpp
 
 HEADERS  += \
     mainwindow.h \
-    person.h
+    person.h \
+    info.h \
+    dialog.h
 
 FORMS    += \
-    mainwindow.ui  
+    mainwindow.ui \  
+    dialog.ui
 
 RESOURCES += \
     Resources.qrc

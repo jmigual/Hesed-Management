@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['person',['Person',['../class_person.html#a0397c6f89fafc12e738923f612bc41a3',1,'Person::Person()'],['../class_person.html#a847845e2e214a89e790c584678f1ea97',1,'Person::Person(const Person &amp;p)']]]
+  ['on_5factioninserir_5ftriggered',['on_actionInserir_triggered',['../class_main_window.html#a308a629f351133027a3602d27099cb7c',1,'MainWindow']]],
+  ['operator_28_29',['operator()',['../struct_person_1_1comp.html#a99053054fa60fef569df526d680b9993',1,'Person::comp']]]
 ];

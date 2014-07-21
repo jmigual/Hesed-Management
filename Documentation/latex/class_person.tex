@@ -10,9 +10,7 @@ The \hyperlink{class_person}{Person} Class contains all people basic data.
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{struct_person_1_1comp}{comp}
-\begin{DoxyCompactList}\small\item\em The comp struct is used to sort the info. \end{DoxyCompactList}\item 
-struct \hyperlink{struct_person_1_1info}{info}
-\begin{DoxyCompactList}\small\item\em Struct to store basic people information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The comp struct is used to sort the info. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,12 +26,14 @@ void \hyperlink{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{sort} (int type)
 \begin{DoxyCompactList}\small\item\em Function to sort the data with the specified metod. \end{DoxyCompactList}\item 
 void \hyperlink{class_person_a100215914f651662a6207722ef28769e}{add\+Table} (Q\+Table\+View $\ast$t)
 \begin{DoxyCompactList}\small\item\em Adds the pointer to a Q\+Table\+View. \end{DoxyCompactList}\item 
+void \hyperlink{class_person_a1f2447001ce07f9d5d6b1a7a5da29198}{add\+Info} ()
+\item 
 void \hyperlink{class_person_a2f1231629a6e7e8c83ada57628e80a89}{show} ()
 \begin{DoxyCompactList}\small\item\em Function to show all stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-list$<$ \hyperlink{struct_person_1_1info}{info} $>$ \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}
+list$<$ \hyperlink{structinfo}{info} $>$ \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}
 \begin{DoxyCompactList}\small\item\em List to store all data. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{max\+I\+D}
 \begin{DoxyCompactList}\small\item\em Contains de maximum I\+D that has ever been assigned. \end{DoxyCompactList}\item 
@@ -44,7 +44,7 @@ Q\+Table\+View $\ast$ \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}
 \subsection{Detailed Description}
 The \hyperlink{class_person}{Person} Class contains all people basic data. 
 
-Definition at line 16 of file person.\+h.
+Definition at line 18 of file person.\+h.
 
 
 
@@ -132,7 +132,7 @@ Definition at line 22 of file person.\+cpp.
 29     in.setByteOrder(QDataStream::LittleEndian);
 30     in >> \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
 31     \textcolor{keywordflow}{while}(not in.atEnd()) \{
-32         info aux;
+32         \hyperlink{structinfo}{info} aux;
 33         in >> aux;
 34         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.push\_back(aux);
 35     \}
@@ -267,6 +267,25 @@ Definition at line 67 of file person.\+cpp.
 \begin{DoxyCode}
 67 \{ \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table} = t; \}
 \end{DoxyCode}
+\hypertarget{class_person_a1f2447001ce07f9d5d6b1a7a5da29198}{\index{Person@{Person}!add\+Info@{add\+Info}}
+\index{add\+Info@{add\+Info}!Person@{Person}}
+\subsubsection[{add\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::add\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_person_a1f2447001ce07f9d5d6b1a7a5da29198}
+
+
+Definition at line 69 of file person.\+cpp.
+
+
+\begin{DoxyCode}
+70 \{
+71     \hyperlink{class_dialog}{Dialog} *d = \textcolor{keyword}{new} \hyperlink{class_dialog}{Dialog};
+72     d->setAttribute(Qt::WA\_DeleteOnClose);
+73     d->open();
+74 \}
+\end{DoxyCode}
 \hypertarget{class_person_a2f1231629a6e7e8c83ada57628e80a89}{\index{Person@{Person}!show@{show}}
 \index{show@{show}!Person@{Person}}
 \subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::show (
@@ -280,19 +299,19 @@ Function to show all stored data.
 
 
 
-Definition at line 73 of file person.\+cpp.
+Definition at line 80 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-74 \{
-75     QStandardItemModel *model = \textcolor{keyword}{new} QStandardItemModel();
-76     QStringList titols;
-77     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"} << \textcolor{stringliteral}{"Nº Ajudat"}
-78            << \textcolor{stringliteral}{"Membres"};
-79     model->setHorizontalHeaderLabels(titols);
-80     
-81     \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table}->setModel(model);
-82 \}
+81 \{
+82     QStandardItemModel *model = \textcolor{keyword}{new} QStandardItemModel();
+83     QStringList titols;
+84     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"} << \textcolor{stringliteral}{"Nº Ajudat"}
+85            << \textcolor{stringliteral}{"Membres"};
+86     model->setHorizontalHeaderLabels(titols);
+87     
+88     \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table}->setModel(model);
+89 \}
 \end{DoxyCode}
 
 
@@ -306,7 +325,7 @@ List to store all data.
 
 
 
-Definition at line 139 of file person.\+h.
+Definition at line 63 of file person.\+h.
 
 \hypertarget{class_person_a816ee6194426eb703b61ae267e8e8ee6}{\index{Person@{Person}!max\+I\+D@{max\+I\+D}}
 \index{max\+I\+D@{max\+I\+D}!Person@{Person}}
@@ -317,14 +336,14 @@ Contains de maximum I\+D that has ever been assigned.
 
 
 
-Definition at line 143 of file person.\+h.
+Definition at line 67 of file person.\+h.
 
 \hypertarget{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{\index{Person@{Person}!table@{table}}
 \index{table@{table}!Person@{Person}}
 \subsubsection[{table}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Table\+View$\ast$ Person\+::table\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_aefba04c96d0d90ab2b220e6ad704c55a}
 
 
-Definition at line 144 of file person.\+h.
+Definition at line 68 of file person.\+h.
 
 
 

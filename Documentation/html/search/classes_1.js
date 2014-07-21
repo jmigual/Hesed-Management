@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['info',['info',['../struct_person_1_1info.html',1,'Person']]]
+  ['comp',['comp',['../struct_person_1_1comp.html',1,'Person']]]
 ];
