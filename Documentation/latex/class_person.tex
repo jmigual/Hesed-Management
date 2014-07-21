@@ -9,6 +9,8 @@ The \hyperlink{class_person}{Person} Class contains all people basic data.
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+struct \hyperlink{struct_person_1_1comp}{comp}
+\begin{DoxyCompactList}\small\item\em The comp struct is used to sort the info. \end{DoxyCompactList}\item 
 struct \hyperlink{struct_person_1_1info}{info}
 \begin{DoxyCompactList}\small\item\em Struct to store basic people information. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
@@ -20,15 +22,19 @@ struct \hyperlink{struct_person_1_1info}{info}
 \begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
 void \hyperlink{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{read} (Q\+Dir data)
 \begin{DoxyCompactList}\small\item\em Function to read all stored data. \end{DoxyCompactList}\item 
+void \hyperlink{class_person_aa667ce32c0552e818ac6df14c9a5f50d}{write} (Q\+Dir data)
+\begin{DoxyCompactList}\small\item\em Function to store all data to a file. \end{DoxyCompactList}\item 
+void \hyperlink{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{sort} (int type)
+\begin{DoxyCompactList}\small\item\em Function to sort the data with the specified metod. \end{DoxyCompactList}\item 
 void \hyperlink{class_person_ac89ee9923a0b4a874be8f5901e35b753}{show} (Q\+Table\+View $\ast$table)
 \begin{DoxyCompactList}\small\item\em Function to show all stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 list$<$ \hyperlink{struct_person_1_1info}{info} $>$ \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}
-\item 
+\begin{DoxyCompactList}\small\item\em List to store all data. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{max\+I\+D}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Contains de maximum I\+D that has ever been assigned. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -52,13 +58,13 @@ Default constructor.
 
 
 
-Definition at line 3 of file person.\+cpp.
+Definition at line 7 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-4 \{
-5     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = 0;
-6 \}
+8 \{
+9     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = 0;
+10 \}
 \end{DoxyCode}
 \hypertarget{class_person_a847845e2e214a89e790c584678f1ea97}{\index{Person@{Person}!Person@{Person}}
 \index{Person@{Person}!Person@{Person}}
@@ -73,14 +79,14 @@ Copy constructor.
 
 
 
-Definition at line 8 of file person.\+cpp.
+Definition at line 12 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-9 \{
-10     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = p.\hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
-11     \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all} = p.\hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all};
-12 \}
+13 \{
+14     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = p.\hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+15     \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all} = p.\hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all};
+16 \}
 \end{DoxyCode}
 
 
@@ -109,24 +115,122 @@ All data stored in {\itshape datafile.\+db} has been read and stored to implicit
 \end{DoxyPostcond}
 
 
-Definition at line 14 of file person.\+cpp.
+Definition at line 22 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-15 \{
-16     QFile dataFile(data.filePath(\textcolor{stringliteral}{"datafile.db"}));
-17     \textcolor{keywordflow}{if}(not dataFile.open(QIODevice::ReadWrite)) \{
-18         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << dataFile.fileName();
-19     \}
-20     QDataStream in(&dataFile);
-21     in.setByteOrder(QDataStream::LittleEndian);
-22     \textcolor{keywordflow}{while}(not in.atEnd()) \{
-23         info aux;
-24         in >> aux;
-25         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.push\_back(aux);
-26     \}
-27     dataFile.close();
-28 \}
+23 \{
+24     QFile file(data.filePath(\textcolor{stringliteral}{"datafile.db"}));
+25     \textcolor{keywordflow}{if}(not file.open(QIODevice::ReadWrite)) \{
+26         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << file.fileName();
+27     \}
+28     QDataStream in(&file);
+29     in.setByteOrder(QDataStream::LittleEndian);
+30     in >> \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+31     \textcolor{keywordflow}{while}(not in.atEnd()) \{
+32         info aux;
+33         in >> aux;
+34         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.push\_back(aux);
+35     \}
+36     file.close();
+37 \}
+\end{DoxyCode}
+\hypertarget{class_person_aa667ce32c0552e818ac6df14c9a5f50d}{\index{Person@{Person}!write@{write}}
+\index{write@{write}!Person@{Person}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::write (
+\begin{DoxyParamCaption}
+\item[{Q\+Dir}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_person_aa667ce32c0552e818ac6df14c9a5f50d}
+
+
+Function to store all data to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Path to {\itshape Data} folder \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All existing data has been stored in {\itshape datafile.\+db} overwriting existing data 
+\end{DoxyPostcond}
+
+
+Definition at line 39 of file person.\+cpp.
+
+
+\begin{DoxyCode}
+40 \{
+41     QFile file(data.filePath(\textcolor{stringliteral}{"datafile.db"}));
+42     \textcolor{keywordflow}{if} (not file.open(QIODevice::ReadWrite)) \{
+43         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << file.fileName();
+44     \}
+45     \hyperlink{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{sort}(0);
+46     QDataStream out(&file);
+47     out.setByteOrder(QDataStream::LittleEndian);
+48     out << \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+49     list<info>::iterator it = \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.begin();
+50     \textcolor{keywordflow}{while}(it != \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.end()) \{
+51         out << *it;
+52         ++it;
+53     \}
+54     
+55 \}
+\end{DoxyCode}
+\hypertarget{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{\index{Person@{Person}!sort@{sort}}
+\index{sort@{sort}!Person@{Person}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::sort (
+\begin{DoxyParamCaption}
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}
+
+
+Function to sort the data with the specified metod. 
+
+\subsubsection*{Order}
+
+
+\begin{DoxyItemize}
+\item {\bfseries 0} -\/$>$ Identification Number (I\+D) 
+\item {\bfseries 1} -\/$>$ Name (name) 
+\item {\bfseries 2} -\/$>$ Surname (surname) 
+\item {\bfseries 3} -\/$>$ N\+I\+F (N\+I\+F) 
+\item {\bfseries 4} -\/$>$ Birth Date(birth\+Date) 
+\item {\bfseries 5} -\/$>$ Couple N\+I\+F (c\+N\+I\+F) 
+\item {\bfseries 6} -\/$>$ Adress (adress) 
+\item {\bfseries 7} -\/$>$ Phone number (phone)  
+\item {\bfseries 8} -\/$>$ Beginning help date (begin\+Help) 
+\item {\bfseries 9} -\/$>$ End help date (end\+Help) 
+\item {\bfseries 10} -\/$>$ Times helped (number\+Help) 
+\item {\bfseries 11} -\/$>$ Family members (fam\+Members) 
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em type} & Variable to specify the desired metod to sort the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+All data has been stored as type specifies 
+\end{DoxyPostcond}
+
+
+Definition at line 57 of file person.\+cpp.
+
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{keywordflow}{if} (not \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.empty() and type >= 0) \{
+60         comp a;
+61         a.select(type);
+62         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.sort(a);
+63     \}
+64 \}
 \end{DoxyCode}
 \hypertarget{class_person_ac89ee9923a0b4a874be8f5901e35b753}{\index{Person@{Person}!show@{show}}
 \index{show@{show}!Person@{Person}}
@@ -146,13 +250,13 @@ Function to show all stored data.
 \end{DoxyParams}
 
 
-Definition at line 30 of file person.\+cpp.
+Definition at line 70 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-31 \{
-32     
-33 \}
+71 \{
+72 
+73 \}
 \end{DoxyCode}
 
 
@@ -162,14 +266,22 @@ Definition at line 30 of file person.\+cpp.
 \subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf info}$>$ Person\+::all\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}
 
 
-Definition at line 81 of file person.\+h.
+List to store all data. 
+
+
+
+Definition at line 138 of file person.\+h.
 
 \hypertarget{class_person_a816ee6194426eb703b61ae267e8e8ee6}{\index{Person@{Person}!max\+I\+D@{max\+I\+D}}
 \index{max\+I\+D@{max\+I\+D}!Person@{Person}}
 \subsubsection[{max\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Person\+::max\+I\+D\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a816ee6194426eb703b61ae267e8e8ee6}
 
 
-Definition at line 82 of file person.\+h.
+Contains de maximum I\+D that has ever been assigned. 
+
+
+
+Definition at line 142 of file person.\+h.
 
 
 

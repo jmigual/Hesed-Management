@@ -37,7 +37,9 @@ unsigned int \hyperlink{struct_person_1_1info_a535ca27747d371eb58005194190f6bd6}
 \begin{DoxyCompactItemize}
 \item 
 Q\+Data\+Stream \& \hyperlink{struct_person_1_1info_aa1cff6f546458f788536a635780f7014}{operator$>$$>$} (Q\+Data\+Stream \&in, \hyperlink{struct_person_1_1info}{info} \&i)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Definition of the operator '$>$$>$' to the struct. \end{DoxyCompactList}\item 
+Q\+Data\+Stream \& \hyperlink{struct_person_1_1info_abc99bd8cbdd8d6f6ee6a15abc543fd26}{operator$<$$<$} (Q\+Data\+Stream \&out, \hyperlink{struct_person_1_1info}{info} \&i)
+\begin{DoxyCompactList}\small\item\em Definition of the operator '$<$$<$' to the struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -52,11 +54,11 @@ Stored info is\+:
 \item Couple N\+I\+F 
 \item Adress 
 \item Phone number 
-\item Start help date 
+\item Beginning help date 
 \item End help date 
 \item Times helped 
-\item Identification Number 
 \item Family members 
+\item Identification Number 
 \end{DoxyItemize}
 
 Definition at line 36 of file person.\+h.
@@ -74,16 +76,45 @@ Definition at line 36 of file person.\+h.
 )\hspace{0.3cm}{\ttfamily [friend]}}}\label{struct_person_1_1info_aa1cff6f546458f788536a635780f7014}
 
 
-Definition at line 74 of file person.\+h.
+Definition of the operator '$>$$>$' to the struct. 
+
+
+
+Definition at line 77 of file person.\+h.
 
 
 \begin{DoxyCode}
-74                                                                   \{
-75             in >> i.adress >> i.beginHelp >> i.birthDate >> i.cNIF
-76                >> i.endHelp >> i.famMembers >> i.ID >> i.name >> i.NIF
-77                >> i.numberHelp >> i.phone >> i.surname;
-78             \textcolor{keywordflow}{return} in;
-79         \}
+77                                                                   \{
+78             in >> i.adress >> i.beginHelp >> i.birthDate >> i.cNIF
+79                >> i.endHelp >> i.famMembers >> i.ID >> i.name >> i.NIF
+80                >> i.numberHelp >> i.phone >> i.surname;
+81             \textcolor{keywordflow}{return} in;
+82         \}
+\end{DoxyCode}
+\hypertarget{struct_person_1_1info_abc99bd8cbdd8d6f6ee6a15abc543fd26}{\index{Person\+::info@{Person\+::info}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Person\+::info@{Person\+::info}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Data\+Stream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{Q\+Data\+Stream \&}]{out, }
+\item[{{\bf info} \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{struct_person_1_1info_abc99bd8cbdd8d6f6ee6a15abc543fd26}
+
+
+Definition of the operator '$<$$<$' to the struct. 
+
+
+
+Definition at line 87 of file person.\+h.
+
+
+\begin{DoxyCode}
+87                                                                    \{
+88             out << i.adress << i.beginHelp << i.birthDate << i.cNIF
+89                 << i.endHelp << i.famMembers << i.ID << i.name << i.NIF
+90                 << i.numberHelp << i.phone << i.surname;
+91             \textcolor{keywordflow}{return} out;
+92         \} 
 \end{DoxyCode}
 
 

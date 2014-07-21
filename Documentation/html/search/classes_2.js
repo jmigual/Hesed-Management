@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['person',['Person',['../class_person.html',1,'']]]
+  ['mainwindow',['MainWindow',['../class_main_window.html',1,'']]]
 ];

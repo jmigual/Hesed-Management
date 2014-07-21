@@ -18,12 +18,20 @@ class MainWindow : public QMainWindow
     Q_OBJECT
     
 public:
+    /****************
+     * CONSTRUCTORS *
+     ****************/
+    
     /**
      * @brief Default constructor
      * @param parent Default parameter
      */
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    
+    /***************
+     *  MODIFIERS  *
+     ***************/
     
     /**
      * @brief Function that loads data when exists de <em>Data</em> folder.

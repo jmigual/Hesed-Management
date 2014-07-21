@@ -1,5 +1,9 @@
 #include "person.h"
 
+/****************
+ * CONSTRUCTORS *
+ ****************/
+
 Person::Person()
 {
     maxID = 0;
@@ -11,23 +15,60 @@ Person::Person(const Person &p)
     all = p.all;
 }
 
+/***************
+ *  MODIFIERS  *
+ ***************/
+
 void Person::read(QDir data)
 {
-    QFile dataFile(data.filePath("datafile.db"));
-    if(not dataFile.open(QIODevice::ReadWrite)) {
-        qWarning() << "Cannot create the file" << dataFile.fileName();
+    QFile file(data.filePath("datafile.db"));
+    if(not file.open(QIODevice::ReadWrite)) {
+        qWarning() << "Cannot create the file" << file.fileName();
     }
-    QDataStream in(&dataFile);
+    QDataStream in(&file);
     in.setByteOrder(QDataStream::LittleEndian);
+    in >> maxID;
     while(not in.atEnd()) {
         info aux;
         in >> aux;
         all.push_back(aux);
     }
-    dataFile.close();
+    file.close();
 }
+
+void Person::write(QDir data)
+{
+    QFile file(data.filePath("datafile.db"));
+    if (not file.open(QIODevice::ReadWrite)) {
+        qWarning() << "Cannot create the file" << file.fileName();
+    }
+    sort(0);
+    QDataStream out(&file);
+    out.setByteOrder(QDataStream::LittleEndian);
+    out << maxID;
+    list<info>::iterator it = all.begin();
+    while(it != all.end()) {
+        out << *it;
+        ++it;
+    }
+    
+}
+
+void Person::sort(int type)
+{
+    if (not all.empty() and type >= 0) {
+        comp a;
+        a.select(type);
+        all.sort(a);
+    }
+    else qWarning() << "Error while trying to sort";
+}
+
+/***************
+ *  CONSULTOR  *
+ ***************/
 
 void Person::show(QTableView *table)
 {
-    
+
 }

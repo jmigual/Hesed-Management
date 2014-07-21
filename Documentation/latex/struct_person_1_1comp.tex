@@ -1,0 +1,127 @@
+\hypertarget{struct_person_1_1comp}{\section{Person\+:\+:comp Struct Reference}
+\label{struct_person_1_1comp}\index{Person\+::comp@{Person\+::comp}}
+}
+
+
+The comp struct is used to sort the info.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{struct_person_1_1comp_a99053054fa60fef569df526d680b9993}{operator()} (\hyperlink{struct_person_1_1info}{info} a, \hyperlink{struct_person_1_1info}{info} b)
+\begin{DoxyCompactList}\small\item\em Needed to sort info. \end{DoxyCompactList}\item 
+\hyperlink{struct_person_1_1comp_a5272710b2721399c612bcdad1b1cead7}{comp} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{struct_person_1_1comp_af552a34297c810b79725508e2d5d810a}{select} (int s)
+\begin{DoxyCompactList}\small\item\em To selec the desired option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel}
+\begin{DoxyCompactList}\small\item\em Stores the selected ordering type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The comp struct is used to sort the info. 
+
+Definition at line 98 of file person.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_person_1_1comp_a5272710b2721399c612bcdad1b1cead7}{\index{Person\+::comp@{Person\+::comp}!comp@{comp}}
+\index{comp@{comp}!Person\+::comp@{Person\+::comp}}
+\subsubsection[{comp}]{\setlength{\rightskip}{0pt plus 5cm}Person\+::comp\+::comp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_person_1_1comp_a5272710b2721399c612bcdad1b1cead7}
+
+
+Default constructor. 
+
+
+
+Definition at line 125 of file person.\+h.
+
+
+\begin{DoxyCode}
+126         \{
+127             \hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} = 0;
+128         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_person_1_1comp_a99053054fa60fef569df526d680b9993}{\index{Person\+::comp@{Person\+::comp}!operator()@{operator()}}
+\index{operator()@{operator()}!Person\+::comp@{Person\+::comp}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}bool Person\+::comp\+::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf info}}]{a, }
+\item[{{\bf info}}]{b}
+\end{DoxyParamCaption}
+)}}\label{struct_person_1_1comp_a99053054fa60fef569df526d680b9993}
+
+
+Needed to sort info. 
+
+
+
+Definition at line 107 of file person.\+h.
+
+
+\begin{DoxyCode}
+108         \{
+109             \textcolor{keywordflow}{if}(\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 0) \textcolor{keywordflow}{return} a.ID < b.ID;
+110             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 1) \textcolor{keywordflow}{return} a.name < b.name;
+111             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 2) \textcolor{keywordflow}{return} a.surname < b.surname;
+112             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 3) \textcolor{keywordflow}{return} a.NIF < b.NIF;
+113             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 4) \textcolor{keywordflow}{return} a.birthDate < b.birthDate;
+114             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 5) \textcolor{keywordflow}{return} a.cNIF < b.cNIF;
+115             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 6) \textcolor{keywordflow}{return} a.adress < b.adress;
+116             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 7) \textcolor{keywordflow}{return} a.phone < b.phone;
+117             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 8) \textcolor{keywordflow}{return} a.beginHelp < b.beginHelp;
+118             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 9) \textcolor{keywordflow}{return} a.endHelp < b.endHelp;
+119             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} == 10) \textcolor{keywordflow}{return} a.numberHelp < b.numberHelp;
+120             \textcolor{keywordflow}{return} a.famMembers < b.famMembers;
+121         \}
+\end{DoxyCode}
+\hypertarget{struct_person_1_1comp_af552a34297c810b79725508e2d5d810a}{\index{Person\+::comp@{Person\+::comp}!select@{select}}
+\index{select@{select}!Person\+::comp@{Person\+::comp}}
+\subsubsection[{select}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::comp\+::select (
+\begin{DoxyParamCaption}
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)}}\label{struct_person_1_1comp_af552a34297c810b79725508e2d5d810a}
+
+
+To selec the desired option. 
+
+
+
+Definition at line 132 of file person.\+h.
+
+
+\begin{DoxyCode}
+132 \{ \hyperlink{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{sel} = s; \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}{\index{Person\+::comp@{Person\+::comp}!sel@{sel}}
+\index{sel@{sel}!Person\+::comp@{Person\+::comp}}
+\subsubsection[{sel}]{\setlength{\rightskip}{0pt plus 5cm}int Person\+::comp\+::sel}}\label{struct_person_1_1comp_a85555416f9f001302f50825aa149ced3}
+
+
+Stores the selected ordering type. 
+
+
+
+Definition at line 102 of file person.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{person_8h}{person.\+h}\end{DoxyCompactItemize}

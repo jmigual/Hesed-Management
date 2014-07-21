@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loaddata',['loadData',['../class_main_window.html#a6906cd747941813c6da899b18d881473',1,'MainWindow']]]
+  ['comp',['comp',['../struct_person_1_1comp.html#a5272710b2721399c612bcdad1b1cead7',1,'Person::comp']]]
 ];
