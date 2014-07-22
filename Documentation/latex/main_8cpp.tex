@@ -1,7 +1,8 @@
 \hypertarget{main_8cpp}{\section{main.\+cpp File Reference}
 \label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
 }
-Include dependency graph for main.\+cpp\+:\nopagebreak
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -46,9 +47,11 @@ Definition at line 8 of file main.\+cpp.
 22         qDebug() << \textcolor{stringliteral}{"No s'ha trobat, creant directori"};
 23         data.mkpath(path);
 24     \}
-25     
-26     w.showMaximized();
-27     
-28     \textcolor{keywordflow}{return} a.exec();
-29 \}
+25     QIcon ico(\textcolor{stringliteral}{"://Images/Hesed.ico"});
+26     w.setWindowIcon(ico);
+27     w.setWindowTitle(\textcolor{stringliteral}{"Associació Hesed"});
+28     w.showMaximized();
+29     
+30     \textcolor{keywordflow}{return} a.exec();
+31 \}
 \end{DoxyCode}

@@ -17,13 +17,13 @@ CXXFLAGS      = -pipe -fno-keep-inline-dllexport -g -frtti -Wall -Wextra -fexcep
 INCPATH       = -I..\..\Code -I"C:\Qt\5.3\mingw482_32\include" -I"C:\Qt\5.3\mingw482_32\include\QtWidgets" -I"C:\Qt\5.3\mingw482_32\include\QtGui" -I"C:\Qt\5.3\mingw482_32\include\QtCore" -I"debug" -I"." -I"." -I"C:\Qt\5.3\mingw482_32\mkspecs\win32-g++"
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -lglu32 -lopengl32 -lgdi32 -luser32 -lmingw32 -LC:/Qt/5.3/mingw482_32/lib -lqtmaind -LC:\mingw482\mingw32\lib -LC:\Utils\icu32_52_1_mingw482\lib -LC:\utils\postgresql\pgsql\lib -LC:\utils\mysql\mysql\lib -LC:\opensll\lib -LC:\Qt\5.3\mingw482_32/lib -lQt5Widgetsd -lQt5Guid -lQt5Cored 
+LIBS        =        -lglu32 -lopengl32 -lgdi32 -luser32 -lmingw32 -LC:/Qt/5.3/mingw482_32/lib -lqtmaind -LC:\mingw482\mingw32\lib -LC:\Utils\icu32_52_1_mingw482\lib -LC:\utils\postgresql\pgsql\lib -LC:\utils\mysql\mysql\lib -LC:\opensll\lib -LC:\Qt\5.3\mingw482_32/lib -lQt5Widgetsd -lQt5Guid -lQt5Cored debug\hesed_res.o 
 QMAKE         = C:\Qt\5.3\mingw482_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
 ZIP           = zip -r -9
 DEF_FILE      = 
-RES_FILE      = 
+RES_FILE      = debug\hesed_res.o
 COPY          = copy /y
 SED           = $(QMAKE) -install sed
 COPY_FILE     = $(COPY)
@@ -84,8 +84,11 @@ DESTDIR_TARGET = debug\Hesed.exe
 first: all
 all: Makefile.Debug  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ui_mainwindow.h ui_dialog.h $(OBJECTS) 
+$(DESTDIR_TARGET): ui_mainwindow.h ui_dialog.h $(OBJECTS) debug/hesed_res.o
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
+
+debug/hesed_res.o: ..\..\Code\hesed.rc
+	windres -i ..\..\Code\hesed.rc -o debug\hesed_res.o --include-dir=./../../Code $(DEFINES)
 
 qmake: FORCE
 	@$(QMAKE) -spec win32-g++ -o Makefile.Debug ..\..\Code\Hesed.pro
@@ -97,6 +100,7 @@ dist:
 
 clean: compiler_clean 
 	-$(DEL_FILE) debug\main.o debug\mainwindow.o debug\person.o debug\dialog.o debug\qrc_Resources.o debug\moc_mainwindow.o debug\moc_dialog.o
+	-$(DEL_FILE) debug\hesed_res.o
 
 distclean: clean 
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -114,6 +118,7 @@ compiler_rcc_make_all: debug/qrc_Resources.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_Resources.cpp
 debug/qrc_Resources.cpp: ../../Code/Resources.qrc \
+		../../Code/Images/Hesed.ico \
 		../../Code/Images/Icons/heart.ico \
 		../../Code/Images/Icons/bookmark.ico \
 		../../Code/Images/Icons/down.ico \
@@ -979,7 +984,39 @@ debug/dialog.o: ../../Code/dialog.cpp ../../Code/dialog.h \
 		C:/Qt/5.3/mingw482_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
-		ui_dialog.h
+		ui_dialog.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QVariant \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QAction \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qaction.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qapplication.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qguiapplication.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QButtonGroup \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QHeaderView \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qheaderview.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qframe.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstyleoption.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qvalidator.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/qregularexpression.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qslider.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstyle.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtabbar.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qrubberband.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\dialog.o ..\..\Code\dialog.cpp
 
 debug/qrc_Resources.o: debug/qrc_Resources.cpp 

@@ -44,7 +44,7 @@ Q\+Table\+View $\ast$ \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}
 \subsection{Detailed Description}
 The \hyperlink{class_person}{Person} Class contains all people basic data. 
 
-Definition at line 18 of file person.\+h.
+Definition at line 16 of file person.\+h.
 
 
 
@@ -62,13 +62,13 @@ Default constructor.
 
 
 
-Definition at line 7 of file person.\+cpp.
+Definition at line 8 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-8 \{
-9     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = 0;
-10 \}
+9 \{
+10     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = 0;
+11 \}
 \end{DoxyCode}
 \hypertarget{class_person_a847845e2e214a89e790c584678f1ea97}{\index{Person@{Person}!Person@{Person}}
 \index{Person@{Person}!Person@{Person}}
@@ -83,14 +83,14 @@ Copy constructor.
 
 
 
-Definition at line 12 of file person.\+cpp.
+Definition at line 13 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-13 \{
-14     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = p.\hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
-15     \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all} = p.\hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all};
-16 \}
+14 \{
+15     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = p.\hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+16     \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all} = p.\hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all};
+17 \}
 \end{DoxyCode}
 
 
@@ -119,25 +119,25 @@ All data stored in {\itshape datafile.\+db} has been read and stored to implicit
 \end{DoxyPostcond}
 
 
-Definition at line 22 of file person.\+cpp.
+Definition at line 23 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-23 \{
-24     QFile file(data.filePath(\textcolor{stringliteral}{"datafile.db"}));
-25     \textcolor{keywordflow}{if}(not file.open(QIODevice::ReadWrite)) \{
-26         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << file.fileName();
-27     \}
-28     QDataStream in(&file);
-29     in.setByteOrder(QDataStream::LittleEndian);
-30     in >> \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
-31     \textcolor{keywordflow}{while}(not in.atEnd()) \{
-32         \hyperlink{structinfo}{info} aux;
-33         in >> aux;
-34         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.push\_back(aux);
-35     \}
-36     file.close();
-37 \}
+24 \{
+25     QFile file(data.filePath(\textcolor{stringliteral}{"datafile.db"}));
+26     \textcolor{keywordflow}{if}(not file.open(QIODevice::ReadWrite)) \{
+27         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << file.fileName();
+28     \}
+29     QDataStream in(&file);
+30     in.setByteOrder(QDataStream::LittleEndian);
+31     in >> \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+32     \textcolor{keywordflow}{while}(not in.atEnd()) \{
+33         \hyperlink{structinfo}{info} aux;
+34         in >> aux;
+35         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.push\_back(aux);
+36     \}
+37     file.close();
+38 \}
 \end{DoxyCode}
 \hypertarget{class_person_aa667ce32c0552e818ac6df14c9a5f50d}{\index{Person@{Person}!write@{write}}
 \index{write@{write}!Person@{Person}}
@@ -163,26 +163,26 @@ All existing data has been stored in {\itshape datafile.\+db} overwriting existi
 \end{DoxyPostcond}
 
 
-Definition at line 39 of file person.\+cpp.
+Definition at line 40 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-40 \{
-41     QFile file(data.filePath(\textcolor{stringliteral}{"datafile.db"}));
-42     \textcolor{keywordflow}{if} (not file.open(QIODevice::ReadWrite)) \{
-43         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << file.fileName();
-44     \}
-45     \hyperlink{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{sort}(0);
-46     QDataStream out(&file);
-47     out.setByteOrder(QDataStream::LittleEndian);
-48     out << \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
-49     list<info>::iterator it = \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.begin();
-50     \textcolor{keywordflow}{while}(it != \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.end()) \{
-51         out << *it;
-52         ++it;
-53     \}
-54     
-55 \}
+41 \{
+42     QFile file(data.filePath(\textcolor{stringliteral}{"datafile.db"}));
+43     \textcolor{keywordflow}{if} (not file.open(QIODevice::ReadWrite)) \{
+44         qWarning() << \textcolor{stringliteral}{"Cannot create the file"} << file.fileName();
+45     \}
+46     \hyperlink{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{sort}(0);
+47     QDataStream out(&file);
+48     out.setByteOrder(QDataStream::LittleEndian);
+49     out << \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+50     list<info>::iterator it = \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.begin();
+51     \textcolor{keywordflow}{while}(it != \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.end()) \{
+52         out << *it;
+53         ++it;
+54     \}
+55     
+56 \}
 \end{DoxyCode}
 \hypertarget{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{\index{Person@{Person}!sort@{sort}}
 \index{sort@{sort}!Person@{Person}}
@@ -224,18 +224,18 @@ All data has been stored as type specifies
 \end{DoxyPostcond}
 
 
-Definition at line 57 of file person.\+cpp.
+Definition at line 58 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-58 \{
-59     \textcolor{keywordflow}{if} (not \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.empty() and type >= 0) \{
-60         comp a;
-61         a.select(type);
-62         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.sort(a);
-63     \}
-64     \textcolor{keywordflow}{else} qWarning() << \textcolor{stringliteral}{"Error while trying to sort"};
-65 \}
+59 \{
+60     \textcolor{keywordflow}{if} (not \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.empty() and type >= 0) \{
+61         comp a;
+62         a.select(type);
+63         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.sort(a);
+64     \}
+65     \textcolor{keywordflow}{else} qWarning() << \textcolor{stringliteral}{"Error while trying to sort"};
+66 \}
 \end{DoxyCode}
 \hypertarget{class_person_a100215914f651662a6207722ef28769e}{\index{Person@{Person}!add\+Table@{add\+Table}}
 \index{add\+Table@{add\+Table}!Person@{Person}}
@@ -261,11 +261,11 @@ The pointer has been added
 \end{DoxyPostcond}
 
 
-Definition at line 67 of file person.\+cpp.
+Definition at line 68 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-67 \{ \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table} = t; \}
+68 \{ \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table} = t; \}
 \end{DoxyCode}
 \hypertarget{class_person_a1f2447001ce07f9d5d6b1a7a5da29198}{\index{Person@{Person}!add\+Info@{add\+Info}}
 \index{add\+Info@{add\+Info}!Person@{Person}}
@@ -276,15 +276,13 @@ Definition at line 67 of file person.\+cpp.
 )}}\label{class_person_a1f2447001ce07f9d5d6b1a7a5da29198}
 
 
-Definition at line 69 of file person.\+cpp.
+Definition at line 70 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-70 \{
-71     \hyperlink{class_dialog}{Dialog} *d = \textcolor{keyword}{new} \hyperlink{class_dialog}{Dialog};
-72     d->setAttribute(Qt::WA\_DeleteOnClose);
-73     d->open();
-74 \}
+71 \{
+72     
+73 \}
 \end{DoxyCode}
 \hypertarget{class_person_a2f1231629a6e7e8c83ada57628e80a89}{\index{Person@{Person}!show@{show}}
 \index{show@{show}!Person@{Person}}
@@ -299,19 +297,19 @@ Function to show all stored data.
 
 
 
-Definition at line 80 of file person.\+cpp.
+Definition at line 79 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-81 \{
-82     QStandardItemModel *model = \textcolor{keyword}{new} QStandardItemModel();
-83     QStringList titols;
-84     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"} << \textcolor{stringliteral}{"Nº Ajudat"}
-85            << \textcolor{stringliteral}{"Membres"};
-86     model->setHorizontalHeaderLabels(titols);
-87     
-88     \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table}->setModel(model);
-89 \}
+80 \{
+81     QStandardItemModel *model = \textcolor{keyword}{new} QStandardItemModel();
+82     QStringList titols;
+83     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"} << \textcolor{stringliteral}{"Nº Ajudat"}
+84            << \textcolor{stringliteral}{"Membres"};
+85     model->setHorizontalHeaderLabels(titols);
+86     
+87     \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table}->setModel(model);
+88 \}
 \end{DoxyCode}
 
 
@@ -325,7 +323,7 @@ List to store all data.
 
 
 
-Definition at line 63 of file person.\+h.
+Definition at line 61 of file person.\+h.
 
 \hypertarget{class_person_a816ee6194426eb703b61ae267e8e8ee6}{\index{Person@{Person}!max\+I\+D@{max\+I\+D}}
 \index{max\+I\+D@{max\+I\+D}!Person@{Person}}
@@ -336,14 +334,14 @@ Contains de maximum I\+D that has ever been assigned.
 
 
 
-Definition at line 67 of file person.\+h.
+Definition at line 65 of file person.\+h.
 
 \hypertarget{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{\index{Person@{Person}!table@{table}}
 \index{table@{table}!Person@{Person}}
 \subsubsection[{table}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Table\+View$\ast$ Person\+::table\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_aefba04c96d0d90ab2b220e6ad704c55a}
 
 
-Definition at line 68 of file person.\+h.
+Definition at line 66 of file person.\+h.
 
 
 

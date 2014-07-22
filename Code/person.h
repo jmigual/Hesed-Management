@@ -6,10 +6,8 @@
 #include <QDir>
 #include <QFile>
 #include <QTableView>
-#include <QtDebug>
 #include <QStandardItemModel>
 #include "info.h"
-#include "dialog.h"
 using namespace std;
 
 /**

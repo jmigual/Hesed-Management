@@ -1,5 +1,6 @@
 #ifndef INFO_H
 #define INFO_H
+#include <QDate>
 
 /**
  * @brief Struct to store basic people information.
@@ -61,7 +62,8 @@ struct info {
     /**
      * @brief Definition of the operator '>>' to the struct
      */
-    friend QDataStream& operator>> (QDataStream &in, info &i) {
+    friend QDataStream& operator>> (QDataStream &in, info &i) 
+    {
         in >> i.adress >> i.beginHelp >> i.birthDate >> i.cNIF
            >> i.endHelp >> i.famMembers >> i.ID >> i.name >> i.NIF
            >> i.numberHelp >> i.phone >> i.surname;
@@ -71,7 +73,8 @@ struct info {
     /**
      * @brief Definition of the operator '<<' to the struct
      */
-    friend QDataStream& operator<< (QDataStream &out, info &i) {
+    friend QDataStream& operator<< (QDataStream &out, info &i) 
+    {
         out << i.adress << i.beginHelp << i.birthDate << i.cNIF
             << i.endHelp << i.famMembers << i.ID << i.name << i.NIF
             << i.numberHelp << i.phone << i.surname;

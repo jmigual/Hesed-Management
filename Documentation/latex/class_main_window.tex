@@ -36,7 +36,7 @@ Ui\+::\+Main\+Window $\ast$ \hyperlink{class_main_window_a35466a70ed47252a019116
 \subsection{Detailed Description}
 Class to show basic information to user. 
 
-Definition at line 15 of file mainwindow.\+h.
+Definition at line 17 of file mainwindow.\+h.
 
 
 
@@ -152,8 +152,12 @@ Definition at line 36 of file mainwindow.\+cpp.
 
 \begin{DoxyCode}
 37 \{
-38     \hyperlink{structinfo}{info}.addInfo();
-39 \}
+38     \hyperlink{class_dialog}{Dialog} *d = \textcolor{keyword}{new} \hyperlink{class_dialog}{Dialog};
+39     d->setAttribute(Qt::WA\_DeleteOnClose);
+40     d->setWindowTitle(\textcolor{stringliteral}{"Associació Hesed - Inserir"});
+41     d->open();
+42     \hyperlink{structinfo}{info}.addInfo();
+43 \}
 \end{DoxyCode}
 
 
@@ -163,21 +167,21 @@ Definition at line 36 of file mainwindow.\+cpp.
 \subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir Main\+Window\+::data\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a1dc35bda22acc11636be809539ab73d9}
 
 
-Definition at line 51 of file mainwindow.\+h.
+Definition at line 53 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}{\index{Main\+Window@{Main\+Window}!ui@{ui}}
 \index{ui@{ui}!Main\+Window@{Main\+Window}}
 \subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a35466a70ed47252a0191168126a352a5}
 
 
-Definition at line 52 of file mainwindow.\+h.
+Definition at line 54 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{\index{Main\+Window@{Main\+Window}!info@{info}}
 \index{info@{info}!Main\+Window@{Main\+Window}}
 \subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Person} Main\+Window\+::info\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a2d1f101eed410e692b5db9b7226174bf}
 
 
-Definition at line 53 of file mainwindow.\+h.
+Definition at line 55 of file mainwindow.\+h.
 
 
 

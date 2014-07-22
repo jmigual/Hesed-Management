@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['comp',['comp',['../struct_person_1_1comp.html',1,'Person']]]
+  ['dialog',['Dialog',['../class_dialog.html',1,'']]]
 ];

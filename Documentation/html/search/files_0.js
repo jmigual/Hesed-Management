@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['addwidged_2ecpp',['addwidged.cpp',['../addwidged_8cpp.html',1,'']]],
-  ['addwidged_2eh',['addwidged.h',['../addwidged_8h.html',1,'']]]
+  ['dialog_2ecpp',['dialog.cpp',['../dialog_8cpp.html',1,'']]],
+  ['dialog_2eh',['dialog.h',['../dialog_8h.html',1,'']]]
 ];

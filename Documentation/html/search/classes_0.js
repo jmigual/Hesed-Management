@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addwidged',['addWidged',['../classadd_widged.html',1,'']]]
+  ['comp',['comp',['../struct_person_1_1comp.html',1,'Person']]]
 ];

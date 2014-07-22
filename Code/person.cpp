@@ -1,4 +1,5 @@
 #include "person.h"
+#include <QtDebug>
 
 /****************
  * CONSTRUCTORS *
@@ -68,9 +69,7 @@ void Person::addTable(QTableView *t) { table = t; }
 
 void Person::addInfo()
 {
-    Dialog *d = new Dialog;
-    d->setAttribute(Qt::WA_DeleteOnClose);
-    d->open();
+    
 }
 
 /***************

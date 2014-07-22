@@ -31,4 +31,7 @@ RESOURCES += \
     Resources.qrc
 
 OTHER_FILES += \
-    Doxyfile
+    Doxyfile \
+    hesed.rc
+
+RC_FILE += hesed.rc

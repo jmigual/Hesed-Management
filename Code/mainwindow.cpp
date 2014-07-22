@@ -35,5 +35,9 @@ void MainWindow::addPath(const QDir &data)
 
 void MainWindow::on_actionInserir_triggered()
 {
+    Dialog *d = new Dialog;
+    d->setAttribute(Qt::WA_DeleteOnClose);
+    d->setWindowTitle("Associació Hesed - Inserir");
+    d->open();
     info.addInfo();
 }

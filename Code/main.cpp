@@ -22,7 +22,9 @@ int main(int argc, char *argv[])
         qDebug() << "No s'ha trobat, creant directori";
         data.mkpath(path);
     }
-    
+    QIcon ico("://Images/Hesed.ico");
+    w.setWindowIcon(ico);
+    w.setWindowTitle("Associació Hesed");
     w.showMaximized();
     
     return a.exec();
