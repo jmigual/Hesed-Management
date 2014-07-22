@@ -21,7 +21,7 @@
  *  <li>Identification Number</li>
  * </ul>
  */
-struct info {
+struct Info {
     /**
      * @var name
      * @brief Name
@@ -62,7 +62,7 @@ struct info {
     /**
      * @brief Definition of the operator '>>' to the struct
      */
-    friend QDataStream& operator>> (QDataStream &in, info &i) 
+    friend QDataStream& operator>> (QDataStream &in, Info &i) 
     {
         in >> i.adress >> i.beginHelp >> i.birthDate >> i.cNIF
            >> i.endHelp >> i.famMembers >> i.ID >> i.name >> i.NIF
@@ -73,7 +73,7 @@ struct info {
     /**
      * @brief Definition of the operator '<<' to the struct
      */
-    friend QDataStream& operator<< (QDataStream &out, info &i) 
+    friend QDataStream& operator<< (QDataStream &out, Info &i) 
     {
         out << i.adress << i.beginHelp << i.birthDate << i.cNIF
             << i.endHelp << i.famMembers << i.ID << i.name << i.NIF

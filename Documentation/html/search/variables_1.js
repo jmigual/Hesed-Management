@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['beginhelp',['beginHelp',['../structinfo.html#a860bf129937fda542024222bd425a224',1,'info']]],
-  ['birthdate',['birthDate',['../structinfo.html#a2269c62bc80419abee5ab99596715014',1,'info']]]
+  ['beginhelp',['beginHelp',['../struct_info.html#a0b9f2e6014fe7a54993c36d15450b7e0',1,'Info']]],
+  ['birthdate',['birthDate',['../struct_info.html#a3c37c78a0e01a9b8871adddce7451e53',1,'Info']]]
 ];

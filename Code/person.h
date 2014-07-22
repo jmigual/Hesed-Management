@@ -27,7 +27,7 @@ private:
         /**
          * @brief Needed to sort info
          */
-        bool operator()(info a, info b) 
+        bool operator()(Info a, Info b) 
         {
             if(sel == 0) return a.ID < b.ID;
             else if (sel == 1) return a.name < b.name;
@@ -49,6 +49,16 @@ private:
         {
             sel = 0;
         }
+        
+        /**
+         * @brief Constructor with the selected option
+         * @param s Selected option
+         */
+        comp(int s)
+        {
+            sel = s;
+        }
+
         /**
          * @brief To selec the desired option
          */
@@ -58,7 +68,7 @@ private:
     /**
      * @brief List to store all data
      */
-    list<info> all;
+    list<Info> all;
     /**
      * @brief Contains de maximum ID that has ever been assigned
      */
@@ -135,7 +145,7 @@ public:
      */
     void addTable(QTableView *t);
     
-    void addInfo();
+    void addInfo(Info i);
     
     /***************
      *  CONSULTOR  *

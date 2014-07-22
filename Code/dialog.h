@@ -15,11 +15,14 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
-    void 
+    
+private slots:
+    void on_buttonBox_accepted();
+    
+    void on_buttonBox_rejected();
     
 private:
     Ui::Dialog *ui;
-    info data;
 };
 
 #endif // DIALOG_H

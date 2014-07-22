@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fammembers',['famMembers',['../structinfo.html#a1b51e61437e4e0b422a49ad00b8a4e65',1,'info']]]
+  ['fammembers',['famMembers',['../struct_info.html#ade80df067f691d4120a15ef8dc095a74',1,'Info']]]
 ];

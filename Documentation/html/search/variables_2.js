@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cnif',['cNIF',['../structinfo.html#a46ee4d6a7e5976d795ed9efa02341fce',1,'info']]]
+  ['cnif',['cNIF',['../struct_info.html#a49fbb11aff87b66c956560ec2bc31df4',1,'Info']]]
 ];

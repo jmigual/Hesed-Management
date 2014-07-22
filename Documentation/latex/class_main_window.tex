@@ -21,6 +21,8 @@ void \hyperlink{class_main_window_a44d044deed1ddca8952f59554705e28d}{add\+Path} 
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_main_window_a308a629f351133027a3602d27099cb7c}{on\+\_\+action\+Inserir\+\_\+triggered} ()
+\item 
+void \hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{end\+Inserir} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -30,6 +32,8 @@ Q\+Dir \hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data}
 Ui\+::\+Main\+Window $\ast$ \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}
 \item 
 \hyperlink{class_person}{Person} \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}
+\item 
+\hyperlink{class_dialog}{Dialog} $\ast$ \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}
 \end{DoxyCompactItemize}
 
 
@@ -107,9 +111,9 @@ Definition at line 24 of file mainwindow.\+cpp.
 
 \begin{DoxyCode}
 25 \{
-26     \hyperlink{structinfo}{info}.read(\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data});
-27     \hyperlink{structinfo}{info}.addTable(\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView);
-28     \hyperlink{structinfo}{info}.show();
+26     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a98c73f33a51b80cc9296a949f2fc5cf3}{read}(\hyperlink{class_main_window_a1dc35bda22acc11636be809539ab73d9}{data});
+27     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a100215914f651662a6207722ef28769e}{addTable}(\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}->tableView);
+28     \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}.\hyperlink{class_person_a2f1231629a6e7e8c83ada57628e80a89}{show}();
 29 \}
 \end{DoxyCode}
 \hypertarget{class_main_window_a44d044deed1ddca8952f59554705e28d}{\index{Main\+Window@{Main\+Window}!add\+Path@{add\+Path}}
@@ -152,12 +156,30 @@ Definition at line 36 of file mainwindow.\+cpp.
 
 \begin{DoxyCode}
 37 \{
-38     \hyperlink{class_dialog}{Dialog} *d = \textcolor{keyword}{new} \hyperlink{class_dialog}{Dialog};
-39     d->setAttribute(Qt::WA\_DeleteOnClose);
-40     d->setWindowTitle(\textcolor{stringliteral}{"Associació Hesed - Inserir"});
-41     d->open();
-42     \hyperlink{structinfo}{info}.addInfo();
+38     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf} = \textcolor{keyword}{new} \hyperlink{class_dialog}{Dialog};
+39     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->setAttribute(Qt::WA\_DeleteOnClose);
+40     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->setWindowTitle(\textcolor{stringliteral}{"Associació Hesed - Inserir"});
+41     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->open();
+42     connect(\hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}, SIGNAL(accepted()), SLOT(\hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{endInserir}()));    
 43 \}
+\end{DoxyCode}
+\hypertarget{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{\index{Main\+Window@{Main\+Window}!end\+Inserir@{end\+Inserir}}
+\index{end\+Inserir@{end\+Inserir}!Main\+Window@{Main\+Window}}
+\subsubsection[{end\+Inserir}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::end\+Inserir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}
+
+
+Definition at line 45 of file mainwindow.\+cpp.
+
+
+\begin{DoxyCode}
+46 \{
+47     \hyperlink{struct_info}{Info} i;
+48     
+49 \}
 \end{DoxyCode}
 
 
@@ -167,21 +189,28 @@ Definition at line 36 of file mainwindow.\+cpp.
 \subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dir Main\+Window\+::data\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a1dc35bda22acc11636be809539ab73d9}
 
 
-Definition at line 53 of file mainwindow.\+h.
+Definition at line 55 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}{\index{Main\+Window@{Main\+Window}!ui@{ui}}
 \index{ui@{ui}!Main\+Window@{Main\+Window}}
 \subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a35466a70ed47252a0191168126a352a5}
 
 
-Definition at line 54 of file mainwindow.\+h.
+Definition at line 56 of file mainwindow.\+h.
 
 \hypertarget{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{\index{Main\+Window@{Main\+Window}!info@{info}}
 \index{info@{info}!Main\+Window@{Main\+Window}}
 \subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Person} Main\+Window\+::info\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a2d1f101eed410e692b5db9b7226174bf}
 
 
-Definition at line 55 of file mainwindow.\+h.
+Definition at line 57 of file mainwindow.\+h.
+
+\hypertarget{class_main_window_a2066670e4565617fa50daa7701226aa8}{\index{Main\+Window@{Main\+Window}!inf@{inf}}
+\index{inf@{inf}!Main\+Window@{Main\+Window}}
+\subsubsection[{inf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dialog}$\ast$ Main\+Window\+::inf\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a2066670e4565617fa50daa7701226aa8}
+
+
+Definition at line 58 of file mainwindow.\+h.
 
 
 

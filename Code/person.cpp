@@ -30,7 +30,7 @@ void Person::read(QDir data)
     in.setByteOrder(QDataStream::LittleEndian);
     in >> maxID;
     while(not in.atEnd()) {
-        info aux;
+        Info aux;
         in >> aux;
         all.push_back(aux);
     }
@@ -47,7 +47,7 @@ void Person::write(QDir data)
     QDataStream out(&file);
     out.setByteOrder(QDataStream::LittleEndian);
     out << maxID;
-    list<info>::iterator it = all.begin();
+    list<Info>::iterator it = all.begin();
     while(it != all.end()) {
         out << *it;
         ++it;
@@ -67,9 +67,12 @@ void Person::sort(int type)
 
 void Person::addTable(QTableView *t) { table = t; }
 
-void Person::addInfo()
+void Person::addInfo(Info i)
 {
-    
+    ++maxID;
+    i.ID = maxID;
+    all.push_back(i);
+    show();
 }
 
 /***************

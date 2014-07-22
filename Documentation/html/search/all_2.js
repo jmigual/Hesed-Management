@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cnif',['cNIF',['../structinfo.html#a46ee4d6a7e5976d795ed9efa02341fce',1,'info']]],
-  ['comp',['comp',['../struct_person_1_1comp.html#a5272710b2721399c612bcdad1b1cead7',1,'Person::comp']]],
+  ['cnif',['cNIF',['../struct_info.html#a49fbb11aff87b66c956560ec2bc31df4',1,'Info']]],
+  ['comp',['comp',['../struct_person_1_1comp.html#a5272710b2721399c612bcdad1b1cead7',1,'Person::comp::comp()'],['../struct_person_1_1comp.html#a9b8f4d9214660d695cc375b9a46cc8ec',1,'Person::comp::comp(int s)']]],
   ['comp',['comp',['../struct_person_1_1comp.html',1,'Person']]]
 ];

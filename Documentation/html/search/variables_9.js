@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['phone',['phone',['../structinfo.html#a716fe5520eb096be308dcd18f7cbd1c1',1,'info']]]
+  ['phone',['phone',['../struct_info.html#a112f47a5e74f513da22e17d78dd9979a',1,'Info']]]
 ];

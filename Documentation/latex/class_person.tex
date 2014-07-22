@@ -26,14 +26,14 @@ void \hyperlink{class_person_a602ce88a8ef959c3f4044d9dc00dd2cf}{sort} (int type)
 \begin{DoxyCompactList}\small\item\em Function to sort the data with the specified metod. \end{DoxyCompactList}\item 
 void \hyperlink{class_person_a100215914f651662a6207722ef28769e}{add\+Table} (Q\+Table\+View $\ast$t)
 \begin{DoxyCompactList}\small\item\em Adds the pointer to a Q\+Table\+View. \end{DoxyCompactList}\item 
-void \hyperlink{class_person_a1f2447001ce07f9d5d6b1a7a5da29198}{add\+Info} ()
+void \hyperlink{class_person_a868dda73091bcad264cad3fd59286400}{add\+Info} (\hyperlink{struct_info}{Info} i)
 \item 
 void \hyperlink{class_person_a2f1231629a6e7e8c83ada57628e80a89}{show} ()
 \begin{DoxyCompactList}\small\item\em Function to show all stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-list$<$ \hyperlink{structinfo}{info} $>$ \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}
+list$<$ \hyperlink{struct_info}{Info} $>$ \hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all}
 \begin{DoxyCompactList}\small\item\em List to store all data. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{max\+I\+D}
 \begin{DoxyCompactList}\small\item\em Contains de maximum I\+D that has ever been assigned. \end{DoxyCompactList}\item 
@@ -89,7 +89,7 @@ Definition at line 13 of file person.\+cpp.
 \begin{DoxyCode}
 14 \{
 15     \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID} = p.\hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
-16     \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all} = p.\hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all};
+16     \hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all} = p.\hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all};
 17 \}
 \end{DoxyCode}
 
@@ -132,9 +132,9 @@ Definition at line 23 of file person.\+cpp.
 30     in.setByteOrder(QDataStream::LittleEndian);
 31     in >> \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
 32     \textcolor{keywordflow}{while}(not in.atEnd()) \{
-33         \hyperlink{structinfo}{info} aux;
+33         \hyperlink{struct_info}{Info} aux;
 34         in >> aux;
-35         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.push\_back(aux);
+35         \hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all}.push\_back(aux);
 36     \}
 37     file.close();
 38 \}
@@ -176,8 +176,8 @@ Definition at line 40 of file person.\+cpp.
 47     QDataStream out(&file);
 48     out.setByteOrder(QDataStream::LittleEndian);
 49     out << \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
-50     list<info>::iterator it = \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.begin();
-51     \textcolor{keywordflow}{while}(it != \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.end()) \{
+50     list<Info>::iterator it = \hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all}.begin();
+51     \textcolor{keywordflow}{while}(it != \hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all}.end()) \{
 52         out << *it;
 53         ++it;
 54     \}
@@ -229,10 +229,10 @@ Definition at line 58 of file person.\+cpp.
 
 \begin{DoxyCode}
 59 \{
-60     \textcolor{keywordflow}{if} (not \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.empty() and type >= 0) \{
+60     \textcolor{keywordflow}{if} (not \hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all}.empty() and type >= 0) \{
 61         comp a;
 62         a.select(type);
-63         \hyperlink{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{all}.sort(a);
+63         \hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all}.sort(a);
 64     \}
 65     \textcolor{keywordflow}{else} qWarning() << \textcolor{stringliteral}{"Error while trying to sort"};
 66 \}
@@ -267,13 +267,13 @@ Definition at line 68 of file person.\+cpp.
 \begin{DoxyCode}
 68 \{ \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table} = t; \}
 \end{DoxyCode}
-\hypertarget{class_person_a1f2447001ce07f9d5d6b1a7a5da29198}{\index{Person@{Person}!add\+Info@{add\+Info}}
+\hypertarget{class_person_a868dda73091bcad264cad3fd59286400}{\index{Person@{Person}!add\+Info@{add\+Info}}
 \index{add\+Info@{add\+Info}!Person@{Person}}
 \subsubsection[{add\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Person\+::add\+Info (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Info}}]{i}
 \end{DoxyParamCaption}
-)}}\label{class_person_a1f2447001ce07f9d5d6b1a7a5da29198}
+)}}\label{class_person_a868dda73091bcad264cad3fd59286400}
 
 
 Definition at line 70 of file person.\+cpp.
@@ -281,8 +281,11 @@ Definition at line 70 of file person.\+cpp.
 
 \begin{DoxyCode}
 71 \{
-72     
-73 \}
+72     ++\hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+73     i.\hyperlink{struct_info_a0c88224e0958874dd2171d8707cb3a5b}{ID} = \hyperlink{class_person_a816ee6194426eb703b61ae267e8e8ee6}{maxID};
+74     \hyperlink{class_person_a19f67351290e2dd1b63a43d4622a46a9}{all}.push\_back(i);
+75     \hyperlink{class_person_a2f1231629a6e7e8c83ada57628e80a89}{show}();
+76 \}
 \end{DoxyCode}
 \hypertarget{class_person_a2f1231629a6e7e8c83ada57628e80a89}{\index{Person@{Person}!show@{show}}
 \index{show@{show}!Person@{Person}}
@@ -297,33 +300,33 @@ Function to show all stored data.
 
 
 
-Definition at line 79 of file person.\+cpp.
+Definition at line 82 of file person.\+cpp.
 
 
 \begin{DoxyCode}
-80 \{
-81     QStandardItemModel *model = \textcolor{keyword}{new} QStandardItemModel();
-82     QStringList titols;
-83     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"} << \textcolor{stringliteral}{"Nº Ajudat"}
-84            << \textcolor{stringliteral}{"Membres"};
-85     model->setHorizontalHeaderLabels(titols);
-86     
-87     \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table}->setModel(model);
-88 \}
+83 \{
+84     QStandardItemModel *model = \textcolor{keyword}{new} QStandardItemModel();
+85     QStringList titols;
+86     titols << \textcolor{stringliteral}{"DNI"} << \textcolor{stringliteral}{"Nom"} << \textcolor{stringliteral}{"Cognoms"} << \textcolor{stringliteral}{"Data Fi ajuda"} << \textcolor{stringliteral}{"Nº Ajudat"}
+87            << \textcolor{stringliteral}{"Membres"};
+88     model->setHorizontalHeaderLabels(titols);
+89     
+90     \hyperlink{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{table}->setModel(model);
+91 \}
 \end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}{\index{Person@{Person}!all@{all}}
+\hypertarget{class_person_a19f67351290e2dd1b63a43d4622a46a9}{\index{Person@{Person}!all@{all}}
 \index{all@{all}!Person@{Person}}
-\subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf info}$>$ Person\+::all\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a23d6ff8cb8e45c9e3502baffa6a0468a}
+\subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf Info}$>$ Person\+::all\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_a19f67351290e2dd1b63a43d4622a46a9}
 
 
 List to store all data. 
 
 
 
-Definition at line 61 of file person.\+h.
+Definition at line 71 of file person.\+h.
 
 \hypertarget{class_person_a816ee6194426eb703b61ae267e8e8ee6}{\index{Person@{Person}!max\+I\+D@{max\+I\+D}}
 \index{max\+I\+D@{max\+I\+D}!Person@{Person}}
@@ -334,14 +337,14 @@ Contains de maximum I\+D that has ever been assigned.
 
 
 
-Definition at line 65 of file person.\+h.
+Definition at line 75 of file person.\+h.
 
 \hypertarget{class_person_aefba04c96d0d90ab2b220e6ad704c55a}{\index{Person@{Person}!table@{table}}
 \index{table@{table}!Person@{Person}}
 \subsubsection[{table}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Table\+View$\ast$ Person\+::table\hspace{0.3cm}{\ttfamily [private]}}}\label{class_person_aefba04c96d0d90ab2b220e6ad704c55a}
 
 
-Definition at line 66 of file person.\+h.
+Definition at line 76 of file person.\+h.
 
 
 

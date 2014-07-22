@@ -49,10 +49,13 @@ private slots:
     
     void on_actionInserir_triggered();
     
+    void endInserir();
+    
 private:
     QDir data;
     Ui::MainWindow *ui;
     Person info;
+    Dialog *inf; 
 };
 
 #endif // MAINWINDOW_H

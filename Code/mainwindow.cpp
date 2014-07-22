@@ -35,9 +35,15 @@ void MainWindow::addPath(const QDir &data)
 
 void MainWindow::on_actionInserir_triggered()
 {
-    Dialog *d = new Dialog;
-    d->setAttribute(Qt::WA_DeleteOnClose);
-    d->setWindowTitle("Associació Hesed - Inserir");
-    d->open();
-    info.addInfo();
+    inf = new Dialog;
+    inf->setAttribute(Qt::WA_DeleteOnClose);
+    inf->setWindowTitle("Associació Hesed - Inserir");
+    inf->open();
+    connect(inf, SIGNAL(accepted()), SLOT(endInserir()));    
+}
+
+void MainWindow::endInserir()
+{
+    Info i;
+    
 }

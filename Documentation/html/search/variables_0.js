@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['adress',['adress',['../structinfo.html#a589dff7ad548e9ac9a45f632539c9a0a',1,'info']]],
-  ['all',['all',['../class_person.html#a23d6ff8cb8e45c9e3502baffa6a0468a',1,'Person']]]
+  ['adress',['adress',['../struct_info.html#ad06b1d7b878c03e41bf30efb34dfbdf6',1,'Info']]],
+  ['all',['all',['../class_person.html#a19f67351290e2dd1b63a43d4622a46a9',1,'Person']]]
 ];
