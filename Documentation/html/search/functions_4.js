@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loaddata',['loadData',['../class_main_window.html#a6906cd747941813c6da899b18d881473',1,'MainWindow']]]
+  ['getdata',['getData',['../class_dialog.html#a069e8b0696869cdd993f1b2a87bddbc2',1,'Dialog']]]
 ];

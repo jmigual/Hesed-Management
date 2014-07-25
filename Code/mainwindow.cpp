@@ -36,14 +36,21 @@ void MainWindow::addPath(const QDir &data)
 void MainWindow::on_actionInserir_triggered()
 {
     inf = new Dialog;
-    inf->setAttribute(Qt::WA_DeleteOnClose);
     inf->setWindowTitle("Associació Hesed - Inserir");
     inf->open();
-    connect(inf, SIGNAL(accepted()), SLOT(endInserir()));    
+    connect(inf, SIGNAL(accepted()), this, SLOT(endInserir()));
+    connect(inf, SIGNAL(rejected()), this, SLOT(endInserir()));
+    
 }
 
 void MainWindow::endInserir()
 {
-    Info i;
-    
+    if (inf->result()) {
+        Info i;
+        inf->getData(i);
+        qDebug() << "Acceptat";
+        qDebug() << i.name << " " << i.surname;
+    }
+    else qDebug() << "No acceptat";
+    delete inf;    
 }

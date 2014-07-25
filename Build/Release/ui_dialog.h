@@ -22,48 +22,42 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QSpinBox>
-#include <QtWidgets/QSplitter>
-#include <QtWidgets/QWidget>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Dialog
 {
 public:
-    QFormLayout *formLayout_2;
+    QVBoxLayout *verticalLayout_2;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_3;
     QFormLayout *formLayout;
-    QHBoxLayout *horizontalLayout_8;
     QLabel *label;
     QLineEdit *name;
-    QHBoxLayout *horizontalLayout_9;
     QLabel *label_2;
     QLineEdit *surname;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *label_3;
-    QLineEdit *NIF;
-    QHBoxLayout *horizontalLayout_10;
-    QLabel *label_4;
-    QLineEdit *cNIF;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *label_6;
-    QLineEdit *adress;
-    QHBoxLayout *horizontalLayout_2;
     QLabel *label_5;
     QDateEdit *birthDate;
-    QHBoxLayout *horizontalLayout;
+    QFormLayout *formLayout_3;
+    QLabel *label_3;
+    QLineEdit *NIF;
+    QLabel *label_4;
+    QLineEdit *cNIF;
     QLabel *label_10;
-    QLineEdit *lineEdit;
-    QSplitter *splitter;
-    QWidget *widget;
-    QHBoxLayout *horizontalLayout_7;
+    QLineEdit *phone;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_6;
+    QLineEdit *adress;
+    QHBoxLayout *horizontalLayout;
+    QFormLayout *formLayout_5;
     QLabel *label_9;
     QSpinBox *famMembers;
-    QWidget *widget1;
-    QHBoxLayout *horizontalLayout_5;
     QLabel *label_7;
     QDateEdit *beginHelp;
-    QWidget *widget2;
-    QHBoxLayout *horizontalLayout_6;
+    QFormLayout *formLayout_2;
+    QLabel *label_11;
+    QSpinBox *numberHelp;
     QLabel *label_8;
     QDateEdit *endHelp;
     QDialogButtonBox *buttonBox;
@@ -72,191 +66,190 @@ public:
     {
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(640, 480);
+        Dialog->resize(447, 209);
         QSizePolicy sizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(Dialog->sizePolicy().hasHeightForWidth());
         Dialog->setSizePolicy(sizePolicy);
-        formLayout_2 = new QFormLayout(Dialog);
-        formLayout_2->setObjectName(QStringLiteral("formLayout_2"));
+        verticalLayout_2 = new QVBoxLayout(Dialog);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         formLayout = new QFormLayout();
         formLayout->setObjectName(QStringLiteral("formLayout"));
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         label = new QLabel(Dialog);
         label->setObjectName(QStringLiteral("label"));
 
-        horizontalLayout_8->addWidget(label);
+        formLayout->setWidget(0, QFormLayout::LabelRole, label);
 
         name = new QLineEdit(Dialog);
         name->setObjectName(QStringLiteral("name"));
 
-        horizontalLayout_8->addWidget(name);
+        formLayout->setWidget(0, QFormLayout::FieldRole, name);
 
-
-        formLayout->setLayout(0, QFormLayout::LabelRole, horizontalLayout_8);
-
-        horizontalLayout_9 = new QHBoxLayout();
-        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
         label_2 = new QLabel(Dialog);
         label_2->setObjectName(QStringLiteral("label_2"));
 
-        horizontalLayout_9->addWidget(label_2);
+        formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
 
         surname = new QLineEdit(Dialog);
         surname->setObjectName(QStringLiteral("surname"));
 
-        horizontalLayout_9->addWidget(surname);
+        formLayout->setWidget(1, QFormLayout::FieldRole, surname);
 
-
-        formLayout->setLayout(0, QFormLayout::FieldRole, horizontalLayout_9);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        label_3 = new QLabel(Dialog);
-        label_3->setObjectName(QStringLiteral("label_3"));
-
-        horizontalLayout_4->addWidget(label_3);
-
-        NIF = new QLineEdit(Dialog);
-        NIF->setObjectName(QStringLiteral("NIF"));
-
-        horizontalLayout_4->addWidget(NIF);
-
-
-        formLayout->setLayout(2, QFormLayout::LabelRole, horizontalLayout_4);
-
-        horizontalLayout_10 = new QHBoxLayout();
-        horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
-        label_4 = new QLabel(Dialog);
-        label_4->setObjectName(QStringLiteral("label_4"));
-
-        horizontalLayout_10->addWidget(label_4);
-
-        cNIF = new QLineEdit(Dialog);
-        cNIF->setObjectName(QStringLiteral("cNIF"));
-
-        horizontalLayout_10->addWidget(cNIF);
-
-
-        formLayout->setLayout(2, QFormLayout::FieldRole, horizontalLayout_10);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        label_6 = new QLabel(Dialog);
-        label_6->setObjectName(QStringLiteral("label_6"));
-
-        horizontalLayout_3->addWidget(label_6);
-
-        adress = new QLineEdit(Dialog);
-        adress->setObjectName(QStringLiteral("adress"));
-
-        horizontalLayout_3->addWidget(adress);
-
-
-        formLayout->setLayout(4, QFormLayout::SpanningRole, horizontalLayout_3);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label_5 = new QLabel(Dialog);
         label_5->setObjectName(QStringLiteral("label_5"));
 
-        horizontalLayout_2->addWidget(label_5);
+        formLayout->setWidget(2, QFormLayout::LabelRole, label_5);
 
         birthDate = new QDateEdit(Dialog);
         birthDate->setObjectName(QStringLiteral("birthDate"));
         birthDate->setCursor(QCursor(Qt::IBeamCursor));
         birthDate->setDateTime(QDateTime(QDate(1990, 1, 1), QTime(0, 0, 0)));
 
-        horizontalLayout_2->addWidget(birthDate);
+        formLayout->setWidget(2, QFormLayout::FieldRole, birthDate);
 
 
-        formLayout->setLayout(6, QFormLayout::LabelRole, horizontalLayout_2);
+        horizontalLayout_3->addLayout(formLayout);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        formLayout_3 = new QFormLayout();
+        formLayout_3->setObjectName(QStringLiteral("formLayout_3"));
+        label_3 = new QLabel(Dialog);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        formLayout_3->setWidget(0, QFormLayout::LabelRole, label_3);
+
+        NIF = new QLineEdit(Dialog);
+        NIF->setObjectName(QStringLiteral("NIF"));
+
+        formLayout_3->setWidget(0, QFormLayout::FieldRole, NIF);
+
+        label_4 = new QLabel(Dialog);
+        label_4->setObjectName(QStringLiteral("label_4"));
+
+        formLayout_3->setWidget(1, QFormLayout::LabelRole, label_4);
+
+        cNIF = new QLineEdit(Dialog);
+        cNIF->setObjectName(QStringLiteral("cNIF"));
+
+        formLayout_3->setWidget(1, QFormLayout::FieldRole, cNIF);
+
         label_10 = new QLabel(Dialog);
         label_10->setObjectName(QStringLiteral("label_10"));
 
-        horizontalLayout->addWidget(label_10);
+        formLayout_3->setWidget(2, QFormLayout::LabelRole, label_10);
 
-        lineEdit = new QLineEdit(Dialog);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        phone = new QLineEdit(Dialog);
+        phone->setObjectName(QStringLiteral("phone"));
 
-        horizontalLayout->addWidget(lineEdit);
-
-
-        formLayout->setLayout(6, QFormLayout::FieldRole, horizontalLayout);
+        formLayout_3->setWidget(2, QFormLayout::FieldRole, phone);
 
 
-        formLayout_2->setLayout(0, QFormLayout::LabelRole, formLayout);
+        horizontalLayout_3->addLayout(formLayout_3);
 
-        splitter = new QSplitter(Dialog);
-        splitter->setObjectName(QStringLiteral("splitter"));
-        splitter->setOrientation(Qt::Vertical);
-        widget = new QWidget(splitter);
-        widget->setObjectName(QStringLiteral("widget"));
-        horizontalLayout_7 = new QHBoxLayout(widget);
-        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        label_9 = new QLabel(widget);
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        label_6 = new QLabel(Dialog);
+        label_6->setObjectName(QStringLiteral("label_6"));
+
+        horizontalLayout_2->addWidget(label_6);
+
+        adress = new QLineEdit(Dialog);
+        adress->setObjectName(QStringLiteral("adress"));
+
+        horizontalLayout_2->addWidget(adress);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        formLayout_5 = new QFormLayout();
+        formLayout_5->setObjectName(QStringLiteral("formLayout_5"));
+        label_9 = new QLabel(Dialog);
         label_9->setObjectName(QStringLiteral("label_9"));
 
-        horizontalLayout_7->addWidget(label_9);
+        formLayout_5->setWidget(0, QFormLayout::LabelRole, label_9);
 
-        famMembers = new QSpinBox(widget);
+        famMembers = new QSpinBox(Dialog);
         famMembers->setObjectName(QStringLiteral("famMembers"));
         famMembers->setCursor(QCursor(Qt::IBeamCursor));
         famMembers->setMinimum(1);
 
-        horizontalLayout_7->addWidget(famMembers);
+        formLayout_5->setWidget(0, QFormLayout::FieldRole, famMembers);
 
-        splitter->addWidget(widget);
-        widget1 = new QWidget(splitter);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        horizontalLayout_5 = new QHBoxLayout(widget1);
-        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        label_7 = new QLabel(widget1);
+        label_7 = new QLabel(Dialog);
         label_7->setObjectName(QStringLiteral("label_7"));
 
-        horizontalLayout_5->addWidget(label_7);
+        formLayout_5->setWidget(1, QFormLayout::LabelRole, label_7);
 
-        beginHelp = new QDateEdit(widget1);
+        beginHelp = new QDateEdit(Dialog);
         beginHelp->setObjectName(QStringLiteral("beginHelp"));
         beginHelp->setCalendarPopup(true);
 
-        horizontalLayout_5->addWidget(beginHelp);
+        formLayout_5->setWidget(1, QFormLayout::FieldRole, beginHelp);
 
-        splitter->addWidget(widget1);
-        widget2 = new QWidget(splitter);
-        widget2->setObjectName(QStringLiteral("widget2"));
-        horizontalLayout_6 = new QHBoxLayout(widget2);
-        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
-        horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
-        label_8 = new QLabel(widget2);
+
+        horizontalLayout->addLayout(formLayout_5);
+
+        formLayout_2 = new QFormLayout();
+        formLayout_2->setObjectName(QStringLiteral("formLayout_2"));
+        label_11 = new QLabel(Dialog);
+        label_11->setObjectName(QStringLiteral("label_11"));
+
+        formLayout_2->setWidget(0, QFormLayout::LabelRole, label_11);
+
+        numberHelp = new QSpinBox(Dialog);
+        numberHelp->setObjectName(QStringLiteral("numberHelp"));
+        numberHelp->setCursor(QCursor(Qt::IBeamCursor));
+        numberHelp->setMinimum(0);
+        numberHelp->setValue(0);
+
+        formLayout_2->setWidget(0, QFormLayout::FieldRole, numberHelp);
+
+        label_8 = new QLabel(Dialog);
         label_8->setObjectName(QStringLiteral("label_8"));
 
-        horizontalLayout_6->addWidget(label_8);
+        formLayout_2->setWidget(1, QFormLayout::LabelRole, label_8);
 
-        endHelp = new QDateEdit(widget2);
+        endHelp = new QDateEdit(Dialog);
         endHelp->setObjectName(QStringLiteral("endHelp"));
         endHelp->setCalendarPopup(true);
         endHelp->setTimeSpec(Qt::LocalTime);
 
-        horizontalLayout_6->addWidget(endHelp);
+        formLayout_2->setWidget(1, QFormLayout::FieldRole, endHelp);
 
-        splitter->addWidget(widget2);
 
-        formLayout_2->setWidget(1, QFormLayout::LabelRole, splitter);
+        horizontalLayout->addLayout(formLayout_2);
+
+
+        verticalLayout_2->addLayout(horizontalLayout);
 
         buttonBox = new QDialogButtonBox(Dialog);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
 
-        formLayout_2->setWidget(2, QFormLayout::LabelRole, buttonBox);
+        verticalLayout_2->addWidget(buttonBox);
 
+        QWidget::setTabOrder(endHelp, birthDate);
+        QWidget::setTabOrder(birthDate, adress);
+        QWidget::setTabOrder(adress, famMembers);
+        QWidget::setTabOrder(famMembers, beginHelp);
+        QWidget::setTabOrder(beginHelp, phone);
+        QWidget::setTabOrder(phone, cNIF);
+        QWidget::setTabOrder(cNIF, numberHelp);
+        QWidget::setTabOrder(numberHelp, NIF);
+        QWidget::setTabOrder(NIF, surname);
+        QWidget::setTabOrder(surname, name);
 
         retranslateUi(Dialog);
 
@@ -268,13 +261,14 @@ public:
         Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
         label->setText(QApplication::translate("Dialog", "Nom*", 0));
         label_2->setText(QApplication::translate("Dialog", "Cognoms*", 0));
+        label_5->setText(QApplication::translate("Dialog", "Data naixement", 0));
         label_3->setText(QApplication::translate("Dialog", "DNI*", 0));
         label_4->setText(QApplication::translate("Dialog", "DNI parella", 0));
-        label_6->setText(QApplication::translate("Dialog", "Adre\303\247a", 0));
-        label_5->setText(QApplication::translate("Dialog", "Data naixement", 0));
         label_10->setText(QApplication::translate("Dialog", "Tel\303\250fon", 0));
+        label_6->setText(QApplication::translate("Dialog", "Adre\303\247a", 0));
         label_9->setText(QApplication::translate("Dialog", "Membres de la fam\303\255lia*", 0));
         label_7->setText(QApplication::translate("Dialog", "Data comen\303\247ament ajuda*", 0));
+        label_11->setText(QApplication::translate("Dialog", "Nombre vegades ajudat", 0));
         label_8->setText(QApplication::translate("Dialog", "Data finalitzaci\303\263 ajuda", 0));
     } // retranslateUi
 

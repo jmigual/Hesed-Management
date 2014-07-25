@@ -16,6 +16,8 @@ public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
     
+    void getData(Info& res);
+    
 private slots:
     void on_buttonBox_accepted();
     

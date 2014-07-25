@@ -97,6 +97,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acfa2063f9f962d394c6a645b6e7e08d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a1fe6ef28513eed13bfcd3a4da83ccb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dialog.html#a2a1fe6ef28513eed13bfcd3a4da83ccb">~Dialog</a> ()</td></tr>
 <tr class="separator:a2a1fe6ef28513eed13bfcd3a4da83ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069e8b0696869cdd993f1b2a87bddbc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dialog.html#a069e8b0696869cdd993f1b2a87bddbc2">getData</a> (<a class="el" href="struct_info.html">Info</a> &amp;res)</td></tr>
+<tr class="separator:a069e8b0696869cdd993f1b2a87bddbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
 Private Slots</h2></td></tr>
@@ -143,7 +145,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
-<div class="ttc" id="class_dialog_html_aaa4b5bfb9a0f64900d524f14bc32e6df"><div class="ttname"><a href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">Dialog::ui</a></div><div class="ttdeci">Ui::Dialog * ui</div><div class="ttdef"><b>Definition:</b> <a href="dialog_8h_source.html#l00025">dialog.h:25</a></div></div>
+<div class="ttc" id="class_dialog_html_aaa4b5bfb9a0f64900d524f14bc32e6df"><div class="ttname"><a href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">Dialog::ui</a></div><div class="ttdeci">Ui::Dialog * ui</div><div class="ttdef"><b>Definition:</b> <a href="dialog_8h_source.html#l00027">dialog.h:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -164,11 +166,54 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="ttc" id="class_dialog_html_aaa4b5bfb9a0f64900d524f14bc32e6df"><div class="ttname"><a href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">Dialog::ui</a></div><div class="ttdeci">Ui::Dialog * ui</div><div class="ttdef"><b>Definition:</b> <a href="dialog_8h_source.html#l00025">dialog.h:25</a></div></div>
+<div class="ttc" id="class_dialog_html_aaa4b5bfb9a0f64900d524f14bc32e6df"><div class="ttname"><a href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">Dialog::ui</a></div><div class="ttdeci">Ui::Dialog * ui</div><div class="ttdef"><b>Definition:</b> <a href="dialog_8h_source.html#l00027">dialog.h:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a069e8b0696869cdd993f1b2a87bddbc2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dialog::getData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_info.html">Info</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="dialog_8cpp_source.html#l00016">16</a> of file <a class="el" href="dialog_8cpp_source.html">dialog.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    res.<a class="code" href="struct_info.html#ad06b1d7b878c03e41bf30efb34dfbdf6">adress</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;adress-&gt;text();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    res.<a class="code" href="struct_info.html#a0b9f2e6014fe7a54993c36d15450b7e0">beginHelp</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;beginHelp-&gt;date();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    res.<a class="code" href="struct_info.html#a3c37c78a0e01a9b8871adddce7451e53">birthDate</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;birthDate-&gt;date();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    res.<a class="code" href="struct_info.html#a49fbb11aff87b66c956560ec2bc31df4">cNIF</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;cNIF-&gt;text();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    res.<a class="code" href="struct_info.html#ae81557ef74d11f90fa17f8e2948028a5">endHelp</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;endHelp-&gt;date();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    res.<a class="code" href="struct_info.html#ade80df067f691d4120a15ef8dc095a74">famMembers</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;famMembers-&gt;value();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    res.<a class="code" href="struct_info.html#abedda733b9fd73013c473e3873dff857">name</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;name-&gt;text();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    res.<a class="code" href="struct_info.html#a81aa1db72f631011ba7426099479f35c">NIF</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;NIF-&gt;text();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    res.<a class="code" href="struct_info.html#aa7475a4d5b9b5e8cd5ff698942dee78f">numberHelp</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;numberHelp-&gt;value();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    res.<a class="code" href="struct_info.html#a112f47a5e74f513da22e17d78dd9979a">phone</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;phone-&gt;text();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    res.<a class="code" href="struct_info.html#a7c380abfc7270f0c19ea6bc4db4c89a9">surname</a> = <a class="code" href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">ui</a>-&gt;surname-&gt;text();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="ttc" id="struct_info_html_ade80df067f691d4120a15ef8dc095a74"><div class="ttname"><a href="struct_info.html#ade80df067f691d4120a15ef8dc095a74">Info::famMembers</a></div><div class="ttdeci">int famMembers</div><div class="ttdoc">Amount of members in the home family. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00055">info.h:55</a></div></div>
+<div class="ttc" id="struct_info_html_ad06b1d7b878c03e41bf30efb34dfbdf6"><div class="ttname"><a href="struct_info.html#ad06b1d7b878c03e41bf30efb34dfbdf6">Info::adress</a></div><div class="ttdeci">QString adress</div><div class="ttdoc">Personal home adress. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00039">info.h:39</a></div></div>
+<div class="ttc" id="class_dialog_html_aaa4b5bfb9a0f64900d524f14bc32e6df"><div class="ttname"><a href="class_dialog.html#aaa4b5bfb9a0f64900d524f14bc32e6df">Dialog::ui</a></div><div class="ttdeci">Ui::Dialog * ui</div><div class="ttdef"><b>Definition:</b> <a href="dialog_8h_source.html#l00027">dialog.h:27</a></div></div>
+<div class="ttc" id="struct_info_html_aa7475a4d5b9b5e8cd5ff698942dee78f"><div class="ttname"><a href="struct_info.html#aa7475a4d5b9b5e8cd5ff698942dee78f">Info::numberHelp</a></div><div class="ttdeci">int numberHelp</div><div class="ttdoc">Number of times that somebody has been helped. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00055">info.h:55</a></div></div>
+<div class="ttc" id="struct_info_html_a81aa1db72f631011ba7426099479f35c"><div class="ttname"><a href="struct_info.html#a81aa1db72f631011ba7426099479f35c">Info::NIF</a></div><div class="ttdeci">QString NIF</div><div class="ttdoc">Personal NIF (Número de Identificación Fiscal) </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00039">info.h:39</a></div></div>
+<div class="ttc" id="struct_info_html_a112f47a5e74f513da22e17d78dd9979a"><div class="ttname"><a href="struct_info.html#a112f47a5e74f513da22e17d78dd9979a">Info::phone</a></div><div class="ttdeci">QString phone</div><div class="ttdoc">Personal phone. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00039">info.h:39</a></div></div>
+<div class="ttc" id="struct_info_html_a3c37c78a0e01a9b8871adddce7451e53"><div class="ttname"><a href="struct_info.html#a3c37c78a0e01a9b8871adddce7451e53">Info::birthDate</a></div><div class="ttdeci">QDate birthDate</div><div class="ttdoc">Date of birth. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00048">info.h:48</a></div></div>
+<div class="ttc" id="struct_info_html_a0b9f2e6014fe7a54993c36d15450b7e0"><div class="ttname"><a href="struct_info.html#a0b9f2e6014fe7a54993c36d15450b7e0">Info::beginHelp</a></div><div class="ttdeci">QDate beginHelp</div><div class="ttdoc">First day recieved help. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00048">info.h:48</a></div></div>
+<div class="ttc" id="struct_info_html_a7c380abfc7270f0c19ea6bc4db4c89a9"><div class="ttname"><a href="struct_info.html#a7c380abfc7270f0c19ea6bc4db4c89a9">Info::surname</a></div><div class="ttdeci">QString surname</div><div class="ttdoc">Surname. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00039">info.h:39</a></div></div>
+<div class="ttc" id="struct_info_html_a49fbb11aff87b66c956560ec2bc31df4"><div class="ttname"><a href="struct_info.html#a49fbb11aff87b66c956560ec2bc31df4">Info::cNIF</a></div><div class="ttdeci">QString cNIF</div><div class="ttdoc">Couple NIF (Número de Identificación Fiscal) </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00039">info.h:39</a></div></div>
+<div class="ttc" id="struct_info_html_abedda733b9fd73013c473e3873dff857"><div class="ttname"><a href="struct_info.html#abedda733b9fd73013c473e3873dff857">Info::name</a></div><div class="ttdeci">QString name</div><div class="ttdoc">Name. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00039">info.h:39</a></div></div>
+<div class="ttc" id="struct_info_html_ae81557ef74d11f90fa17f8e2948028a5"><div class="ttname"><a href="struct_info.html#ae81557ef74d11f90fa17f8e2948028a5">Info::endHelp</a></div><div class="ttdeci">QDate endHelp</div><div class="ttdoc">Finishing help date. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00048">info.h:48</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="aafe2aef7fbd4d6158b2ac7ed42cbf985"></a>
 <div class="memitem">
 <div class="memproto">
@@ -190,10 +235,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dialog_8cpp_source.html#l00016">16</a> of file <a class="el" href="dialog_8cpp_source.html">dialog.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;accept();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<p>Definition at line <a class="el" href="dialog_8cpp_source.html#l00031">31</a> of file <a class="el" href="dialog_8cpp_source.html">dialog.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    this-&gt;accept();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -218,10 +263,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dialog_8cpp_source.html#l00021">21</a> of file <a class="el" href="dialog_8cpp_source.html">dialog.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    this-&gt;reject();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<p>Definition at line <a class="el" href="dialog_8cpp_source.html#l00036">36</a> of file <a class="el" href="dialog_8cpp_source.html">dialog.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    this-&gt;reject();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -244,7 +289,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dialog_8h_source.html#l00025">25</a> of file <a class="el" href="dialog_8h_source.html">dialog.h</a>.</p>
+<p>Definition at line <a class="el" href="dialog_8h_source.html#l00027">27</a> of file <a class="el" href="dialog_8h_source.html">dialog.h</a>.</p>
 
 </div>
 </div>
@@ -255,7 +300,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 22 2014 21:20:15 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 25 2014 17:58:17 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

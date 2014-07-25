@@ -157,11 +157,12 @@ Definition at line 36 of file mainwindow.\+cpp.
 \begin{DoxyCode}
 37 \{
 38     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf} = \textcolor{keyword}{new} \hyperlink{class_dialog}{Dialog};
-39     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->setAttribute(Qt::WA\_DeleteOnClose);
-40     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->setWindowTitle(\textcolor{stringliteral}{"Associació Hesed - Inserir"});
-41     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->open();
-42     connect(\hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}, SIGNAL(accepted()), SLOT(\hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{endInserir}()));    
-43 \}
+39     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->setWindowTitle(\textcolor{stringliteral}{"Associació Hesed - Inserir"});
+40     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->open();
+41     connect(\hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}, SIGNAL(accepted()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{endInserir}()));
+42     connect(\hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}, SIGNAL(rejected()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{endInserir}()));
+43     
+44 \}
 \end{DoxyCode}
 \hypertarget{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{\index{Main\+Window@{Main\+Window}!end\+Inserir@{end\+Inserir}}
 \index{end\+Inserir@{end\+Inserir}!Main\+Window@{Main\+Window}}
@@ -172,14 +173,20 @@ Definition at line 36 of file mainwindow.\+cpp.
 )\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}
 
 
-Definition at line 45 of file mainwindow.\+cpp.
+Definition at line 46 of file mainwindow.\+cpp.
 
 
 \begin{DoxyCode}
-46 \{
-47     \hyperlink{struct_info}{Info} i;
-48     
-49 \}
+47 \{
+48     \textcolor{keywordflow}{if} (\hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->result()) \{
+49         \hyperlink{struct_info}{Info} i;
+50         \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->\hyperlink{class_dialog_a069e8b0696869cdd993f1b2a87bddbc2}{getData}(i);
+51         qDebug() << \textcolor{stringliteral}{"Acceptat"};
+52         qDebug() << i.\hyperlink{struct_info_abedda733b9fd73013c473e3873dff857}{name} << \textcolor{stringliteral}{" "} << i.\hyperlink{struct_info_a7c380abfc7270f0c19ea6bc4db4c89a9}{surname};
+53     \}
+54     \textcolor{keywordflow}{else} qDebug() << \textcolor{stringliteral}{"No acceptat"};
+55     \textcolor{keyword}{delete} \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf};    
+56 \}
 \end{DoxyCode}
 
 
