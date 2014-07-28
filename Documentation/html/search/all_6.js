@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getdata',['getData',['../class_dialog.html#a069e8b0696869cdd993f1b2a87bddbc2',1,'Dialog']]]
+  ['getdata',['getData',['../class_dialog.html#ad1b42c2c6f44d3da7b133fa0f33fe05c',1,'Dialog']]]
 ];

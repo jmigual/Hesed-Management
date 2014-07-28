@@ -5,7 +5,6 @@
 #include <QDir>
 #include "person.h"
 #include "info.h"
-#include "dialog.h"
 
 namespace Ui {
 class MainWindow;

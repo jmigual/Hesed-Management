@@ -8,7 +8,7 @@
 \item 
 \hyperlink{class_dialog_a2a1fe6ef28513eed13bfcd3a4da83ccb}{$\sim$\+Dialog} ()
 \item 
-void \hyperlink{class_dialog_a069e8b0696869cdd993f1b2a87bddbc2}{get\+Data} (\hyperlink{struct_info}{Info} \&res)
+void \hyperlink{class_dialog_ad1b42c2c6f44d3da7b133fa0f33fe05c}{get\+Data} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Slots}
 \begin{DoxyCompactItemize}
@@ -21,13 +21,15 @@ void \hyperlink{class_dialog_a932a060bc56692af1d024203360e839d}{on\+\_\+button\+
 \begin{DoxyCompactItemize}
 \item 
 Ui\+::\+Dialog $\ast$ \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}
+\item 
+std\+::vector$<$ Q\+Label $\ast$ $>$ \hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 11 of file dialog.\+h.
+Definition at line 13 of file dialog.\+h.
 
 
 
@@ -41,16 +43,23 @@ Definition at line 11 of file dialog.\+h.
 )\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_dialog_acfa2063f9f962d394c6a645b6e7e08d8}
 
 
-Definition at line 4 of file dialog.\+cpp.
+Definition at line 7 of file dialog.\+cpp.
 
 
 \begin{DoxyCode}
-4                               :
-5     QDialog(parent),
-6     \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}(\textcolor{keyword}{new} Ui::Dialog)
-7 \{
-8     \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->setupUi(\textcolor{keyword}{this});
-9 \}
+7                               :
+8     QDialog(parent),
+9     \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}(\textcolor{keyword}{new} Ui::Dialog)
+10 \{
+11     \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->setupUi(\textcolor{keyword}{this});
+12     \hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V} = std::vector<QLabel *> (3);
+13     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < int(\hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}.size()); ++i) \{
+14         QString text = \textcolor{stringliteral}{"Prova "};
+15         text.append(i + \textcolor{charliteral}{'0'});
+16         \hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}[i] = \textcolor{keyword}{new} QLabel(text);
+17         \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->verticalLayout->addWidget(\hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}[i]);
+18     \}    
+19 \}
 \end{DoxyCode}
 \hypertarget{class_dialog_a2a1fe6ef28513eed13bfcd3a4da83ccb}{\index{Dialog@{Dialog}!````~Dialog@{$\sim$\+Dialog}}
 \index{````~Dialog@{$\sim$\+Dialog}!Dialog@{Dialog}}
@@ -61,42 +70,32 @@ Definition at line 4 of file dialog.\+cpp.
 )}}\label{class_dialog_a2a1fe6ef28513eed13bfcd3a4da83ccb}
 
 
-Definition at line 11 of file dialog.\+cpp.
+Definition at line 21 of file dialog.\+cpp.
 
 
 \begin{DoxyCode}
-12 \{
-13     \textcolor{keyword}{delete} \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui};
-14 \}
+22 \{
+23     \textcolor{keyword}{delete} \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui};
+24 \}
 \end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_dialog_a069e8b0696869cdd993f1b2a87bddbc2}{\index{Dialog@{Dialog}!get\+Data@{get\+Data}}
+\hypertarget{class_dialog_ad1b42c2c6f44d3da7b133fa0f33fe05c}{\index{Dialog@{Dialog}!get\+Data@{get\+Data}}
 \index{get\+Data@{get\+Data}!Dialog@{Dialog}}
 \subsubsection[{get\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Dialog\+::get\+Data (
 \begin{DoxyParamCaption}
-\item[{{\bf Info} \&}]{res}
+{}
 \end{DoxyParamCaption}
-)}}\label{class_dialog_a069e8b0696869cdd993f1b2a87bddbc2}
+)}}\label{class_dialog_ad1b42c2c6f44d3da7b133fa0f33fe05c}
 
 
-Definition at line 16 of file dialog.\+cpp.
+Definition at line 26 of file dialog.\+cpp.
 
 
 \begin{DoxyCode}
-17 \{
-18     res.\hyperlink{struct_info_ad06b1d7b878c03e41bf30efb34dfbdf6}{adress} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->adress->text();
-19     res.\hyperlink{struct_info_a0b9f2e6014fe7a54993c36d15450b7e0}{beginHelp} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->beginHelp->date();
-20     res.\hyperlink{struct_info_a3c37c78a0e01a9b8871adddce7451e53}{birthDate} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->birthDate->date();
-21     res.\hyperlink{struct_info_a49fbb11aff87b66c956560ec2bc31df4}{cNIF} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->cNIF->text();
-22     res.\hyperlink{struct_info_ae81557ef74d11f90fa17f8e2948028a5}{endHelp} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->endHelp->date();
-23     res.\hyperlink{struct_info_ade80df067f691d4120a15ef8dc095a74}{famMembers} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->famMembers->value();
-24     res.\hyperlink{struct_info_abedda733b9fd73013c473e3873dff857}{name} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->name->text();
-25     res.\hyperlink{struct_info_a81aa1db72f631011ba7426099479f35c}{NIF} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->NIF->text();
-26     res.\hyperlink{struct_info_aa7475a4d5b9b5e8cd5ff698942dee78f}{numberHelp} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->numberHelp->value();
-27     res.\hyperlink{struct_info_a112f47a5e74f513da22e17d78dd9979a}{phone} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->phone->text();
-28     res.\hyperlink{struct_info_a7c380abfc7270f0c19ea6bc4db4c89a9}{surname} = \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->surname->text();
+27 \{
+28     
 29 \}
 \end{DoxyCode}
 \hypertarget{class_dialog_aafe2aef7fbd4d6158b2ac7ed42cbf985}{\index{Dialog@{Dialog}!on\+\_\+button\+Box\+\_\+accepted@{on\+\_\+button\+Box\+\_\+accepted}}
@@ -113,8 +112,11 @@ Definition at line 31 of file dialog.\+cpp.
 
 \begin{DoxyCode}
 32 \{
-33     this->accept();
-34 \}
+33     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < int(\hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}.size()); ++i) \{
+34         \hyperlink{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}{ui}->verticalLayout->removeWidget(\hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}[i]);
+35         \textcolor{keyword}{delete} \hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}[i];
+36     \}
+37 \}
 \end{DoxyCode}
 \hypertarget{class_dialog_a932a060bc56692af1d024203360e839d}{\index{Dialog@{Dialog}!on\+\_\+button\+Box\+\_\+rejected@{on\+\_\+button\+Box\+\_\+rejected}}
 \index{on\+\_\+button\+Box\+\_\+rejected@{on\+\_\+button\+Box\+\_\+rejected}!Dialog@{Dialog}}
@@ -125,14 +127,15 @@ Definition at line 31 of file dialog.\+cpp.
 )\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_dialog_a932a060bc56692af1d024203360e839d}
 
 
-Definition at line 36 of file dialog.\+cpp.
+Definition at line 39 of file dialog.\+cpp.
 
 
 \begin{DoxyCode}
-37 \{
-38     this->reject();
-39 \}
-\end{DoxyCode}
+40 \{
+41     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < int(\hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}.size()); ++i) \{
+42         \hyperlink{class_dialog_a3876121f29753b2702d6070b8262512f}{V}[i]->setText(\textcolor{stringliteral}{"Guai"});
+43     \}
+44 \}\end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
@@ -141,7 +144,14 @@ Definition at line 36 of file dialog.\+cpp.
 \subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Dialog$\ast$ Dialog\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_dialog_aaa4b5bfb9a0f64900d524f14bc32e6df}
 
 
-Definition at line 27 of file dialog.\+h.
+Definition at line 30 of file dialog.\+h.
+
+\hypertarget{class_dialog_a3876121f29753b2702d6070b8262512f}{\index{Dialog@{Dialog}!V@{V}}
+\index{V@{V}!Dialog@{Dialog}}
+\subsubsection[{V}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$Q\+Label $\ast$$>$ Dialog\+::\+V\hspace{0.3cm}{\ttfamily [private]}}}\label{class_dialog_a3876121f29753b2702d6070b8262512f}
+
+
+Definition at line 31 of file dialog.\+h.
 
 
 

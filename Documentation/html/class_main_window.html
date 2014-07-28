@@ -284,7 +284,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="ttc" id="class_main_window_html_a0ab4c2fb4c79e29566e20a0ee60edf77"><div class="ttname"><a href="class_main_window.html#a0ab4c2fb4c79e29566e20a0ee60edf77">MainWindow::endInserir</a></div><div class="ttdeci">void endInserir()</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00046">mainwindow.cpp:46</a></div></div>
-<div class="ttc" id="class_dialog_html"><div class="ttname"><a href="class_dialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="dialog_8h_source.html#l00011">dialog.h:11</a></div></div>
+<div class="ttc" id="class_dialog_html"><div class="ttname"><a href="class_dialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="dialog_8h_source.html#l00013">dialog.h:13</a></div></div>
 <div class="ttc" id="class_main_window_html_a2066670e4565617fa50daa7701226aa8"><div class="ttname"><a href="class_main_window.html#a2066670e4565617fa50daa7701226aa8">MainWindow::inf</a></div><div class="ttdeci">Dialog * inf</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00058">mainwindow.h:58</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -314,7 +314,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#a2066670e4565617fa50daa7701226aa8">inf</a>-&gt;result()) {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="struct_info.html">Info</a> i;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_main_window.html#a2066670e4565617fa50daa7701226aa8">inf</a>-&gt;<a class="code" href="class_dialog.html#a069e8b0696869cdd993f1b2a87bddbc2">getData</a>(i);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//inf-&gt;getData(i);</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;Acceptat&quot;</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        qDebug() &lt;&lt; i.<a class="code" href="struct_info.html#abedda733b9fd73013c473e3873dff857">name</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; i.<a class="code" href="struct_info.html#a7c380abfc7270f0c19ea6bc4db4c89a9">surname</a>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
@@ -323,7 +323,6 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 <div class="ttc" id="struct_info_html"><div class="ttname"><a href="struct_info.html">Info</a></div><div class="ttdoc">Struct to store basic people information. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00024">info.h:24</a></div></div>
 <div class="ttc" id="struct_info_html_a7c380abfc7270f0c19ea6bc4db4c89a9"><div class="ttname"><a href="struct_info.html#a7c380abfc7270f0c19ea6bc4db4c89a9">Info::surname</a></div><div class="ttdeci">QString surname</div><div class="ttdoc">Surname. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00039">info.h:39</a></div></div>
-<div class="ttc" id="class_dialog_html_a069e8b0696869cdd993f1b2a87bddbc2"><div class="ttname"><a href="class_dialog.html#a069e8b0696869cdd993f1b2a87bddbc2">Dialog::getData</a></div><div class="ttdeci">void getData(Info &amp;res)</div><div class="ttdef"><b>Definition:</b> <a href="dialog_8cpp_source.html#l00016">dialog.cpp:16</a></div></div>
 <div class="ttc" id="class_main_window_html_a2066670e4565617fa50daa7701226aa8"><div class="ttname"><a href="class_main_window.html#a2066670e4565617fa50daa7701226aa8">MainWindow::inf</a></div><div class="ttdeci">Dialog * inf</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00058">mainwindow.h:58</a></div></div>
 <div class="ttc" id="struct_info_html_abedda733b9fd73013c473e3873dff857"><div class="ttname"><a href="struct_info.html#abedda733b9fd73013c473e3873dff857">Info::name</a></div><div class="ttdeci">QString name</div><div class="ttdoc">Name. </div><div class="ttdef"><b>Definition:</b> <a href="info_8h_source.html#l00039">info.h:39</a></div></div>
 </div><!-- fragment -->
@@ -425,7 +424,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 25 2014 17:58:17 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 28 2014 19:05:48 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

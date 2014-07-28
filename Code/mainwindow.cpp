@@ -47,7 +47,7 @@ void MainWindow::endInserir()
 {
     if (inf->result()) {
         Info i;
-        inf->getData(i);
+        //inf->getData(i);
         qDebug() << "Acceptat";
         qDebug() << i.name << " " << i.surname;
     }
