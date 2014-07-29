@@ -95,21 +95,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_ins_dialog.html#a822e0887cf9597f75ed5c4a772a8c9db">scroll</a>-&gt;widget()-&gt;setLayout(temp);</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c">all</a> = <span class="keyword">new</span> QVBoxLayout;    </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a> = <span class="keyword">new</span> QDialogButtonBox(QDialogButtonBox::Ok |</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                   QDialogButtonBox::Cancel);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    connect(<a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a>, SIGNAL(accepted()), <span class="keyword">this</span>, SLOT(accept()));</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    connect(<a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a>, SIGNAL(rejected()), <span class="keyword">this</span>, SLOT(reject()));</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c">all</a>-&gt;addWidget(<a class="code" href="class_ins_dialog.html#a822e0887cf9597f75ed5c4a772a8c9db">scroll</a>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c">all</a>-&gt;addWidget(<a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    setLayout(<a class="code" href="class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c">all</a>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_ins_dialog.html#a9c15fe45d3d2c9eaa484df2213b791e2">   22</a></span>&#160;<a class="code" href="class_ins_dialog.html#a9c15fe45d3d2c9eaa484df2213b791e2">InsDialog::~InsDialog</a>()</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="ttc" id="class_ins_dialog_html_a9c15fe45d3d2c9eaa484df2213b791e2"><div class="ttname"><a href="class_ins_dialog.html#a9c15fe45d3d2c9eaa484df2213b791e2">InsDialog::~InsDialog</a></div><div class="ttdeci">~InsDialog()</div><div class="ttdef"><b>Definition:</b> <a href="_ins_dialog_8cpp_source.html#l00022">InsDialog.cpp:22</a></div></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a> = <span class="keyword">new</span> QDialogButtonBox();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a>-&gt;addButton(tr(<span class="stringliteral">&quot;Acceptar&quot;</span>), QDialogButtonBox::AcceptRole);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a>-&gt;addButton(tr(<span class="stringliteral">&quot;Cancelar&quot;</span>), QDialogButtonBox::RejectRole);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    connect(<a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a>, SIGNAL(accepted()), <span class="keyword">this</span>, SLOT(accept()));</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    connect(<a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a>, SIGNAL(rejected()), <span class="keyword">this</span>, SLOT(reject()));</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c">all</a>-&gt;addWidget(<a class="code" href="class_ins_dialog.html#a822e0887cf9597f75ed5c4a772a8c9db">scroll</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c">all</a>-&gt;addWidget(<a class="code" href="class_ins_dialog.html#aa77dfa096f7cd3bc82823f6944ecbd8b">confirm</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    setLayout(<a class="code" href="class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c">all</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_ins_dialog.html#a9c15fe45d3d2c9eaa484df2213b791e2">   23</a></span>&#160;<a class="code" href="class_ins_dialog.html#a9c15fe45d3d2c9eaa484df2213b791e2">InsDialog::~InsDialog</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="class_ins_dialog_html_a9c15fe45d3d2c9eaa484df2213b791e2"><div class="ttname"><a href="class_ins_dialog.html#a9c15fe45d3d2c9eaa484df2213b791e2">InsDialog::~InsDialog</a></div><div class="ttdeci">~InsDialog()</div><div class="ttdef"><b>Definition:</b> <a href="_ins_dialog_8cpp_source.html#l00023">InsDialog.cpp:23</a></div></div>
 <div class="ttc" id="class_ins_dialog_html_a4a3cd89b0f67e2ef788333272106125a"><div class="ttname"><a href="class_ins_dialog.html#a4a3cd89b0f67e2ef788333272106125a">InsDialog::InsDialog</a></div><div class="ttdeci">InsDialog(QWidget *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="_ins_dialog_8cpp_source.html#l00003">InsDialog.cpp:3</a></div></div>
 <div class="ttc" id="class_ins_dialog_html_ab8de5f3cd72b44a3b3524fc52bac148c"><div class="ttname"><a href="class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c">InsDialog::all</a></div><div class="ttdeci">QVBoxLayout * all</div><div class="ttdef"><b>Definition:</b> <a href="_ins_dialog_8h_source.html#l00023">InsDialog.h:23</a></div></div>
 <div class="ttc" id="class_ins_dialog_html_a822e0887cf9597f75ed5c4a772a8c9db"><div class="ttname"><a href="class_ins_dialog.html#a822e0887cf9597f75ed5c4a772a8c9db">InsDialog::scroll</a></div><div class="ttdeci">QScrollArea * scroll</div><div class="ttdef"><b>Definition:</b> <a href="_ins_dialog_8h_source.html#l00025">InsDialog.h:25</a></div></div>
@@ -118,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 29 2014 18:07:46 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 29 2014 18:17:38 for Hesed by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -9,8 +9,9 @@ InsDialog::InsDialog(QWidget *parent) : QDialog(parent)
     scroll->widget()->setLayout(temp);
     
     all = new QVBoxLayout;    
-    confirm = new QDialogButtonBox(QDialogButtonBox::Ok |
-                                   QDialogButtonBox::Cancel);
+    confirm = new QDialogButtonBox();
+    confirm->addButton(tr("Acceptar"), QDialogButtonBox::AcceptRole);
+    confirm->addButton(tr("Cancel·lar"), QDialogButtonBox::RejectRole);
     connect(confirm, SIGNAL(accepted()), this, SLOT(accept()));
     connect(confirm, SIGNAL(rejected()), this, SLOT(reject()));
     
