@@ -1,0 +1,135 @@
+\hypertarget{class_ins_dialog}{\section{Ins\+Dialog Class Reference}
+\label{class_ins_dialog}\index{Ins\+Dialog@{Ins\+Dialog}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ins_dialog_a4a3cd89b0f67e2ef788333272106125a}{Ins\+Dialog} (Q\+Widget $\ast$parent=0)
+\item 
+\hyperlink{class_ins_dialog_a9c15fe45d3d2c9eaa484df2213b791e2}{$\sim$\+Ins\+Dialog} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Line\+Edit $\ast$ \hyperlink{class_ins_dialog_a2edd5f0fce0dcc6f12c4f8cd391b5fc0}{tel1}
+\item 
+Q\+Line\+Edit \hyperlink{class_ins_dialog_a80b1bd54ec9e97020280559e6b5532db}{tel2}
+\item 
+Q\+Line\+Edit \hyperlink{class_ins_dialog_acd23e80138ee75cc27dd87dff5457ba9}{address}
+\item 
+Q\+V\+Box\+Layout $\ast$ \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}
+\item 
+Q\+Dialog\+Button\+Box $\ast$ \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}
+\item 
+Q\+Scroll\+Area $\ast$ \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 13 of file Ins\+Dialog.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ins_dialog_a4a3cd89b0f67e2ef788333272106125a}{\index{Ins\+Dialog@{Ins\+Dialog}!Ins\+Dialog@{Ins\+Dialog}}
+\index{Ins\+Dialog@{Ins\+Dialog}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{Ins\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Ins\+Dialog\+::\+Ins\+Dialog (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_ins_dialog_a4a3cd89b0f67e2ef788333272106125a}
+
+
+Definition at line 3 of file Ins\+Dialog.\+cpp.
+
+
+\begin{DoxyCode}
+3                                     : QDialog(parent)
+4 \{
+5     QHBoxLayout* temp = \textcolor{keyword}{new} QHBoxLayout;
+6     temp->addWidget(\textcolor{keyword}{new} QLabel(tr(\textcolor{stringliteral}{"Prova"})));
+7     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll} = \textcolor{keyword}{new} QScrollArea;
+8     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->setWidget(\textcolor{keyword}{new} QWidget);
+9     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->widget()->setLayout(temp);
+10     
+11     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all} = \textcolor{keyword}{new} QVBoxLayout;    
+12     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm} = \textcolor{keyword}{new} QDialogButtonBox(QDialogButtonBox::Ok |
+13                                    QDialogButtonBox::Cancel);
+14     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(accepted()), \textcolor{keyword}{this}, SLOT(accept()));
+15     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(rejected()), \textcolor{keyword}{this}, SLOT(reject()));
+16     
+17     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll});
+18     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm});
+19     setLayout(\hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all});
+20 \}
+\end{DoxyCode}
+\hypertarget{class_ins_dialog_a9c15fe45d3d2c9eaa484df2213b791e2}{\index{Ins\+Dialog@{Ins\+Dialog}!````~Ins\+Dialog@{$\sim$\+Ins\+Dialog}}
+\index{````~Ins\+Dialog@{$\sim$\+Ins\+Dialog}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{$\sim$\+Ins\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Ins\+Dialog\+::$\sim$\+Ins\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ins_dialog_a9c15fe45d3d2c9eaa484df2213b791e2}
+
+
+Definition at line 22 of file Ins\+Dialog.\+cpp.
+
+
+\begin{DoxyCode}
+23 \{
+24     
+25 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_ins_dialog_a2edd5f0fce0dcc6f12c4f8cd391b5fc0}{\index{Ins\+Dialog@{Ins\+Dialog}!tel1@{tel1}}
+\index{tel1@{tel1}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{tel1}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Line\+Edit$\ast$ Ins\+Dialog\+::tel1\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_a2edd5f0fce0dcc6f12c4f8cd391b5fc0}
+
+
+Definition at line 22 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_a80b1bd54ec9e97020280559e6b5532db}{\index{Ins\+Dialog@{Ins\+Dialog}!tel2@{tel2}}
+\index{tel2@{tel2}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{tel2}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Line\+Edit Ins\+Dialog\+::tel2\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_a80b1bd54ec9e97020280559e6b5532db}
+
+
+Definition at line 22 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_acd23e80138ee75cc27dd87dff5457ba9}{\index{Ins\+Dialog@{Ins\+Dialog}!address@{address}}
+\index{address@{address}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Line\+Edit Ins\+Dialog\+::address\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_acd23e80138ee75cc27dd87dff5457ba9}
+
+
+Definition at line 22 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{\index{Ins\+Dialog@{Ins\+Dialog}!all@{all}}
+\index{all@{all}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}Q\+V\+Box\+Layout$\ast$ Ins\+Dialog\+::all\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}
+
+
+Definition at line 23 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{\index{Ins\+Dialog@{Ins\+Dialog}!confirm@{confirm}}
+\index{confirm@{confirm}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{confirm}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Dialog\+Button\+Box$\ast$ Ins\+Dialog\+::confirm\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}
+
+
+Definition at line 24 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{\index{Ins\+Dialog@{Ins\+Dialog}!scroll@{scroll}}
+\index{scroll@{scroll}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{scroll}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Scroll\+Area$\ast$ Ins\+Dialog\+::scroll\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}
+
+
+Definition at line 25 of file Ins\+Dialog.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_ins_dialog_8h}{Ins\+Dialog.\+h}\item 
+\hyperlink{_ins_dialog_8cpp}{Ins\+Dialog.\+cpp}\end{DoxyCompactItemize}

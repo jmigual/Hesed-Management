@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['write',['write',['../class_person.html#aa667ce32c0552e818ac6df14c9a5f50d',1,'Person']]]
+  ['_7einsdialog',['~InsDialog',['../class_ins_dialog.html#a9c15fe45d3d2c9eaa484df2213b791e2',1,'InsDialog']]],
+  ['_7emainwindow',['~MainWindow',['../class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]]
 ];

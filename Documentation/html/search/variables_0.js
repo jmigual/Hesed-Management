@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['address',['address',['../class_ins_dialog.html#acd23e80138ee75cc27dd87dff5457ba9',1,'InsDialog']]],
   ['adress',['adress',['../struct_info.html#ad06b1d7b878c03e41bf30efb34dfbdf6',1,'Info']]],
-  ['all',['all',['../class_person.html#a19f67351290e2dd1b63a43d4622a46a9',1,'Person']]]
+  ['all',['all',['../class_ins_dialog.html#ab8de5f3cd72b44a3b3524fc52bac148c',1,'InsDialog::all()'],['../class_person.html#a19f67351290e2dd1b63a43d4622a46a9',1,'Person::all()']]]
 ];

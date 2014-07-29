@@ -33,7 +33,7 @@ Ui\+::\+Main\+Window $\ast$ \hyperlink{class_main_window_a35466a70ed47252a019116
 \item 
 \hyperlink{class_person}{Person} \hyperlink{class_main_window_a2d1f101eed410e692b5db9b7226174bf}{info}
 \item 
-\hyperlink{class_dialog}{Dialog} $\ast$ \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}
+\hyperlink{class_ins_dialog}{Ins\+Dialog} $\ast$ \hyperlink{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{inf}
 \end{DoxyCompactItemize}
 
 
@@ -156,11 +156,11 @@ Definition at line 36 of file mainwindow.\+cpp.
 
 \begin{DoxyCode}
 37 \{
-38     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf} = \textcolor{keyword}{new} \hyperlink{class_dialog}{Dialog};
-39     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->setWindowTitle(\textcolor{stringliteral}{"Associació Hesed - Inserir"});
-40     \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->open();
-41     connect(\hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}, SIGNAL(accepted()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{endInserir}()));
-42     connect(\hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}, SIGNAL(rejected()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{endInserir}()));
+38     \hyperlink{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{inf} = \textcolor{keyword}{new} \hyperlink{class_ins_dialog}{InsDialog};
+39     \hyperlink{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{inf}->setWindowTitle(\textcolor{stringliteral}{"Associació Hesed - Inserir"});
+40     \hyperlink{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{inf}->open();
+41     connect(\hyperlink{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{inf}, SIGNAL(accepted()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{endInserir}()));
+42     connect(\hyperlink{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{inf}, SIGNAL(rejected()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_main_window_a0ab4c2fb4c79e29566e20a0ee60edf77}{endInserir}()));
 43     
 44 \}
 \end{DoxyCode}
@@ -178,14 +178,14 @@ Definition at line 46 of file mainwindow.\+cpp.
 
 \begin{DoxyCode}
 47 \{
-48     \textcolor{keywordflow}{if} (\hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf}->result()) \{
+48     \textcolor{keywordflow}{if} (\hyperlink{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{inf}->result()) \{
 49         \hyperlink{struct_info}{Info} i;
 50         \textcolor{comment}{//inf->getData(i);}
 51         qDebug() << \textcolor{stringliteral}{"Acceptat"};
 52         qDebug() << i.\hyperlink{struct_info_abedda733b9fd73013c473e3873dff857}{name} << \textcolor{stringliteral}{" "} << i.\hyperlink{struct_info_a7c380abfc7270f0c19ea6bc4db4c89a9}{surname};
 53     \}
 54     \textcolor{keywordflow}{else} qDebug() << \textcolor{stringliteral}{"No acceptat"};
-55     \textcolor{keyword}{delete} \hyperlink{class_main_window_a2066670e4565617fa50daa7701226aa8}{inf};    
+55     \textcolor{keyword}{delete} \hyperlink{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{inf};    
 56 \}
 \end{DoxyCode}
 
@@ -212,9 +212,9 @@ Definition at line 56 of file mainwindow.\+h.
 
 Definition at line 57 of file mainwindow.\+h.
 
-\hypertarget{class_main_window_a2066670e4565617fa50daa7701226aa8}{\index{Main\+Window@{Main\+Window}!inf@{inf}}
+\hypertarget{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}{\index{Main\+Window@{Main\+Window}!inf@{inf}}
 \index{inf@{inf}!Main\+Window@{Main\+Window}}
-\subsubsection[{inf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dialog}$\ast$ Main\+Window\+::inf\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a2066670e4565617fa50daa7701226aa8}
+\subsubsection[{inf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ins\+Dialog}$\ast$ Main\+Window\+::inf\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_ad84bd8f23d732609dc5a01cbe3ae21de}
 
 
 Definition at line 58 of file mainwindow.\+h.

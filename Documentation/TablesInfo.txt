@@ -1,0 +1,27 @@
+Family Table
+
+ID |  Members  |   Address   |   Phone 1   |   Phone 2   |      Help      |  Autorized people
+===|===========|=============|=============|=============|================|===================
+ # | Vector of | String with | String with | String with | Vector of      | Vector with people
+   | members   | the address | Phone 1     | Phone 2     | pairs of QDate | autorized ID
+
+
+  • ID: Unsigned Integer
+  • Members: Vector containing chars:
+  	- 0 => Age < 2 years
+  	- 1 => 2 <= Age < 8 years
+  	- 2 => 8 <= Age
+  • Address: String with the address
+  • Phone 1: String containing a phone
+  • Phone 2: String containing a phone
+  • Help: Vector containing pairs of QDate:
+  	- First => Date when the help starts.
+  	- Second => Date when the help ends.
+  • Autorized people: vector of Unsigned Integers
+
+
+People table
+
+ID |  Name  | Surname |   NIF  | Passport | BirthDate
+===|========|=========|========|==========|==========
+ # | String | String  | String |  String  |  QDate

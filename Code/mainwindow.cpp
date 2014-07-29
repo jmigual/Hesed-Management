@@ -35,7 +35,7 @@ void MainWindow::addPath(const QDir &data)
 
 void MainWindow::on_actionInserir_triggered()
 {
-    inf = new Dialog;
+    inf = new InsDialog;
     inf->setWindowTitle("Associació Hesed - Inserir");
     inf->open();
     connect(inf, SIGNAL(accepted()), this, SLOT(endInserir()));

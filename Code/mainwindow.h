@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QDir>
+#include <InsDialog.h>
 #include "person.h"
 #include "info.h"
 
@@ -54,7 +55,7 @@ private:
     QDir data;
     Ui::MainWindow *ui;
     Person info;
-    Dialog *inf; 
+    InsDialog *inf; 
 };
 
 #endif // MAINWINDOW_H

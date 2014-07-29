@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['dialog_2ecpp',['dialog.cpp',['../dialog_8cpp.html',1,'']]],
-  ['dialog_2eh',['dialog.h',['../dialog_8h.html',1,'']]]
+  ['info_2eh',['info.h',['../info_8h.html',1,'']]],
+  ['insdialog_2ecpp',['InsDialog.cpp',['../_ins_dialog_8cpp.html',1,'']]],
+  ['insdialog_2eh',['InsDialog.h',['../_ins_dialog_8h.html',1,'']]]
 ];
