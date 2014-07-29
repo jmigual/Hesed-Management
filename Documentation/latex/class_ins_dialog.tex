@@ -48,23 +48,26 @@ Definition at line 3 of file Ins\+Dialog.\+cpp.
 \begin{DoxyCode}
 3                                     : QDialog(parent)
 4 \{
-5     QHBoxLayout* temp = \textcolor{keyword}{new} QHBoxLayout;
-6     temp->addWidget(\textcolor{keyword}{new} QLabel(tr(\textcolor{stringliteral}{"Prova"})));
+5     QVBoxLayout* temp = \textcolor{keyword}{new} QVBoxLayout;
+6     
 7     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll} = \textcolor{keyword}{new} QScrollArea;
-8     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->setWidget(\textcolor{keyword}{new} QWidget);
-9     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->widget()->setLayout(temp);
-10     
-11     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all} = \textcolor{keyword}{new} QVBoxLayout;    
-12     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm} = \textcolor{keyword}{new} QDialogButtonBox();
-13     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}->addButton(tr(\textcolor{stringliteral}{"Acceptar"}), QDialogButtonBox::AcceptRole);
-14     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}->addButton(tr(\textcolor{stringliteral}{"Cancelar"}), QDialogButtonBox::RejectRole);
-15     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(accepted()), \textcolor{keyword}{this}, SLOT(accept()));
-16     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(rejected()), \textcolor{keyword}{this}, SLOT(reject()));
-17     
-18     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll});
-19     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm});
-20     setLayout(\hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all});
-21 \}
+8     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->setWidgetResizable(\textcolor{keyword}{true});
+9     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->setWidget(\textcolor{keyword}{new} QWidget);
+10     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->widget()->setLayout(temp);
+11     
+12     \textcolor{comment}{// Declarem els elements necessaris del Layout principal}
+13     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all} = \textcolor{keyword}{new} QVBoxLayout;    
+14     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm} = \textcolor{keyword}{new} QDialogButtonBox();
+15     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}->addButton(tr(\textcolor{stringliteral}{"Acceptar"}), QDialogButtonBox::AcceptRole);
+16     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}->addButton(tr(\textcolor{stringliteral}{"Cancel·lar"}), QDialogButtonBox::RejectRole);
+17     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(accepted()), \textcolor{keyword}{this}, SLOT(accept()));
+18     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(rejected()), \textcolor{keyword}{this}, SLOT(reject()));
+19     
+20     \textcolor{comment}{// Afegim les dos parts del Layout principal}
+21     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll});
+22     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm});
+23     setLayout(\hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all});
+24 \}
 \end{DoxyCode}
 \hypertarget{class_ins_dialog_a9c15fe45d3d2c9eaa484df2213b791e2}{\index{Ins\+Dialog@{Ins\+Dialog}!````~Ins\+Dialog@{$\sim$\+Ins\+Dialog}}
 \index{````~Ins\+Dialog@{$\sim$\+Ins\+Dialog}!Ins\+Dialog@{Ins\+Dialog}}
@@ -75,13 +78,13 @@ Definition at line 3 of file Ins\+Dialog.\+cpp.
 )}}\label{class_ins_dialog_a9c15fe45d3d2c9eaa484df2213b791e2}
 
 
-Definition at line 23 of file Ins\+Dialog.\+cpp.
+Definition at line 26 of file Ins\+Dialog.\+cpp.
 
 
 \begin{DoxyCode}
-24 \{
-25     
-26 \}
+27 \{
+28     
+29 \}
 \end{DoxyCode}
 
 

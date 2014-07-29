@@ -46,10 +46,7 @@ void MainWindow::on_actionInserir_triggered()
 void MainWindow::endInserir()
 {
     if (inf->result()) {
-        Info i;
-        //inf->getData(i);
         qDebug() << "Acceptat";
-        qDebug() << i.name << " " << i.surname;
     }
     else qDebug() << "No acceptat";
     delete inf;    
