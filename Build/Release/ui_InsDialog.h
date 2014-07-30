@@ -34,21 +34,21 @@ QT_BEGIN_NAMESPACE
 class Ui_Dialog
 {
 public:
-    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *verticalLayout_2;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_5;
-    QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout_7;
-    QHBoxLayout *horizontalLayout_6;
+    QHBoxLayout *horizontalLayout_5;
+    QFormLayout *formLayout_3;
     QLabel *label_9;
     QLineEdit *lineEdit_7;
-    QHBoxLayout *horizontalLayout_5;
-    QLabel *label_10;
-    QLineEdit *lineEdit_6;
-    QHBoxLayout *horizontalLayout_8;
     QLabel *label_8;
     QLineEdit *lineEdit_5;
+    QFormLayout *formLayout_4;
+    QLabel *label_10;
+    QLineEdit *lineEdit_6;
+    QLabel *label_15;
+    QDateEdit *dateEdit_4;
     QFrame *line;
     QHBoxLayout *horizontalLayout_9;
     QLabel *label_11;
@@ -102,71 +102,72 @@ public:
     {
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(581, 432);
-        verticalLayout_4 = new QVBoxLayout(Dialog);
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        Dialog->resize(557, 417);
+        verticalLayout_2 = new QVBoxLayout(Dialog);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         scrollArea = new QScrollArea(Dialog);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 561, 383));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 537, 368));
         verticalLayout_5 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        formLayout_3 = new QFormLayout();
+        formLayout_3->setObjectName(QStringLiteral("formLayout_3"));
         label_9 = new QLabel(scrollAreaWidgetContents);
         label_9->setObjectName(QStringLiteral("label_9"));
 
-        horizontalLayout_6->addWidget(label_9);
+        formLayout_3->setWidget(0, QFormLayout::LabelRole, label_9);
 
         lineEdit_7 = new QLineEdit(scrollAreaWidgetContents);
         lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
 
-        horizontalLayout_6->addWidget(lineEdit_7);
+        formLayout_3->setWidget(0, QFormLayout::FieldRole, lineEdit_7);
 
-
-        horizontalLayout_7->addLayout(horizontalLayout_6);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        label_10 = new QLabel(scrollAreaWidgetContents);
-        label_10->setObjectName(QStringLiteral("label_10"));
-
-        horizontalLayout_5->addWidget(label_10);
-
-        lineEdit_6 = new QLineEdit(scrollAreaWidgetContents);
-        lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
-
-        horizontalLayout_5->addWidget(lineEdit_6);
-
-
-        horizontalLayout_7->addLayout(horizontalLayout_5);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_7);
-
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         label_8 = new QLabel(scrollAreaWidgetContents);
         label_8->setObjectName(QStringLiteral("label_8"));
 
-        horizontalLayout_8->addWidget(label_8);
+        formLayout_3->setWidget(1, QFormLayout::LabelRole, label_8);
 
         lineEdit_5 = new QLineEdit(scrollAreaWidgetContents);
         lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
 
-        horizontalLayout_8->addWidget(lineEdit_5);
+        formLayout_3->setWidget(1, QFormLayout::FieldRole, lineEdit_5);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_8);
+        horizontalLayout_5->addLayout(formLayout_3);
+
+        formLayout_4 = new QFormLayout();
+        formLayout_4->setObjectName(QStringLiteral("formLayout_4"));
+        label_10 = new QLabel(scrollAreaWidgetContents);
+        label_10->setObjectName(QStringLiteral("label_10"));
+
+        formLayout_4->setWidget(0, QFormLayout::LabelRole, label_10);
+
+        lineEdit_6 = new QLineEdit(scrollAreaWidgetContents);
+        lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
+
+        formLayout_4->setWidget(0, QFormLayout::FieldRole, lineEdit_6);
+
+        label_15 = new QLabel(scrollAreaWidgetContents);
+        label_15->setObjectName(QStringLiteral("label_15"));
+
+        formLayout_4->setWidget(1, QFormLayout::LabelRole, label_15);
+
+        dateEdit_4 = new QDateEdit(scrollAreaWidgetContents);
+        dateEdit_4->setObjectName(QStringLiteral("dateEdit_4"));
+        dateEdit_4->setCalendarPopup(true);
+
+        formLayout_4->setWidget(1, QFormLayout::FieldRole, dateEdit_4);
 
 
-        verticalLayout_5->addLayout(verticalLayout_2);
+        horizontalLayout_5->addLayout(formLayout_4);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_5);
 
         line = new QFrame(scrollAreaWidgetContents);
         line->setObjectName(QStringLiteral("line"));
@@ -409,13 +410,13 @@ public:
 
         scrollArea->setWidget(scrollAreaWidgetContents);
 
-        verticalLayout_4->addWidget(scrollArea);
+        verticalLayout_2->addWidget(scrollArea);
 
         buttonBox = new QDialogButtonBox(Dialog);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
 
-        verticalLayout_4->addWidget(buttonBox);
+        verticalLayout_2->addWidget(buttonBox);
 
 
         retranslateUi(Dialog);
@@ -427,8 +428,9 @@ public:
     {
         Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
         label_9->setText(QApplication::translate("Dialog", "Tel\303\250fon 1", 0));
-        label_10->setText(QApplication::translate("Dialog", "Tel\303\250fon 2", 0));
         label_8->setText(QApplication::translate("Dialog", "Adre\303\247a", 0));
+        label_10->setText(QApplication::translate("Dialog", "Tel\303\250fon 2", 0));
+        label_15->setText(QApplication::translate("Dialog", "\303\232ltima Recollida", 0));
         label_11->setText(QApplication::translate("Dialog", "Ajudes", 0));
         pushButton_4->setText(QApplication::translate("Dialog", "Afegir", 0));
         label_14->setText(QApplication::translate("Dialog", "Ajuda 1:", 0));

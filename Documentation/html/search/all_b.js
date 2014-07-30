@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['person',['Person',['../class_person.html',1,'Person'],['../class_person.html#a0397c6f89fafc12e738923f612bc41a3',1,'Person::Person()'],['../class_person.html#a847845e2e214a89e790c584678f1ea97',1,'Person::Person(const Person &amp;p)']]],
-  ['person_2ecpp',['person.cpp',['../person_8cpp.html',1,'']]],
-  ['person_2eh',['person.h',['../person_8h.html',1,'']]],
-  ['phone',['phone',['../struct_info.html#a112f47a5e74f513da22e17d78dd9979a',1,'Info']]]
+  ['on_5factioninserir_5ftriggered',['on_actionInserir_triggered',['../class_main_window.html#a308a629f351133027a3602d27099cb7c',1,'MainWindow']]],
+  ['operator_28_29',['operator()',['../struct_person_1_1comp.html#ac4cb7f88f120bf8b332a837307ae3476',1,'Person::comp']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../struct_info.html#ab0cbd32d9d3f6f6d176b81093daa6a70',1,'Info']]],
+  ['operator_3e_3e',['operator&gt;&gt;',['../struct_info.html#abcc9ca92dd5c05367bd2807464e03747',1,'Info']]]
 ];

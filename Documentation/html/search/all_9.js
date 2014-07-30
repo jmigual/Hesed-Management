@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['name',['name',['../struct_info.html#abedda733b9fd73013c473e3873dff857',1,'Info']]],
-  ['nif',['NIF',['../struct_info.html#a81aa1db72f631011ba7426099479f35c',1,'Info']]],
-  ['numberhelp',['numberHelp',['../struct_info.html#aa7475a4d5b9b5e8cd5ff698942dee78f',1,'Info']]]
+  ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['mainwindow',['MainWindow',['../class_main_window.html',1,'MainWindow'],['../class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db',1,'MainWindow::MainWindow()']]],
+  ['mainwindow_2ecpp',['mainwindow.cpp',['../mainwindow_8cpp.html',1,'']]],
+  ['mainwindow_2eh',['mainwindow.h',['../mainwindow_8h.html',1,'']]],
+  ['maxid',['maxID',['../class_person.html#a816ee6194426eb703b61ae267e8e8ee6',1,'Person']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write',['write',['../class_person.html#aa667ce32c0552e818ac6df14c9a5f50d',1,'Person']]]
+  ['ui',['Ui',['../namespace_ui.html',1,'Ui'],['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow::ui()']]]
 ];

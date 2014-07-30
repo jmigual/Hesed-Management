@@ -1,6 +1,7 @@
 #ifndef INSDIALOG_H
 #define INSDIALOG_
 
+#include <QtWidgets>
 #include <QDialog>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -9,6 +10,7 @@
 #include <QLineEdit>
 #include <QLabel>
 #include <QDialogButtonBox>
+#include <QDateEdit>
 
 
 /**
@@ -38,19 +40,30 @@ private:
      * @var address
      * @brief Home address
      */
-    QLineEdit* tel1, tel2, address;
+    QLineEdit *tel1, *tel2, *address;
+    /**
+      * @brief Las collection date
+      */
+    QDateEdit *lastColl;
     /**
      * @brief Layout containing all data
      */
-    QVBoxLayout* all;
+    QVBoxLayout *all, *content;
     /**
      * @brief Buttons to confirm or reject the dialog
      */
-    QDialogButtonBox* confirm;
+    QDialogButtonBox *confirm;
     /**
      * @brief Scroll area
      */
-    QScrollArea* scroll;
+    QScrollArea *scroll;
+    /**
+      * @
+      */
+    int helpCounter, authMembers, famMembers;
+    
+private slots:
+    void addHelp();
     
 };
 

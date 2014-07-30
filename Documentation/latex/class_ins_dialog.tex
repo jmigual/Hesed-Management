@@ -13,27 +13,42 @@ Dialog to insert new families in the Database.
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 \hyperlink{class_ins_dialog_a9c15fe45d3d2c9eaa484df2213b791e2}{$\sim$\+Ins\+Dialog} ()
 \begin{DoxyCompactList}\small\item\em Default desctructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_ins_dialog_a44a1f7a74f99cfff6cb76babfb7ffbe0}{add\+Help} ()
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Q\+Line\+Edit $\ast$ \hyperlink{class_ins_dialog_a7dc562149fa67417983c78fe2621d7f9}{tel1}
 \begin{DoxyCompactList}\small\item\em Phone nº 1. \end{DoxyCompactList}\item 
-Q\+Line\+Edit \hyperlink{class_ins_dialog_a79832ba6767602ed1d07b9b707bbfd1f}{tel2}
+Q\+Line\+Edit $\ast$ \hyperlink{class_ins_dialog_a79832ba6767602ed1d07b9b707bbfd1f}{tel2}
 \begin{DoxyCompactList}\small\item\em Phone nº 2. \end{DoxyCompactList}\item 
-Q\+Line\+Edit \hyperlink{class_ins_dialog_a14da50d5cdf18e266b1d198ebbd20770}{address}
+Q\+Line\+Edit $\ast$ \hyperlink{class_ins_dialog_a14da50d5cdf18e266b1d198ebbd20770}{address}
 \begin{DoxyCompactList}\small\item\em Home address. \end{DoxyCompactList}\item 
+Q\+Date\+Edit $\ast$ \hyperlink{class_ins_dialog_a945a99c1652d647dbab8dc25df556828}{last\+Coll}
+\begin{DoxyCompactList}\small\item\em Las collection date. \end{DoxyCompactList}\item 
 Q\+V\+Box\+Layout $\ast$ \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}
 \begin{DoxyCompactList}\small\item\em Layout containing all data. \end{DoxyCompactList}\item 
+Q\+V\+Box\+Layout $\ast$ \hyperlink{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}{content}
+\item 
 Q\+Dialog\+Button\+Box $\ast$ \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}
 \begin{DoxyCompactList}\small\item\em Buttons to confirm or reject the dialog. \end{DoxyCompactList}\item 
 Q\+Scroll\+Area $\ast$ \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}
-\begin{DoxyCompactList}\small\item\em Scroll area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Scroll area. \end{DoxyCompactList}\item 
+int \hyperlink{class_ins_dialog_aa67a0256243ba4ca9bb6623610ad3f3a}{help\+Counter}
+\item 
+int \hyperlink{class_ins_dialog_a665468f228a04cf077de009d22736f21}{auth\+Members}
+\item 
+int \hyperlink{class_ins_dialog_ac1fbb6dd4e8c3828826a98c3946935a3}{fam\+Members}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Dialog to insert new families in the Database. 
 
-Definition at line 17 of file Ins\+Dialog.\+h.
+Definition at line 19 of file Ins\+Dialog.\+h.
 
 
 
@@ -57,26 +72,73 @@ Definition at line 3 of file Ins\+Dialog.\+cpp.
 \begin{DoxyCode}
 3                                     : QDialog(parent)
 4 \{
-5     QVBoxLayout* temp = \textcolor{keyword}{new} QVBoxLayout;
+5     \hyperlink{class_ins_dialog_aa67a0256243ba4ca9bb6623610ad3f3a}{helpCounter} = \hyperlink{class_ins_dialog_a665468f228a04cf077de009d22736f21}{authMembers} = \hyperlink{class_ins_dialog_ac1fbb6dd4e8c3828826a98c3946935a3}{famMembers} = 0;
 6     
-7     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll} = \textcolor{keyword}{new} QScrollArea;
-8     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->setWidgetResizable(\textcolor{keyword}{true});
-9     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->setWidget(\textcolor{keyword}{new} QWidget);
-10     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->widget()->setLayout(temp);
-11     
-12     \textcolor{comment}{// Declarem els elements necessaris del Layout principal}
-13     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all} = \textcolor{keyword}{new} QVBoxLayout;    
-14     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm} = \textcolor{keyword}{new} QDialogButtonBox();
-15     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}->addButton(tr(\textcolor{stringliteral}{"Acceptar"}), QDialogButtonBox::AcceptRole);
-16     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}->addButton(tr(\textcolor{stringliteral}{"Cancel·lar"}), QDialogButtonBox::RejectRole);
-17     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(accepted()), \textcolor{keyword}{this}, SLOT(accept()));
-18     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(rejected()), \textcolor{keyword}{this}, SLOT(reject()));
-19     
-20     \textcolor{comment}{// Afegim les dos parts del Layout principal}
-21     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll});
-22     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm});
-23     setLayout(\hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all});
-24 \}
+7     \textcolor{comment}{// Definition of the main container}
+8     \hyperlink{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}{content} = \textcolor{keyword}{new} QVBoxLayout;
+9     
+10     \textcolor{comment}{// H1Form1 creation}
+11     QFormLayout *H1Form1 = \textcolor{keyword}{new} QFormLayout;
+12     \hyperlink{class_ins_dialog_a7dc562149fa67417983c78fe2621d7f9}{tel1} = \textcolor{keyword}{new} QLineEdit;
+13     \hyperlink{class_ins_dialog_a14da50d5cdf18e266b1d198ebbd20770}{address} = \textcolor{keyword}{new} QLineEdit;
+14     H1Form1->addRow(\textcolor{keyword}{new} QLabel(tr(\textcolor{stringliteral}{"Telèfon 1"})), \hyperlink{class_ins_dialog_a7dc562149fa67417983c78fe2621d7f9}{tel1});
+15     H1Form1->addRow(\textcolor{keyword}{new} QLabel(tr(\textcolor{stringliteral}{"Adreça"})), \hyperlink{class_ins_dialog_a14da50d5cdf18e266b1d198ebbd20770}{address});
+16     
+17     \textcolor{comment}{// H1Form2 creation}
+18     QFormLayout* H1Form2 = \textcolor{keyword}{new} QFormLayout;
+19     \hyperlink{class_ins_dialog_a79832ba6767602ed1d07b9b707bbfd1f}{tel2} = \textcolor{keyword}{new} QLineEdit;
+20     \hyperlink{class_ins_dialog_a945a99c1652d647dbab8dc25df556828}{lastColl} = \textcolor{keyword}{new} QDateEdit(QDate::currentDate());
+21     \hyperlink{class_ins_dialog_a945a99c1652d647dbab8dc25df556828}{lastColl}->setCalendarPopup(\textcolor{keyword}{true});
+22     H1Form2->addRow(\textcolor{keyword}{new} QLabel(tr(\textcolor{stringliteral}{"Telèfon 2"})), \hyperlink{class_ins_dialog_a79832ba6767602ed1d07b9b707bbfd1f}{tel2});
+23     H1Form2->addRow(\textcolor{keyword}{new} QLabel(tr(\textcolor{stringliteral}{"Última recollida"})), \hyperlink{class_ins_dialog_a945a99c1652d647dbab8dc25df556828}{lastColl});    
+24     
+25     \textcolor{comment}{// H1Form1 and H1Form2 addition to H1 (Header 1)}
+26     QHBoxLayout *H1 = \textcolor{keyword}{new} QHBoxLayout;
+27     H1->addLayout(H1Form1);
+28     H1->addLayout(H1Form2);
+29     
+30     \textcolor{comment}{// H1 (Header 1) addition to main layout}
+31     \hyperlink{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}{content}->addLayout(H1);
+32     
+33     \textcolor{comment}{// Horitzontal line}
+34     QFrame *line = \textcolor{keyword}{new} QFrame;
+35     line->setFrameShape(QFrame::HLine);
+36     line->setFrameShadow(QFrame::Sunken);
+37     line->setLineWidth(1);
+38     line->setMidLineWidth(0);
+39     \hyperlink{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}{content}->addWidget(line);
+40     
+41     \textcolor{comment}{// Creation of the Help addition area}
+42     \textcolor{comment}{// Title}
+43     QHBoxLayout *H2 = \textcolor{keyword}{new} QHBoxLayout;
+44     H2->addWidget(\textcolor{keyword}{new} QLabel(tr(\textcolor{stringliteral}{"Ajudes"})));
+45     \textcolor{comment}{// Button to add}
+46     QPushButton *But1 = \textcolor{keyword}{new} QPushButton(tr(\textcolor{stringliteral}{"Afegir"}));
+47     connect(But1, SIGNAL(clicked()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_ins_dialog_a44a1f7a74f99cfff6cb76babfb7ffbe0}{addHelp}()));
+48     H2->addWidget(But1);
+49     \textcolor{comment}{// Spacer}
+50     H2->addSpacerItem(\textcolor{keyword}{new} QSpacerItem(0, 0, QSizePolicy::Expanding));
+51     \hyperlink{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}{content}->addLayout(H2);
+52             
+53     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll} = \textcolor{keyword}{new} QScrollArea;
+54     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->setWidgetResizable(\textcolor{keyword}{true});
+55     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->setWidget(\textcolor{keyword}{new} QWidget);
+56     \hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll}->widget()->setLayout(\hyperlink{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}{content});
+57     
+58     \textcolor{comment}{// Declarem els elements necessaris del Layout principal}
+59     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all} = \textcolor{keyword}{new} QVBoxLayout;    
+60     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm} = \textcolor{keyword}{new} QDialogButtonBox();
+61     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}->addButton(tr(\textcolor{stringliteral}{"Acceptar"}), QDialogButtonBox::AcceptRole);
+62     \hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}->addButton(tr(\textcolor{stringliteral}{"Cancel·lar"}), QDialogButtonBox::RejectRole);
+63     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(accepted()), \textcolor{keyword}{this}, SLOT(accept()));
+64     connect(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm}, SIGNAL(rejected()), \textcolor{keyword}{this}, SLOT(reject()));
+65     
+66     \textcolor{comment}{// Afegim les dos parts del Layout principal}
+67     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{scroll});
+68     \hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all}->addWidget(\hyperlink{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{confirm});
+69     setLayout(\hyperlink{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{all});
+70     \hyperlink{class_ins_dialog_a7dc562149fa67417983c78fe2621d7f9}{tel1}->setFocus();
+71 \}
 \end{DoxyCode}
 \hypertarget{class_ins_dialog_a9c15fe45d3d2c9eaa484df2213b791e2}{\index{Ins\+Dialog@{Ins\+Dialog}!````~Ins\+Dialog@{$\sim$\+Ins\+Dialog}}
 \index{````~Ins\+Dialog@{$\sim$\+Ins\+Dialog}!Ins\+Dialog@{Ins\+Dialog}}
@@ -91,13 +153,36 @@ Default desctructor.
 
 
 
-Definition at line 26 of file Ins\+Dialog.\+cpp.
+Definition at line 73 of file Ins\+Dialog.\+cpp.
 
 
 \begin{DoxyCode}
-27 \{
-28     
-29 \}
+74 \{
+75     
+76 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ins_dialog_a44a1f7a74f99cfff6cb76babfb7ffbe0}{\index{Ins\+Dialog@{Ins\+Dialog}!add\+Help@{add\+Help}}
+\index{add\+Help@{add\+Help}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{add\+Help}]{\setlength{\rightskip}{0pt plus 5cm}void Ins\+Dialog\+::add\+Help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_ins_dialog_a44a1f7a74f99cfff6cb76babfb7ffbe0}
+
+
+Definition at line 78 of file Ins\+Dialog.\+cpp.
+
+
+\begin{DoxyCode}
+79 \{
+80     QHBoxLayout *cont = \textcolor{keyword}{new} QHBoxLayout;
+81     cont->addWidget(\textcolor{keyword}{new} QLabel(tr(\textcolor{stringliteral}{"Ajuda %n"}, \textcolor{stringliteral}{""}, \hyperlink{class_ins_dialog_aa67a0256243ba4ca9bb6623610ad3f3a}{helpCounter} + 1)));
+82     \hyperlink{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}{content}->insertLayout(\hyperlink{class_ins_dialog_aa67a0256243ba4ca9bb6623610ad3f3a}{helpCounter} + 3, cont);
+83     ++\hyperlink{class_ins_dialog_aa67a0256243ba4ca9bb6623610ad3f3a}{helpCounter};
+84 \}
 \end{DoxyCode}
 
 
@@ -111,7 +196,7 @@ Phone nº 1.
 
 
 
-Definition at line 41 of file Ins\+Dialog.\+h.
+Definition at line 43 of file Ins\+Dialog.\+h.
 
 \hypertarget{class_ins_dialog_a79832ba6767602ed1d07b9b707bbfd1f}{\index{Ins\+Dialog@{Ins\+Dialog}!tel2@{tel2}}
 \index{tel2@{tel2}!Ins\+Dialog@{Ins\+Dialog}}
@@ -122,7 +207,7 @@ Phone nº 2.
 
 
 
-Definition at line 41 of file Ins\+Dialog.\+h.
+Definition at line 43 of file Ins\+Dialog.\+h.
 
 \hypertarget{class_ins_dialog_a14da50d5cdf18e266b1d198ebbd20770}{\index{Ins\+Dialog@{Ins\+Dialog}!address@{address}}
 \index{address@{address}!Ins\+Dialog@{Ins\+Dialog}}
@@ -133,7 +218,18 @@ Home address.
 
 
 
-Definition at line 41 of file Ins\+Dialog.\+h.
+Definition at line 43 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_a945a99c1652d647dbab8dc25df556828}{\index{Ins\+Dialog@{Ins\+Dialog}!last\+Coll@{last\+Coll}}
+\index{last\+Coll@{last\+Coll}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{last\+Coll}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+Edit$\ast$ Ins\+Dialog\+::last\+Coll\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_a945a99c1652d647dbab8dc25df556828}
+
+
+Las collection date. 
+
+
+
+Definition at line 47 of file Ins\+Dialog.\+h.
 
 \hypertarget{class_ins_dialog_ab8de5f3cd72b44a3b3524fc52bac148c}{\index{Ins\+Dialog@{Ins\+Dialog}!all@{all}}
 \index{all@{all}!Ins\+Dialog@{Ins\+Dialog}}
@@ -144,7 +240,14 @@ Layout containing all data.
 
 
 
-Definition at line 45 of file Ins\+Dialog.\+h.
+Definition at line 51 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}{\index{Ins\+Dialog@{Ins\+Dialog}!content@{content}}
+\index{content@{content}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{content}]{\setlength{\rightskip}{0pt plus 5cm}Q\+V\+Box\+Layout $\ast$ Ins\+Dialog\+::content\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_a9b0df6254c3f39e812bbeb0ef85c1d0c}
+
+
+Definition at line 51 of file Ins\+Dialog.\+h.
 
 \hypertarget{class_ins_dialog_aa77dfa096f7cd3bc82823f6944ecbd8b}{\index{Ins\+Dialog@{Ins\+Dialog}!confirm@{confirm}}
 \index{confirm@{confirm}!Ins\+Dialog@{Ins\+Dialog}}
@@ -155,7 +258,7 @@ Buttons to confirm or reject the dialog.
 
 
 
-Definition at line 49 of file Ins\+Dialog.\+h.
+Definition at line 55 of file Ins\+Dialog.\+h.
 
 \hypertarget{class_ins_dialog_a822e0887cf9597f75ed5c4a772a8c9db}{\index{Ins\+Dialog@{Ins\+Dialog}!scroll@{scroll}}
 \index{scroll@{scroll}!Ins\+Dialog@{Ins\+Dialog}}
@@ -166,7 +269,28 @@ Scroll area.
 
 
 
-Definition at line 53 of file Ins\+Dialog.\+h.
+Definition at line 59 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_aa67a0256243ba4ca9bb6623610ad3f3a}{\index{Ins\+Dialog@{Ins\+Dialog}!help\+Counter@{help\+Counter}}
+\index{help\+Counter@{help\+Counter}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{help\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}int Ins\+Dialog\+::help\+Counter\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_aa67a0256243ba4ca9bb6623610ad3f3a}
+@ 
+
+Definition at line 63 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_a665468f228a04cf077de009d22736f21}{\index{Ins\+Dialog@{Ins\+Dialog}!auth\+Members@{auth\+Members}}
+\index{auth\+Members@{auth\+Members}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{auth\+Members}]{\setlength{\rightskip}{0pt plus 5cm}int Ins\+Dialog\+::auth\+Members\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_a665468f228a04cf077de009d22736f21}
+
+
+Definition at line 63 of file Ins\+Dialog.\+h.
+
+\hypertarget{class_ins_dialog_ac1fbb6dd4e8c3828826a98c3946935a3}{\index{Ins\+Dialog@{Ins\+Dialog}!fam\+Members@{fam\+Members}}
+\index{fam\+Members@{fam\+Members}!Ins\+Dialog@{Ins\+Dialog}}
+\subsubsection[{fam\+Members}]{\setlength{\rightskip}{0pt plus 5cm}int Ins\+Dialog\+::fam\+Members\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ins_dialog_ac1fbb6dd4e8c3828826a98c3946935a3}
+
+
+Definition at line 63 of file Ins\+Dialog.\+h.
 
 
 
